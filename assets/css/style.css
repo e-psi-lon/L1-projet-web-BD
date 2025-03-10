@@ -28,7 +28,6 @@
 }
 
 /* Dark Mode Toggle */
-/* Dark Mode Toggle */
 .dark-mode-container {
     display: flex;
     align-items: center;
@@ -140,6 +139,7 @@ header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .logo h1 {
@@ -155,6 +155,22 @@ header .container {
     text-decoration: none;
 }
 
+/* Menu toggle (hamburger) button */
+.menu-toggle {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 0.5rem;
+    color: var(--primary-color);
+    background: transparent;
+}
+
+.menu-toggle .icon {
+    width: 24px;
+    height: 24px;
+}
+
 nav ul {
     display: flex;
     list-style: none;
@@ -163,6 +179,51 @@ nav ul {
 nav li {
     margin-left: 1.5rem;
 }
+
+/* Responsive styles */
+@media (max-width: 720px) {
+    .menu-toggle {
+        display: flex;
+    }
+    
+    nav {
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+    }
+    
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: var(--header-bg);
+        box-shadow: 0 4px 10px var(--shadow-color);
+        border-top: 1px solid var(--border-color);
+        padding: 1rem 0;
+        width: 100%;
+        z-index: 100;
+    }
+    
+    nav.active ul {
+        display: flex;
+    }
+    
+    nav li {
+        margin: 0.5rem 0;
+        padding: 0 1.5rem;
+        width: 100%;
+        text-align: center;
+    }
+    
+    .dark-mode-container {
+        margin-top: 1rem;
+        justify-content: center;
+        display: flex;
+        width: 100%;
+    }
+}
+
 
 /* Main Content */
 main {

@@ -22,7 +22,10 @@ $isAdmin = $loggedIn && isset($_SESSION['is_admin']) && $_SESSION['is_admin'];
             <div class="logo">
                 <h1><a href="/">Litterae Aeternae</a></h1>
             </div>
-            <nav>
+            <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-label="Menu">
+                <i data-lucide="menu" class="icon"></i>
+            </button>
+            <nav id="mainNav">
                 <ul>
                     <li><a href="/index.php">Accueil</a></li>
                     <li><a href="/authors.php">Auteurs</a></li>
