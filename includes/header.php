@@ -27,15 +27,15 @@ $isAdmin = $loggedIn && isset($_SESSION['is_admin']) && $_SESSION['is_admin'];
             </button>
             <nav id="mainNav">
                 <ul>
-                    <li><a href="/index.php">Accueil</a></li>
-                    <li><a href="/authors.php">Auteurs</a></li>
-                    <li><a href="/search.php">Recherche</a></li>
+                    <li><a href="/index">Accueil</a></li>
+                    <li><a href="/authors">Auteurs</a></li>
+                    <li><a href="/search">Recherche</a></li>
                     <?php if ($loggedIn): ?>
-                        <li><a href="/suggest.php">Suggérer du contenu</a></li>
+                        <li><a href="/suggest">Suggérer du contenu</a></li>
                         <?php if ($isAdmin): ?>
-                            <li><a href="/admin/dashboard.php">Admin</a></li>
+                            <li><a href="/admin/dashboard">Admin</a></li>
                         <?php endif; ?>
-                        <li><a href="/auth/profile.php"><?php echo htmlspecialchars($_SESSION['username']); ?></a></li>
+                        <li><a href="/auth/profile"><?php echo htmlspecialchars($_SESSION['username']); ?></a></li>
                         <li><a href="/auth/logout.php">Déconnexion</a></li>
                     <?php else: ?>
                         <li><a href="/auth/login.php">Connexion</a></li>
