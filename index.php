@@ -12,8 +12,6 @@
             </div>
         </div>
     </section>
-    
-    
     <section class="about">
         <div class="card">
             <h2>À propos de ce projet</h2>
