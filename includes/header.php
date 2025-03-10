@@ -36,10 +36,10 @@ $isAdmin = $loggedIn && isset($_SESSION['is_admin']) && $_SESSION['is_admin'];
                             <li><a href="/admin/dashboard">Admin</a></li>
                         <?php endif; ?>
                         <li><a href="/auth/profile"><?php echo htmlspecialchars($_SESSION['username']); ?></a></li>
-                        <li><a href="/auth/logout.php">Déconnexion</a></li>
+                        <li><a href="/auth/logout">Déconnexion</a></li>
                     <?php else: ?>
-                        <li><a href="/auth/login.php">Connexion</a></li>
-                        <li><a href="/auth/register.php">Inscription</a></li>
+                        <li><a href="/auth/login">Connexion</a></li>
+                        <li><a href="/auth/register">Inscription</a></li>
                     <?php endif; ?>
                     <li class="dark-mode-container">
                         <label class="dark-mode-toggle">

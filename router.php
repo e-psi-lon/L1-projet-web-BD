@@ -135,11 +135,18 @@ if (in_array($firstSegment, $staticDirs)) {
 // ----- Pages -----
 $router->addRoute('GET', '', 'index.php')
     ->addRoute('GET', 'index', 'index.php')
+    ->addRoute('GET', 'index.php', 'index.php')
     ->addRoute('GET', 'search', 'search.php')
     ->addRoute('GET', 'authors', 'authors.php')
     ->addRoute('GET', 'authors/{author}', ['author.php', ['author' => '$1']])
     ->addRoute('GET', 'authors/{author}/books', ['author_books.php', ['author' => '$1']])
     ->addRoute('GET', 'authors/{author}/books/{book}', ['book.php', ['author' => '$1', 'book' => '$2']]);
+
+// ----- Auth -----
+$router->addRoute('GET', 'auth/login', 'auth/login.php')
+    ->addRoute('GET', 'auth/register', 'auth/register.php')
+    ->addRoute('GET', 'auth/logout', 'auth/logout.php')
+    ->addRoute('GET', 'auth/profile', 'auth/profile.php');
 
 // ----- API Routes -----
 $router->addRoute('ANY', 'api/authors', function() {
@@ -158,4 +165,4 @@ $router->setNotFoundHandler(function() {
 });
 
 // Handle the request
-$router->handleRequest($_SERVER['REQUEST_METHOD'], $_GET['path'] ?? '');
+$router->handleRequest($_SERVER['REQUEST_METHOD'], $requestUri);
