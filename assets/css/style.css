@@ -9,7 +9,7 @@
     --success-color: #4A7C59; 
     --card-bg: #FDF6E3;
     --border-color: #C4A05C;
-    --shadow-color: rgba(0, 0, 0, 0.1);
+    --shadow-color: #0000001a;
     --header-bg: #D4B88B;
 }
 
@@ -23,7 +23,7 @@
     --accent-color: #C14545; 
     --card-bg: #2C3A4B;
     --border-color: #D4B464;
-    --shadow-color: rgba(0, 0, 0, 0.4);
+    --shadow-color: #00000066;
     --header-bg: #364151;
 }
 
@@ -184,6 +184,11 @@ nav li {
 @media (max-width: 720px) {
     .menu-toggle {
         display: flex;
+    }
+
+    .menu-toggle .active {
+        transition: transform 0.2s;
+        transform: rotate(90deg);
     }
     
     nav {
