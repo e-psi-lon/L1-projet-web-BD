@@ -37,7 +37,7 @@ class Router {
     /**
      * Register a new route
      */
-    public function addRoute($method, $path, $handler): static {
+    public function addRoute(string $method, string $path, ?callable $handler): static {
         $this->routes[] = [
             'method' => $method,
             'path' => $path,
@@ -49,7 +49,7 @@ class Router {
     /**
      * Set 404 handler
      */
-    public function setNotFoundHandler($handler): static {
+    public function setNotFoundHandler(callable $handler): static {
         $this->notFoundHandler = $handler;
         return $this;
     }
@@ -57,7 +57,7 @@ class Router {
     /**
      * Match current request against registered routes
      */
-    public function handleRequest($requestMethod, $requestPath) {
+    public function handleRequest(string $requestMethod, string $requestPath): bool {
         // Remove query string
         $requestPath = parse_url($requestPath, PHP_URL_PATH);
         $requestPath = trim($requestPath, '/');
@@ -95,7 +95,7 @@ class Router {
     /**
      * Convert route with placeholders to regex pattern
      */
-    private function convertRouteToPattern($route): string {
+    private function convertRouteToPattern(string $route): string {
         $route = preg_replace('~\{([^/]+)}~', '([^/]+)', $route);
         return '~^' . $route . '$~';
     }
@@ -103,7 +103,7 @@ class Router {
     /**
      * Execute the route handler
      */
-    private function executeHandler($handler, $params = []) {
+    private function executeHandler(string $handler, array $params = []) {
         if (is_callable($handler)) {
             return call_user_func_array($handler, $params);
         } elseif (is_string($handler) && file_exists($handler)) {
@@ -124,7 +124,7 @@ class Router {
 $router = new Router();
 
 // Define static file directories - let web server handle these
-$staticDirs = ['css', 'js', 'images', 'fonts', 'assets'];
+$staticDirs = ['assets'];
 $requestPath = $_GET['path'] ?? '';
 $firstSegment = explode('/', trim($requestPath, '/'))[0] ?? '';
 if (in_array($firstSegment, $staticDirs)) {
