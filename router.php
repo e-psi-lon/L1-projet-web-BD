@@ -32,12 +32,13 @@ if (file_exists($filePath) && isset($mimeTypes[$extension])) {
  */
 class Router {
     private array $routes = [];
+    /** @var callable|null */
     private $notFoundHandler;
 
     /**
      * Register a new route
      */
-    public function addRoute(string $method, string $path, ?callable $handler): static {
+    public function addRoute(string $method, string $path, callable|array|string|null $handler): static {
         $this->routes[] = [
             'method' => $method,
             'path' => $path,
@@ -103,9 +104,9 @@ class Router {
     /**
      * Execute the route handler
      */
-    private function executeHandler(string $handler, array $params = []) {
+    private function executeHandler(string|array|callable $handler, array $params = []): bool {
         if (is_callable($handler)) {
-            return call_user_func_array($handler, $params);
+            return $handler(...$params) === null;
         } elseif (is_string($handler) && file_exists($handler)) {
             extract($params, EXTR_SKIP);
             include $handler;
@@ -122,15 +123,6 @@ class Router {
 
 // Initialize router
 $router = new Router();
-
-// Define static file directories - let web server handle these
-$staticDirs = ['assets'];
-$requestPath = $_GET['path'] ?? '';
-$firstSegment = explode('/', trim($requestPath, '/'))[0] ?? '';
-if (in_array($firstSegment, $staticDirs)) {
-    return false;
-}
-
 // Register routes
 // ----- Pages -----
 $router->addRoute('GET', '', 'index.php')
