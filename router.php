@@ -106,15 +106,28 @@ class Router {
      */
     private function executeHandler(string|array|callable $handler, array $params = []): bool {
         if (is_callable($handler)) {
-            return $handler(...$params) === null;
+            return $handler(...$params) !== false;
         } elseif (is_string($handler) && file_exists($handler)) {
             extract($params, EXTR_SKIP);
             include $handler;
             return true;
         } elseif (is_array($handler) && count($handler) === 2) {
             // Format: ['file.php', ['param1' => 'value1']]
-            extract($handler[1], EXTR_SKIP);
-            include $handler[0];
+            $file = $handler[0];
+            $variables = $handler[1];
+
+            // Replace placeholder values with actual parameters
+            foreach ($variables as $key => $value) {
+                if (is_string($value) && str_starts_with($value, '$')) {
+                    $index = (int)substr($value, 1) - 1;
+                    if (isset($params[$index])) {
+                        $variables[$key] = $params[$index];
+                    }
+                }
+            }
+
+            extract($variables, EXTR_SKIP);
+            require $file;
             return true;
         }
         return false;
