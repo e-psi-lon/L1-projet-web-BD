@@ -144,7 +144,9 @@ $router->addRoute('GET', '', 'index.php')
 
 // ----- Auth -----
 $router->addRoute('GET', 'auth/login', 'auth/login.php')
+    ->addRoute('POST', 'auth/login', 'auth/login.php')
     ->addRoute('GET', 'auth/register', 'auth/register.php')
+    ->addRoute('POST', 'auth/register', 'auth/register.php')
     ->addRoute('GET', 'auth/logout', 'auth/logout.php')
     ->addRoute('GET', 'auth/profile', 'auth/profile.php');
 
