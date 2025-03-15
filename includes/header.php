@@ -1,6 +1,6 @@
 <?php
 session_start();
-// require_once 'config/database.php';
+require_once 'config/utils.php';
 
 // Check if user is logged in
 $loggedIn = isset($_SESSION['user_id']);
@@ -13,7 +13,7 @@ $isAdmin = $loggedIn && isset($_SESSION['is_admin']) && $_SESSION['is_admin'];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Corpus Digitale</title>
     <link rel="stylesheet" href="/assets/css/style.css">
-    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
     <script src="/assets/js/darkMode.js" defer></script>
 </head>
 <body>

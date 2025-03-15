@@ -1,4 +1,4 @@
-<?php include 'includes/header.php'; ?>
+<?php include 'includes/header.php';?>
 
 <div class="container">
     <h1>Auteurs</h1>
@@ -10,7 +10,6 @@
     
     <div class="author-list">
         <?php
-        include 'config/database.php';
         // Get database connection
         $db = getDbConnection();
         
@@ -22,10 +21,10 @@
         if (count($result) > 0) {
             foreach ($result as $row) {
                 echo '<div class="author-card">';
-                echo '<h3><a href="/authors/' . urlencode($row['url_name'] ?? $row['name']) . '">' . htmlspecialchars($row['name']) . '</a></h3>';
+                echo '<h3><a href="/authors/' . toUrlName($row['name']) . '">' . htmlspecialchars($row['name']) . '</a></h3>';
                 echo '<p>(' . ($row['birth_year'] ?: '?') . ' - ' . ($row['death_year'] ?: '?') . ')</p>';
                 echo '<p>' . (strlen($row['biography']) > 150 ? substr(htmlspecialchars($row['biography']), 0, 150) . '...' : htmlspecialchars($row['biography'])) . '</p>';
-                echo '<a href="/authors/' . urlencode($row['url_name'] ?? $row['name']) . '" class="btn btn-secondary">Voir les œuvres</a>';
+                echo '<a href="/authors/' . toUrlName($row['name']) . '" class="btn btn-secondary">Voir les œuvres</a>';
                 echo '</div>';
             }
         } else {

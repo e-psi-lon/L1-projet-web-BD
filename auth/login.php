@@ -18,10 +18,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt->bindParam(":username", $username);
         $stmt->bindParam(":email", $username);
         $stmt->execute();
-        
-        if ($stmt->rowCount() > 0) {
-            $user = $stmt->fetch(PDO::FETCH_ASSOC);
-            
+        $user = $stmt->fetch(PDO::FETCH_ASSOC);
+        if ($user) {
             if (password_verify($password, $user['password'])) {
                 // Store user data in session
                 $_SESSION['user_id'] = $user['user_id'];

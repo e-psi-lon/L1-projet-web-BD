@@ -35,8 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
     if (empty($errors)) {
         // Check if username or email already exists
-        $database = new Database();
-        $db = $database->getConnection();
+        $db = getDbConnection();
         
         $query = "SELECT COUNT(*) FROM users WHERE username = :username OR email = :email";
         $stmt = $db->prepare($query);
@@ -62,6 +61,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $errors[] = "Une erreur s'est produite lors de l'inscription. Veuillez réessayer.";
             }
         }
+        $stmt = null;
+        $db = null;
     }
 }
 ?>
