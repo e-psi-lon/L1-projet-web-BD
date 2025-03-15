@@ -1,4 +1,4 @@
--- Database schema for Litterae Aeternae
+-- Database schema for Corpus Digitale
 
 -- Authors table
 CREATE TABLE authors (

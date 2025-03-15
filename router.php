@@ -27,7 +27,7 @@ if (file_exists($filePath) && isset($mimeTypes[$extension])) {
 }
 
 /**
- * Router for Litterae Aeternae
+ * Router for Corpus Digitale
  * Handles all incoming requests and routes them to the appropriate controllers
  */
 class Router {

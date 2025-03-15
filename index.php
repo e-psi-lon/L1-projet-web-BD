@@ -3,19 +3,19 @@
 <div class="container">
     <section class="hero">
         <div class="card">
-            <h2>Bienvenue sur Litterae Aeternae</h2>
+            <h2>Bienvenue sur Corpus Digitale</h2>
             <p>Explorez les textes anciens de l'antiquité classique.</p>
             <p>Parcourez les auteurs, les livres et les chapitres, ou recherchez un contenu spécifique.</p>
             <div class="hero-actions">
-                <a href="/authors.php" class="btn">Parcourir les auteurs</a>
-                <a href="/search.php" class="btn btn-secondary">Rechercher des textes</a>
+                <a href="/authors" class="btn">Parcourir les auteurs</a>
+                <a href="/search" class="btn btn-secondary">Rechercher des textes</a>
             </div>
         </div>
     </section>
     <section class="about">
         <div class="card">
             <h2>À propos de ce projet</h2>
-            <p>Litterae Aeternae est conçu pour fournir aux étudiants, chercheurs et passionnés un accès facile aux textes classiques importants. 
+            <p>Corpus Digitale est conçu pour fournir aux étudiants, chercheurs et passionnés un accès facile aux textes classiques importants.
                Contrairement à d'autres sites, notre site offre :</p>
             <ul>
                 <li>Une interface moderne pour une lecture confortable</li>

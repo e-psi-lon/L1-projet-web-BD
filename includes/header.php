@@ -11,7 +11,7 @@ $isAdmin = $loggedIn && isset($_SESSION['is_admin']) && $_SESSION['is_admin'];
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Litterae Aeternae</title>
+    <title>Corpus Digitale</title>
     <link rel="stylesheet" href="/assets/css/style.css">
     <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
     <script src="/assets/js/darkMode.js" defer></script>
@@ -20,7 +20,7 @@ $isAdmin = $loggedIn && isset($_SESSION['is_admin']) && $_SESSION['is_admin'];
     <header>
         <div class="container">
             <div class="logo">
-                <h1><a onclick='window.location.href="/"'>Litterae Aeternae</a></h1>
+                <h1><a onclick='window.location.href="/"'>Corpus Digitale</a></h1>
             </div>
             <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-label="Menu">
                 <i data-lucide="menu" class="icon"></i>
