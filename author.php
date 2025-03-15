@@ -11,8 +11,7 @@ $author_info = null;
 $books = [];
 
 // Get database connection
-$database = new Database();
-$db = $database->getConnection();
+$db = getDbConnection();
 
 // Get author information by name (using URL-safe name)
 $query = "SELECT * FROM authors WHERE url_name = :author_name OR name = :author_name";
@@ -33,8 +32,12 @@ if ($stmt->rowCount() > 0) {
     while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
         $books[] = $row;
     }
+    $stmt = null;
+    $db = null;
 } else {
     header("Location: /authors");
+    $stmt = null;
+    $db = null;
     exit();
 }
 ?>

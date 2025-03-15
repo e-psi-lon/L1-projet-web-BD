@@ -10,8 +10,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (empty($username) || empty($password)) {
         $errors[] = "Veuillez saisir à la fois votre nom d'utilisateur/email et votre mot de passe";
     } else {
-        $database = new Database();
-        $db = $database->getConnection();
+        $db = getDbConnection();
         
         // Check if input is email or username
         $query = "SELECT * FROM users WHERE username = :username OR email = :email LIMIT 1";
@@ -38,6 +37,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         } else {
             $errors[] = "Nom d'utilisateur ou email non trouvé";
         }
+        $stmt = null;
+        $db = null;
     }
 }
 ?>

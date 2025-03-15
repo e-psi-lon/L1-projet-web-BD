@@ -10,17 +10,17 @@
     
     <div class="author-list">
         <?php
+        include 'config/database.php';
         // Get database connection
-        $database = new Database();
-        $db = $database->getConnection();
+        $db = getDbConnection();
         
         // Query all authors
         $query = "SELECT * FROM authors ORDER BY name";
         $stmt = $db->prepare($query);
         $stmt->execute();
-        
-        if ($stmt->rowCount() > 0) {
-            while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+        $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        if (count($result) > 0) {
+            foreach ($result as $row) {
                 echo '<div class="author-card">';
                 echo '<h3><a href="/authors/' . urlencode($row['url_name'] ?? $row['name']) . '">' . htmlspecialchars($row['name']) . '</a></h3>';
                 echo '<p>(' . ($row['birth_year'] ?: '?') . ' - ' . ($row['death_year'] ?: '?') . ')</p>';
@@ -31,6 +31,8 @@
         } else {
             echo '<p>Aucun auteur trouvé dans la base de données.</p>';
         }
+        $stmt = null;
+        $db = null;
         ?>
     </div>
 </div>
