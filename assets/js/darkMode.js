@@ -1,7 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Initialize Lucide icons
-    lucide.createIcons();
-    
     const darkModeToggle = document.getElementById('darkModeToggle');
     
     // Check for saved dark mode preference or respect OS preference

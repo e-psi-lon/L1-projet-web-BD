@@ -1,6 +1,11 @@
-// Main JavaScript file for Litterae Aeternae
+// Main JavaScript file for Corpus Digitale
 
 document.addEventListener('DOMContentLoaded', function() {
+    try {
+        lucide.createIcons();
+    } catch (error) {
+        console.error('Lucide icons could not be initialized:', error);
+    }
     // Initialize interactive elements
     initializeForms();
     initializeSearchFeatures();
