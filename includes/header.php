@@ -14,7 +14,6 @@ $isAdmin = $loggedIn && isset($_SESSION['is_admin']) && $_SESSION['is_admin'];
     <title>Corpus Digitale</title>
     <link rel="stylesheet" href="/assets/css/style.css">
     <script src="https://unpkg.com/lucide@latest"></script>
-    <script src="/assets/js/darkMode.js" defer></script>
 </head>
 <body>
     <header>
