@@ -59,38 +59,43 @@ class Router {
      * Match current request against registered routes
      */
     public function handleRequest(string $requestMethod, string $requestPath): bool {
-        // Remove query string
-        $requestPath = parse_url($requestPath, PHP_URL_PATH);
-        $requestPath = trim($requestPath, '/');
+        try {
+            // Remove query string
+            $requestPath = parse_url($requestPath, PHP_URL_PATH);
+            $requestPath = trim($requestPath, '/');
 
-        foreach ($this->routes as $route) {
-            // Skip routes that don't match the request method
-            if ($route['method'] !== 'ANY' && $route['method'] !== $requestMethod) {
-                continue;
+            foreach ($this->routes as $route) {
+                // Skip routes that don't match the request method
+                if ($route['method'] !== 'ANY' && $route['method'] !== $requestMethod) {
+                    continue;
+                }
+
+                // Handle exact matches
+                if ($route['path'] === $requestPath) {
+                    return $this->executeHandler($route['handler']);
+                }
+
+                // Handle pattern matching with parameters
+                $pattern = $this->convertRouteToPattern($route['path']);
+                if (preg_match($pattern, $requestPath, $matches)) {
+                    array_shift($matches); // Remove full match
+                    return $this->executeHandler($route['handler'], $matches);
+                }
             }
 
-            // Handle exact matches
-            if ($route['path'] === $requestPath) {
-                return $this->executeHandler($route['handler']);
+            // No matching route found, execute 404 handler
+            if ($this->notFoundHandler) {
+                return $this->executeHandler($this->notFoundHandler);
             }
 
-            // Handle pattern matching with parameters
-            $pattern = $this->convertRouteToPattern($route['path']);
-            if (preg_match($pattern, $requestPath, $matches)) {
-                array_shift($matches); // Remove full match
-                return $this->executeHandler($route['handler'], $matches);
-            }
+            // Default 404 response if no handler defined
+            header("HTTP/1.0 404 Not Found");
+            echo "404 - Page not found";
+            return false;
+        } catch (\Throwable $e) {
+            include "500.php";
+            return false;
         }
-
-        // No matching route found, execute 404 handler
-        if ($this->notFoundHandler) {
-            return $this->executeHandler($this->notFoundHandler);
-        }
-
-        // Default 404 response if no handler defined
-        header("HTTP/1.0 404 Not Found");
-        echo "404 - Page not found";
-        return false;
     }
 
     /**
