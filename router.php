@@ -93,6 +93,8 @@ class Router {
             echo "404 - Page not found";
             return false;
         } catch (\Throwable $e) {
+            header("HTTP/1.0 500 Internal Server Error");
+            ob_clean();
             include "500.php";
             return false;
         }
@@ -138,6 +140,8 @@ class Router {
         return false;
     }
 }
+
+ob_start();
 
 // Initialize router
 $router = new Router();
