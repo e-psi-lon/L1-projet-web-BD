@@ -34,7 +34,7 @@ $isAdmin = $loggedIn && isset($_SESSION['is_admin']) && $_SESSION['is_admin'];
                         <?php if ($isAdmin): ?>
                             <li><a onclick='window.location.href="/admin/dashboard"'>Admin</a></li>
                         <?php endif; ?>
-                        <li><a onclick='window.location.href="/auth/profile"'><?php echo htmlspecialchars($_SESSION['username']); ?></a></li>
+                        <li><a onclick='window.location.href="/account"'><?php echo htmlspecialchars($_SESSION['username']); ?></a></li>
                         <li><a onclick='window.location.href="/auth/logout"'>Déconnexion</a></li>
                     <?php else: ?>
                         <li><a onclick='window.location.href="/auth/login"'>Connexion</a></li>

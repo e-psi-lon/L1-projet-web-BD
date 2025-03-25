@@ -155,3 +155,23 @@ function initializeResponsiveMenu() {
     }
 }
 
+function editAccount() {
+    const form = document.getElementById('accountForm');
+    const inputs = form.querySelectorAll('input, select');
+    const editButton = document.getElementById('editButton');
+    const saveButton = document.getElementById('saveButton');
+    const cancelButton = document.getElementById('cancelButton');
+
+    editButton.style.display = 'none';
+    saveButton.style.display = 'inline-block';
+    cancelButton.style.display = 'inline-block';
+
+    inputs.forEach(input => {
+        input.removeAttribute('disabled');
+    });
+
+    cancelButton.addEventListener('click', function() {
+        window.location.reload();
+    });
+
+}

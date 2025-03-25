@@ -156,13 +156,13 @@ $router->addRoute('GET', '', 'index.php')
     ->addRoute('GET', 'authors/{author}/books', ['author_books.php', ['author' => '$1']])
     ->addRoute('GET', 'authors/{author}/books/{book}', ['book.php', ['author' => '$1', 'book' => '$2']]);
 
-// ----- Auth -----
+// ----- Auth & Account -----
 $router->addRoute('GET', 'auth/login', 'auth/login.php')
     ->addRoute('POST', 'auth/login', 'auth/login.php')
     ->addRoute('GET', 'auth/register', 'auth/register.php')
     ->addRoute('POST', 'auth/register', 'auth/register.php')
     ->addRoute('GET', 'auth/logout', 'auth/logout.php')
-    ->addRoute('GET', 'auth/profile', 'auth/profile.php');
+    ->addRoute('ANY', 'account', 'auth/account.php');
 
 // ----- API Routes -----
 $router->addRoute('ANY', 'api/authors', function() {
