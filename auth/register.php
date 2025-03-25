@@ -73,7 +73,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         
         <?php if ($success): ?>
             <div class="alert alert-success">
-                Inscription réussie ! Vous pouvez maintenant vous <a href="/auth/login.php">connecter</a>.
+                Inscription réussie ! Vous pouvez maintenant vous <a href="/auth/login">connecter</a>.
             </div>
         <?php else: ?>
             <?php if (!empty($errors)): ?>
