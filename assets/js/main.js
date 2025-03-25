@@ -1,6 +1,6 @@
 // Main JavaScript file for Corpus Digitale
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', () => {
     // Initialize Lucide icons
     try {
         lucide.createIcons();
@@ -19,7 +19,7 @@ function initializeForms() {
     const forms = document.querySelectorAll('form');
 
     forms.forEach(form => {
-        form.addEventListener('submit', function(event) {
+        form.addEventListener('submit', (event) => {
             const requiredFields = form.querySelectorAll('[required]');
             let valid = true;
 
@@ -74,7 +74,7 @@ function initializeSearchFeatures() {
     const searchInput = document.getElementById('search-input');
     if (!searchInput) return;
 
-    searchInput.addEventListener('input', function() {
+    searchInput.addEventListener('input', () => {
         if (this.value.length >= 3) {
             performLiveSearch(this.value);
         }
@@ -137,7 +137,7 @@ function initializeResponsiveMenu() {
     const mainNav = document.getElementById('mainNav');
     
     if (menuToggle && mainNav) {
-        menuToggle.addEventListener('click', function() {
+        menuToggle.addEventListener('click', () => {
             mainNav.classList.toggle('active');
             
             // Optional: toggle aria-expanded attribute for accessibility
@@ -146,7 +146,7 @@ function initializeResponsiveMenu() {
         });
         
         // Close menu when clicking outside
-        document.addEventListener('click', function(event) {
+        document.addEventListener('click', (event) => {
             if (!mainNav.contains(event.target) && !menuToggle.contains(event.target) && mainNav.classList.contains('active')) {
                 mainNav.classList.remove('active');
                 menuToggle.setAttribute('aria-expanded', 'false');
@@ -170,7 +170,7 @@ function editAccount() {
         input.removeAttribute('disabled');
     });
 
-    cancelButton.addEventListener('click', function() {
+    cancelButton.addEventListener('click', () => {
         window.location.reload();
     });
 
