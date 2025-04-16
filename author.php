@@ -66,11 +66,10 @@ if ($author_info) {
             <div class="book-list">
                 <?php foreach ($books as $book): ?>
                     <div class="book-card">
-                        <h3><a href="/authors/<?php echo $author; ?>/books/<?php echo toUrlName($book['name'] ?? $book['book_id']); ?>"><?php echo htmlspecialchars($book['title']); ?></a></h3>
+                        <h3><a href="/authors/<?php echo $author; ?>/books/<?php echo toUrlName($book['title'] ?? $book['book_id']); ?>"><?php echo htmlspecialchars($book['title']); ?></a></h3>
                         <p>Année: <?php echo ($book['publication_year'] ?: 'Inconnue'); ?></p>
-                        <p>Langue: <?php echo htmlspecialchars($book['language']); ?></p>
                         <p><?php echo (strlen($book['description']) > 100 ? substr(htmlspecialchars($book['description']), 0, 100) . '...' : htmlspecialchars($book['description'])); ?></p>
-                        <a href="/authors/<?php echo $author; ?>/books/<?php echo toUrlName($book['name'] ?? $book['book_id']); ?>" class="btn">En savoir plus</a>
+                        <a href="/authors/<?php echo $author; ?>/books/<?php echo toUrlName($book['title'] ?? $book['book_id']); ?>" class="btn">En savoir plus</a>
                     </div>
                 <?php endforeach; ?>
             </div>

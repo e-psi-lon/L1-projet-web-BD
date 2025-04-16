@@ -62,7 +62,6 @@ if ($result) {
 $stmt = null;
 $db = null;
 ?>
-
     <div class="container">
         <?php if ($book_info): ?>
             <div class="book-header">
@@ -103,6 +102,7 @@ $db = null;
                             <p><?php echo (strlen($chapter['content']) > 100 ?
                                     substr(htmlspecialchars($chapter['content']), 0, 100) . '...' :
                                     htmlspecialchars($chapter['content'])); ?></p>
+                            <a href="/authors/<?php echo toUrlName($author_info['name']); ?>/books/<?php echo toUrlName($book_info['title']); ?>/chapters/<?php echo $chapter['chapter_number']; ?>" class="btn">Lire le chapitre</a>
                         </div>
                     <?php endforeach; ?>
                 </div>
