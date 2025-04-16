@@ -22,9 +22,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if ($user) {
             if (password_verify($password, $user['password'])) {
                 // Store user data in session
-                $_SESSION['user_id'] = $user['user_id'];
-                $_SESSION['username'] = $user['username'];
-                $_SESSION['is_admin'] = (bool)$user['is_admin'];
+                $_SESSION['user'] = [
+                    'id' => $user['user_id'],
+                    'username' => $user['username'],
+                    'email' => $user['email'],
+                    'is_admin' => $user['is_admin']
+                ];
                 
                 // Redirect to homepage
                 header("Location: /index");

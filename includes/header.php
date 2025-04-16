@@ -3,8 +3,8 @@ session_start();
 require_once 'config/utils.php';
 
 // Check if user is logged in
-$loggedIn = isset($_SESSION['user_id']);
-$isAdmin = $loggedIn && isset($_SESSION['is_admin']) && $_SESSION['is_admin'];
+$loggedIn = isset($_SESSION['user']);
+$isAdmin = $loggedIn && isset($_SESSION['user']) && $_SESSION['user']['is_admin'];
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -13,7 +13,6 @@ $isAdmin = $loggedIn && isset($_SESSION['is_admin']) && $_SESSION['is_admin'];
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Corpus Digitale</title>
     <link rel="stylesheet" href="/assets/css/style.css">
-    <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
     <header>
@@ -34,7 +33,7 @@ $isAdmin = $loggedIn && isset($_SESSION['is_admin']) && $_SESSION['is_admin'];
                         <?php if ($isAdmin): ?>
                             <li><a onclick='window.location.href="/admin/dashboard"'>Admin</a></li>
                         <?php endif; ?>
-                        <li><a onclick='window.location.href="/account"'><?php echo htmlspecialchars($_SESSION['username']); ?></a></li>
+                        <li><a onclick='window.location.href="/account"'><?php echo htmlspecialchars($_SESSION['user']["username"]); ?></a></li>
                         <li><a onclick='window.location.href="/auth/logout"'>Déconnexion</a></li>
                     <?php else: ?>
                         <li><a onclick='window.location.href="/auth/login"'>Connexion</a></li>

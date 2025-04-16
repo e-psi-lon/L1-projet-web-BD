@@ -162,7 +162,8 @@ $router->addRoute('GET', 'auth/login', 'auth/login.php')
     ->addRoute('GET', 'auth/register', 'auth/register.php')
     ->addRoute('POST', 'auth/register', 'auth/register.php')
     ->addRoute('GET', 'auth/logout', 'auth/logout.php')
-    ->addRoute('ANY', 'account', 'auth/account.php');
+    ->addRoute('GET', 'account', 'auth/account.php')
+    ->addRoute('POST', 'account', 'auth/account.php');
 
 // ----- API Routes -----
 $router->addRoute('ANY', 'api/authors', function() {

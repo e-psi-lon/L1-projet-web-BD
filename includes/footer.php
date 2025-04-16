@@ -4,6 +4,7 @@
             <p>&copy; <?php echo date("Y"); ?> Corpus Digitale - Projet Universitaire</p>
         </div>
     </footer>
-    <script src="/assets/js/main.js"></script>
+    <script src="https://unpkg.com/lucide@latest" defer></script>
+    <script src="/assets/js/main.js" defer></script>
 </body>
 </html>
