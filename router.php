@@ -154,7 +154,8 @@ $router->addRoute('GET', '', 'index.php')
     ->addRoute('GET', 'authors', 'authors.php')
     ->addRoute('GET', 'authors/{author}', ['author.php', ['author' => '$1']])
     ->addRoute('GET', 'authors/{author}/books', ['author_books.php', ['author' => '$1']])
-    ->addRoute('GET', 'authors/{author}/books/{book}', ['book.php', ['author' => '$1', 'book' => '$2']]);
+    ->addRoute('GET', 'authors/{author}/books/{book}', ['book.php', ['author' => '$1', 'book' => '$2']])
+    ->addRoute('GET', 'authors/{author}/books/{book}/chapters/{chapter}', ['chapter.php', ['author' => '$1', 'book' => '$2', 'chapter' => '$3']]);
 
 // ----- Auth & Account -----
 $router->addRoute('GET', 'auth/login', 'auth/login.php')
