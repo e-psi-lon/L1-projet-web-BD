@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once 'config/utils.php';
+require_once 'includes/utils.php';
 
 // Check if user is logged in
 $loggedIn = isset($_SESSION['user']);
