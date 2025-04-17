@@ -6,7 +6,7 @@ header('Content-Type: application/json');
 $db = getDbConnection();
 
 // Query all authors
-$query = "SELECT * FROM authors ORDER BY name";
+$query = "SELECT * FROM books ORDER BY title";
 $stmt = $db->prepare($query);
 $stmt->execute();
 
