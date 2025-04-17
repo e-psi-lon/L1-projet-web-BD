@@ -39,11 +39,12 @@
 <script>
 function filterAuthors() {
     const searchTerm = document.getElementById('author-search').value.toLowerCase();
+    const search = searchTerm.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
     const authors = document.querySelectorAll('.author-card');
     
     authors.forEach(author => {
-        const authorName = author.querySelector('h3').textContent.toLowerCase();
-        if (authorName.includes(searchTerm)) {
+        const authorName = author.querySelector('h3').textContent.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+        if (authorName.includes(search) || searchTerm === '') {
             author.style.display = '';
         } else {
             author.style.display = 'none';

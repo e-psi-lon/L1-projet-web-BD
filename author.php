@@ -1,7 +1,7 @@
 <?php
 include 'includes/header.php';
 
-// Check if author parameter is provided
+// Check if the author parameter is provided
 if (empty($author)) {
     header("Location: /authors");
     exit();
