@@ -10,7 +10,6 @@ if (!isset($_GET['q']) || strlen($_GET['q']) < 3) {
 $search = $_GET['q'];
 $db = getDbConnection();
 
-// Requête simplifiée pour l'autocomplétion
 $query = "
 SELECT 
     books.title AS book_title,

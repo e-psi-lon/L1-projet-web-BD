@@ -101,7 +101,7 @@ function performLiveSearch(query) {
 }
 
 function displaySearchResults(results, searchTerm, container) {
-    // Vider le conteneur de résultats
+    // Empty the results container
     container.innerHTML = '';
 
     if (results.length === 0) {
@@ -113,7 +113,7 @@ function displaySearchResults(results, searchTerm, container) {
         return;
     }
 
-    // Ajouter le titre des résultats
+    // Add a title to the results
     const titleElement = document.createElement('h2');
     titleElement.textContent = `Résultats de recherche pour "${searchTerm}"`;
     container.appendChild(titleElement);
@@ -125,15 +125,15 @@ function displaySearchResults(results, searchTerm, container) {
 
     results.forEach(result => {
         if (currentBook !== result.book_title || currentAuthor !== result.author_name) {
-            // Début d'un nouveau livre
+            // Start of a new book
             currentBook = result.book_title;
             currentAuthor = result.author_name;
 
-            // Créer un nouvel élément pour le livre
+            // Create a new book element
             bookElement = document.createElement('div');
             bookElement.className = 'search-result-book card';
 
-            // Créer l'en-tête du livre
+            // Create the book header
             const bookHeader = document.createElement('div');
             bookHeader.className = 'book-header';
 
@@ -153,45 +153,45 @@ function displaySearchResults(results, searchTerm, container) {
             bookHeader.appendChild(bookTitle);
             bookHeader.appendChild(authorParagraph);
 
-            // Créer le conteneur des chapitres
+            // Create a new chapters container
             chaptersContainer = document.createElement('div');
             chaptersContainer.className = 'book-chapters';
 
-            // Assembler le livre
+            // Combine elements into a single book element
             bookElement.appendChild(bookHeader);
             bookElement.appendChild(chaptersContainer);
 
-            // Ajouter le livre au conteneur de résultats
+            // Add the book element to the main container
             container.appendChild(bookElement);
         }
 
-        // Créer un élément pour le chapitre
+        // Create a new chapter element
         const chapterElement = document.createElement('div');
         chapterElement.className = 'search-result-chapter';
 
-        // Créer le titre du chapitre
+        // Create the book title
         const chapterTitle = document.createElement('h4');
         const chapterLink = document.createElement('a');
         chapterLink.href = `/authors/${result.url_name}/books/${result.url_title}/chapters/${result.chapter_number}`;
         chapterLink.textContent = result.chapter_title ? result.chapter_title : `Chapitre ${result.chapter_number}`;
         chapterTitle.appendChild(chapterLink);
 
-        // Créer l'aperçu du texte
+        // Create the text preview
         const previewElement = document.createElement('div');
         previewElement.className = 'chapter-preview';
         previewElement.innerHTML = truncateText(result.content, 150, searchTerm);
 
-        // Assembler le chapitre
+        // Assemble the chapter element
         chapterElement.appendChild(chapterTitle);
         chapterElement.appendChild(previewElement);
 
-        // Ajouter le chapitre au conteneur des chapitres
+        // Append the chapter element to the chapters container
         chaptersContainer.appendChild(chapterElement);
     });
 }
 
 function truncateText(text, length = 150, searchTerm = '') {
-    // Supprimer les balises HTML
+    // Remove any HTML tags
     text = text.replace(/<[^>]*>/g, '');
 
     if (searchTerm && searchTerm.trim() !== '') {
@@ -209,7 +209,7 @@ function truncateText(text, length = 150, searchTerm = '') {
     }
 
     if (searchTerm && searchTerm.trim() !== '') {
-        // Échapper les caractères spéciaux de RegExp
+        // Escape special regex characters
         const escapedSearchTerm = searchTerm.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
         const regex = new RegExp(`(${escapedSearchTerm})`, 'gi');
         text = text.replace(regex, '<mark>$1</mark>');

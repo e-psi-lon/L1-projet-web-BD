@@ -17,12 +17,12 @@
 
         <div class="search-results" id="search-results">
             <?php
-            // Si une recherche a été effectuée
+            // If a request was made
             if (!empty($_GET['q'])) {
                 $search = $_GET['q'];
                 $db = getDbConnection();
 
-                // Requête pour trouver les correspondances
+                // Request to find matches
                 $query = "
                 SELECT 
                     books.title AS book_title,
@@ -61,10 +61,10 @@
 
                     foreach ($results as $result) {
                         if ($currentBook != $result['book_title'] || $currentAuthor != $result['author_name']) {
-                            // Début d'un nouveau livre
+                            // Start of a new book
                             if ($currentBook != '') {
-                                echo '</div>'; // Ferme le conteneur des chapitres
-                                echo '</div>'; // Ferme la carte du livre
+                                echo '</div>'; // End the chapter container
+                                echo '</div>'; // End the book card
                             }
 
                             $currentBook = $result['book_title'];
@@ -78,7 +78,7 @@
                             echo '<div class="book-chapters">';
                         }
 
-                        // Affiche chaque chapitre trouvé
+                        // Show all found chapters
                         $chapterTitle = $result['chapter_title'] ? htmlspecialchars($result['chapter_title']) : 'Chapitre ' . $result['chapter_number'];
                         $previewText = truncateText(strip_tags($result['content']), 150, $search);
 
@@ -89,8 +89,8 @@
                     }
 
                     if ($currentBook != '') {
-                        echo '</div>'; // Ferme le conteneur des chapitres
-                        echo '</div>'; // Ferme la carte du livre
+                        echo '</div>'; // ENd the chapter container
+                        echo '</div>'; // End the book card
                     }
                 } else {
                     echo '<div class="alert alert-danger">';
