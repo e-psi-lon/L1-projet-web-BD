@@ -79,3 +79,6 @@ if ($author_info) {
         <p>Auteur non trouvé.</p>
     <?php endif; ?>
 </div>
+<?php
+include 'includes/footer.php';
+?>
