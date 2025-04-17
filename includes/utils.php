@@ -21,13 +21,3 @@ function getDbConnection() {
         exit();
     }
 }
-
-function toUrlName(string $name): string {
-    // Replace spaces with dashes
-    return str_replace(' ', '-', $name);
-}
-
-function fromUrlName(string $url_name): string {
-    // Replace dashes with spaces
-    return str_replace('-', ' ', $url_name);
-}

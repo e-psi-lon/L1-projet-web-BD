@@ -21,10 +21,10 @@
         if (count($result) > 0) {
             foreach ($result as $row) {
                 echo '<div class="author-card">';
-                echo '<h3><a href="/authors/' . toUrlName($row['name']) . '">' . htmlspecialchars($row['name']) . '</a></h3>';
+                echo '<h3><a href="/authors/' . $row['url_name'] . '">' . htmlspecialchars($row['name']) . '</a></h3>';
                 echo '<p>(' . ($row['birth_year'] ?: '?') . ' - ' . ($row['death_year'] ?: '?') . ')</p>';
                 echo '<p>' . (strlen($row['biography']) > 150 ? substr(htmlspecialchars($row['biography']), 0, 150) . '...' : htmlspecialchars($row['biography'])) . '</p>';
-                echo '<a href="/authors/' . toUrlName($row['name']) . '" class="btn btn-secondary">Voir les œuvres</a>';
+                echo '<a href="/authors/' . $row['url_name'] . '" class="btn btn-secondary">Voir les œuvres</a>';
                 echo '</div>';
             }
         } else {
@@ -41,7 +41,7 @@ function filterAuthors() {
     const searchTerm = document.getElementById('author-search').value.toLowerCase();
     const search = searchTerm.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
     const authors = document.querySelectorAll('.author-card');
-    
+
     authors.forEach(author => {
         const authorName = author.querySelector('h3').textContent.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
         if (authorName.includes(search) || searchTerm === '') {

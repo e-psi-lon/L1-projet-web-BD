@@ -31,12 +31,10 @@ $query = "SELECT
     chapters.title AS chapter_title, chapters.chapter_number, chapters.content
 FROM chapters
     JOIN books ON chapters.book_id = books.book_id
-WHERE books.title = :title
+WHERE books.url_title = :title
     AND chapters.chapter_number = :chapter_number";
 $stmt = $db->prepare($query);
-$author_db = fromUrlName($author);
-$book_db = fromUrlName($book);
-$stmt->bindParam(":title", $book_db);
+$stmt->bindParam(":title", $book);
 $stmt->bindParam(":chapter_number", $chapter);
 $stmt->execute();
 $result = $stmt->fetch(PDO::FETCH_ASSOC);

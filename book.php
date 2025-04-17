@@ -21,29 +21,29 @@ $db = getDbConnection();
 
 // Get book information by name (using URL-safe name)
 $query = "SELECT 
-    books.book_id, books.title, books.publication_year, books.description,
-    authors.name, authors.birth_year, authors.death_year, authors.biography
+    books.book_id, books.url_title, books.title, books.publication_year, books.description,
+    authors.name, authors.url_name, authors.birth_year, authors.death_year, authors.biography
 FROM books
     JOIN authors ON books.author_id = authors.author_id
-WHERE books.title = :title
-    AND authors.name = :author_name";
+WHERE books.url_title = :title
+    AND authors.url_name = :author_name";
 $stmt = $db->prepare($query);
-$author_db = fromUrlName($author);
-$book_db = fromUrlName($book);
-$stmt->bindParam(":author_name", $author_db);
-$stmt->bindParam(":title", $book_db);
+$stmt->bindParam(":author_name", $author);
+$stmt->bindParam(":title", $book);
 $stmt->execute();
 $result = $stmt->fetch(PDO::FETCH_ASSOC);
 
 if ($result) {
     $author_info = [
         'name' => $result['name'],
+        'url_name' => $result['url_name'],
         'birth_year' => $result['birth_year'],
         'death_year' => $result['death_year'],
         'biography' => $result['biography']
     ];
     $book_info = [
         'title' => $result['title'],
+        'url_title' => $result['url_title'],
         'publication_year' => $result['publication_year'],
         'description' => $result['description']
     ];
@@ -80,7 +80,7 @@ $db = null;
 
             <div class="author-section card">
                 <h2 class="card-title">À propos de l'auteur</h2>
-                <h3><a href="/authors/<?php echo toUrlName($author_info['name']); ?>"><?php echo htmlspecialchars($author_info['name']); ?></a></h3>
+                <h3><a href="/authors/<?php echo $author_info['url_name']; ?>"><?php echo htmlspecialchars($author_info['name']); ?></a></h3>
                 <p class="author-years">
                     <?php echo ($author_info['birth_year'] ?: '?'); ?> -
                     <?php echo ($author_info['death_year'] ?: '?'); ?>
@@ -90,7 +90,7 @@ $db = null;
                         substr(htmlspecialchars($author_info['biography']), 0, 200) . '...' :
                         htmlspecialchars($author_info['biography'])); ?>
                 </div>
-                <a href="/authors/<?php echo toUrlName($author_info['name']); ?>" class="btn">Voir la page de l'auteur</a>
+                <a href="/authors/<?php echo $author_info['url_name']; ?>" class="btn">Voir la page de l'auteur</a>
             </div>
 
             <?php if (count($chapters) > 0): ?>
@@ -102,7 +102,7 @@ $db = null;
                             <p><?php echo (strlen($chapter['content']) > 100 ?
                                     substr(htmlspecialchars($chapter['content']), 0, 100) . '...' :
                                     htmlspecialchars($chapter['content'])); ?></p>
-                            <a href="/authors/<?php echo toUrlName($author_info['name']); ?>/books/<?php echo toUrlName($book_info['title']); ?>/chapters/<?php echo $chapter['chapter_number']; ?>" class="btn">Lire le chapitre</a>
+                            <a href="/authors/<?php echo $author_info['url_name']; ?>/books/<?php echo $book_info['url_title']; ?>/chapters/<?php echo $chapter['chapter_number']; ?>" class="btn">Lire le chapitre</a>
                         </div>
                     <?php endforeach; ?>
                 </div>

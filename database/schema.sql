@@ -4,6 +4,7 @@
 CREATE TABLE authors (
     author_id INTEGER PRIMARY KEY AUTOINCREMENT,
     name VARCHAR(100) NOT NULL,
+    url_name VARCHAR(100) NOT NULL UNIQUE,
     birth_year INTEGER,
     death_year INTEGER,
     biography TEXT
@@ -14,6 +15,7 @@ CREATE TABLE books (
     book_id INTEGER PRIMARY KEY AUTOINCREMENT,
     author_id INTEGER NOT NULL,
     title VARCHAR(255) NOT NULL,
+    url_title VARCHAR(255) NOT NULL,
     publication_year INTEGER,
     description TEXT,
     FOREIGN KEY (author_id) REFERENCES authors(author_id)

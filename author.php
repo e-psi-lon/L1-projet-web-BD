@@ -14,10 +14,9 @@ $books = [];
 $db = getDbConnection();
 
 // Get author information by name (using URL-safe name)
-$query = "SELECT * FROM authors WHERE name = :author_name";
+$query = "SELECT * FROM authors WHERE authors.url_name = :author_name";
 $stmt = $db->prepare($query);
-$db_name = fromUrlName($author);
-$stmt->bindParam(":author_name", $db_name);
+$stmt->bindParam(":author_name", $author);
 $stmt->execute();
 $author_info = $stmt->fetch(PDO::FETCH_ASSOC);
 
@@ -66,10 +65,10 @@ if ($author_info) {
             <div class="book-list">
                 <?php foreach ($books as $book): ?>
                     <div class="book-card">
-                        <h3><a href="/authors/<?php echo $author; ?>/books/<?php echo toUrlName($book['title'] ?? $book['book_id']); ?>"><?php echo htmlspecialchars($book['title']); ?></a></h3>
+                        <h3><a href="/authors/<?php echo $author; ?>/books/<?php echo $book['url_title'] ?? $book['book_id']; ?>"><?php echo htmlspecialchars($book['title']); ?></a></h3>
                         <p>Année: <?php echo ($book['publication_year'] ?: 'Inconnue'); ?></p>
                         <p><?php echo (strlen($book['description']) > 100 ? substr(htmlspecialchars($book['description']), 0, 100) . '...' : htmlspecialchars($book['description'])); ?></p>
-                        <a href="/authors/<?php echo $author; ?>/books/<?php echo toUrlName($book['title'] ?? $book['book_id']); ?>" class="btn">En savoir plus</a>
+                        <a href="/authors/<?php echo $author; ?>/books/<?php echo $book['url_title'] ?? $book['book_id']; ?>" class="btn">En savoir plus</a>
                     </div>
                 <?php endforeach; ?>
             </div>
