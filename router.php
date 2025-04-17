@@ -174,6 +174,10 @@ $router->addRoute('ANY', 'api/authors', function() {
     ->addRoute('ANY', 'api/books', function() {
         header('Content-Type: application/json');
         include 'api/books.php';
+    })
+    ->addRoute('ANY', 'api/search', function() {
+        header('Content-Type: application/json');
+        include 'api/search.php';
     });
 
 // Set 404 handler
