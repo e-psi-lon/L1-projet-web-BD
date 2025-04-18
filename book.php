@@ -94,7 +94,7 @@ $db = null;
             </div>
 
             <?php if (count($chapters) > 0): ?>
-                <h2>Chapitres</h2>
+                <h2>Chapitres & Parties</h2>
                 <div class="chapter-list">
                     <?php foreach ($chapters as $chapter): ?>
                         <div class="chapter-item card">

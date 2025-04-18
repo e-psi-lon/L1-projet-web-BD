@@ -46,10 +46,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if ($stmt->fetchColumn() > 0) {
             $errors[] = "Ce nom d'utilisateur ou cette adresse email existe déjà";
         } else {
-            // Hash password and create user
             $hashed_password = password_hash($password, PASSWORD_DEFAULT);
             
-            $query = "INSERT INTO users (username, email, password) VALUES (:username, :email, :password)";
+            $query = "INSERT INTO users (username, email, password, is_admin) VALUES (:username, :email, :password, FALSE)";
             $stmt = $db->prepare($query);
             $stmt->bindParam(":username", $username);
             $stmt->bindParam(":email", $email);

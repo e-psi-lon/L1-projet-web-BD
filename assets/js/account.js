@@ -14,7 +14,7 @@ export function editAccount() {
     passwordField.style.display = 'block';
 
     inputs.forEach(input => {
-        input.removeAttribute('disabled');
+        input.removeAttribute('readonly');
     });
 
     cancelButton.addEventListener('click', () => {
@@ -22,7 +22,7 @@ export function editAccount() {
     });
 
     form.addEventListener('submit', (event) => {
-        if (!passwordValidation(passwordField, document.getElementById('password-confirm'))) {
+        if (!passwordValidation(passwordField, document.getElementById('confirm-password'))) {
             event.preventDefault();
         }
     });
