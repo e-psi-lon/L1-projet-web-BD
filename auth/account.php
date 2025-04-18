@@ -62,8 +62,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 ?>
+    <script type="module" src="/assets/js/account.js"></script>
     <div class="container">
-        <script type="module" src="/assets/js/account.js"></script>
         <div class="card">
             <h2 class="card-title">Mon compte</h2>
 
@@ -82,26 +82,27 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <?php endif; ?>
 
             <form class="form-group" id="accountForm" method="POST" action="account">
-                <div>
+                <div class="form-group">
                     <label for="username">Nom d'utilisateur</label>
-                    <input type="text" id="username" name="username" value="<?php echo htmlspecialchars($user['username']); ?>" readonly>
+                    <input type="text" id="username" name="username" value="<?php echo htmlspecialchars($user['username']); ?>" readonly disabled>
                 </div>
-                <div>
+                <div class="form-group">
                     <label for="email">Adresse e-mail</label>
-                    <input type="email" id="email" name="email" value="<?php echo htmlspecialchars($user['email']); ?>" readonly>
+                    <input type="email" id="email" name="email" value="<?php echo htmlspecialchars($user['email']); ?>" readonly disabled>
                 </div>
-                <div>
+                <div class="form-group">
                     <label for="password">Mot de passe</label>
-                    <input type="password" id="password" name="password" value="" readonly>
+                    <input type="password" id="password" name="password" value="" readonly disabled>
                 </div>
-                <div style="display: none;" id="password-confirm-field">
+                <div style="display: none;" id="password-confirm-field" class="form-group">
                     <label for="confirm-password">Confirmer le mot de passe</label>
-                    <input type="password" id="confirm-password" name="confirm-password" value="" readonly>
+                    <input type="password" id="confirm-password" name="confirm-password" value="" readonly disabled>
                 </div>
-                <div style="margin-top: 1rem;"></div>
-                <button id="editButton" onclick="editAccount()" type="button">Modifier</button>
-                <button id="saveButton" style="display: none;" type="submit">Enregistrer</button>
-                <button id="cancelButton" style="display: none;" type="button">Annuler</button>
+                <div class="form-group">
+                    <button id="editButton" type="button">Modifier</button>
+                    <button id="saveButton" style="display: none;" type="submit">Enregistrer</button>
+                    <button id="cancelButton" style="display: none;" type="button">Annuler</button>
+                </div>
             </form>
         </div>
     </div>
