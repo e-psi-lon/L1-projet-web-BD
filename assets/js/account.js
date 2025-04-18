@@ -22,7 +22,7 @@ export function editAccount() {
     });
 
     form.addEventListener('submit', (event) => {
-        if (!passwordValidation(passwordField, document.getElementById('confirm-password'))) {
+        if (!passwordValidation(document.getElementById('password'), document.getElementById('confirm-password'))) {
             event.preventDefault();
         }
     });
