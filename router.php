@@ -154,7 +154,9 @@ $router->addRoute('GET', '', 'index.php')
     ->addRoute('GET', 'authors', 'research/authors.php')
     ->addRoute('GET', 'authors/{author}', ['content/author.php', ['author' => '$1']])
     ->addRoute('GET', 'authors/{author}/books/{book}', ['content/book.php', ['author' => '$1', 'book' => '$2']])
-    ->addRoute('GET', 'authors/{author}/books/{book}/chapters/{chapter}', ['content/chapter.php', ['author' => '$1', 'book' => '$2', 'chapter' => '$3']]);
+    ->addRoute('GET', 'authors/{author}/books/{book}/chapters/{chapter}', ['content/chapter.php', ['author' => '$1', 'book' => '$2', 'chapter' => '$3']])
+    ->addRoute('GET', 'suggest', 'content/suggest.php')
+    ->addRoute('POST', 'suggest', 'content/suggest.php');
 
 // ----- Auth & Account -----
 $router->addRoute('GET', 'auth/login', 'account/login.php')
@@ -178,6 +180,11 @@ $router->addRoute('ANY', 'api/authors', function() {
         header('Content-Type: application/json');
         include 'api/search.php';
     });
+
+// ----- Admin routes -----
+$router->addRoute('GET', 'admin/dashboard', 'admin/dashboard.php')
+    ->addRoute('GET', 'admin/users', 'admin/users.php')
+
 
 // Set 404 handler
 $router->setNotFoundHandler(function() {
