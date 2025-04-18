@@ -30,7 +30,7 @@ Le projet est divisé en plusieurs parties :
 - **[assets](/assets/)** : Contient les ressources statiques
   - **[`/css`](/assets/css/)** : Feuilles de style CSS
   - **[`/js`](/assets/js/)** : Scripts JavaScript
-- **[auth](/auth)** : Gestion de l'authentification
+- **[account](/account)** : Gestion de l'authentification
   - Login, inscription et déconnexion
 - **[config](/config/)** : Configuration et utilitaires
 - **[database](/database/)** : Schéma de la base de données
