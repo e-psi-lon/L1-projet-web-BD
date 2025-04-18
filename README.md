@@ -5,7 +5,7 @@ Ce dépôt contient le code source du projet de web et base de données de premi
 ## Lancement
 
 Ce projet utilise la fonctionnalité de PHP permettant de définir un routeur.
-Pour lancer le projet, il faut donc démarrer le serveur en précisant d'utiliser le fichier router.php comme routeur. Par exemple, en utilisant le serveur de développement de PHP :
+Pour lancer le projet, il faut donc démarrer le serveur en précisant d'utiliser le fichier router.php comme routeur. Ci-dessous vous trouverez comment lancer le serveur correctement selon diverses méthodes :
 
 ### Ligne de commande PHP
 
