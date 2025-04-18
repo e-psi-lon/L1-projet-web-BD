@@ -18,7 +18,7 @@ $mimeTypes = [
     'ttf' => 'font/ttf'
 ];
 
-// Check if file exists and has a recognized extension
+// Check if a file exists and has a recognized extension
 $extension = pathinfo($filePath, PATHINFO_EXTENSION);
 if (file_exists($filePath) && isset($mimeTypes[$extension])) {
     header("Content-Type: $mimeTypes[$extension]");
@@ -78,7 +78,7 @@ class Router {
                 // Handle pattern matching with parameters
                 $pattern = $this->convertRouteToPattern($route['path']);
                 if (preg_match($pattern, $requestPath, $matches)) {
-                    array_shift($matches); // Remove full match
+                    array_shift($matches); // Remove the full match
                     return $this->executeHandler($route['handler'], $matches);
                 }
             }
@@ -92,16 +92,16 @@ class Router {
             header("HTTP/1.0 404 Not Found");
             echo "404 - Page not found";
             return false;
-        } catch (\Throwable $e) {
+        } catch (Throwable $e) {
             header("HTTP/1.0 500 Internal Server Error");
             ob_clean();
-            include "500.php";
+            include "errors/500.php";
             return false;
         }
     }
 
     /**
-     * Convert route with placeholders to regex pattern
+     * Convert a route with placeholders to a regex pattern
      */
     private function convertRouteToPattern(string $route): string {
         $route = preg_replace('~\{([^/]+)}~', '([^/]+)', $route);
@@ -150,12 +150,11 @@ $router = new Router();
 $router->addRoute('GET', '', 'index.php')
     ->addRoute('GET', 'index', 'index.php')
     ->addRoute('GET', 'index.php', 'index.php')
-    ->addRoute('GET', 'search', 'search.php')
-    ->addRoute('GET', 'authors', 'authors.php')
-    ->addRoute('GET', 'authors/{author}', ['author.php', ['author' => '$1']])
-    ->addRoute('GET', 'authors/{author}/books', ['author_books.php', ['author' => '$1']])
-    ->addRoute('GET', 'authors/{author}/books/{book}', ['book.php', ['author' => '$1', 'book' => '$2']])
-    ->addRoute('GET', 'authors/{author}/books/{book}/chapters/{chapter}', ['chapter.php', ['author' => '$1', 'book' => '$2', 'chapter' => '$3']]);
+    ->addRoute('GET', 'search', 'research/search.php')
+    ->addRoute('GET', 'authors', 'research/authors.php')
+    ->addRoute('GET', 'authors/{author}', ['content/author.php', ['author' => '$1']])
+    ->addRoute('GET', 'authors/{author}/books/{book}', ['content/book.php', ['author' => '$1', 'book' => '$2']])
+    ->addRoute('GET', 'authors/{author}/books/{book}/chapters/{chapter}', ['content/chapter.php', ['author' => '$1', 'book' => '$2', 'chapter' => '$3']]);
 
 // ----- Auth & Account -----
 $router->addRoute('GET', 'auth/login', 'account/login.php')
@@ -183,7 +182,7 @@ $router->addRoute('ANY', 'api/authors', function() {
 // Set 404 handler
 $router->setNotFoundHandler(function() {
     header("HTTP/1.0 404 Not Found");
-    include '404.php';
+    include 'errors/404.php';
 });
 
 // Handle the request

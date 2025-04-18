@@ -1,6 +1,6 @@
 -- Database schema for Corpus Digitale
 
--- Authors table
+-- Authors' table
 CREATE TABLE authors (
     author_id INTEGER PRIMARY KEY AUTOINCREMENT,
     name VARCHAR(100) NOT NULL,
@@ -10,7 +10,7 @@ CREATE TABLE authors (
     biography TEXT
 );
 
--- Books table
+-- Books' table
 CREATE TABLE books (
     book_id INTEGER PRIMARY KEY AUTOINCREMENT,
     author_id INTEGER NOT NULL,
@@ -21,7 +21,7 @@ CREATE TABLE books (
     FOREIGN KEY (author_id) REFERENCES authors(author_id)
 );
 
--- Chapters table
+-- Chapters' table
 CREATE TABLE chapters (
     chapter_id INTEGER PRIMARY KEY AUTOINCREMENT,
     book_id INTEGER NOT NULL,
@@ -31,13 +31,13 @@ CREATE TABLE chapters (
     FOREIGN KEY (book_id) REFERENCES books(book_id)
 );
 
--- Users table
+-- Users' table
 CREATE TABLE users (
     user_id INTEGER PRIMARY KEY AUTOINCREMENT,
     username VARCHAR(50) NOT NULL UNIQUE,
     email VARCHAR(100) NOT NULL UNIQUE,
     password VARCHAR(255) NOT NULL,
-    is_admin BOOLEAN
+    is_admin BOOLEAN NOT NULL DEFAULT FALSE
 );
 
 -- Suggestions table (for new content)
@@ -46,7 +46,7 @@ CREATE TABLE suggestions (
     user_id INTEGER NOT NULL,
     suggestion_type VARCHAR(20) NOT NULL,
     content TEXT NOT NULL,
-    status VARCHAR(20),
+    status VARCHAR(20) NOT NULL DEFAULT 'pending',
     admin_notes TEXT,
     reviewed_by INTEGER,
     FOREIGN KEY (user_id) REFERENCES users(user_id),
