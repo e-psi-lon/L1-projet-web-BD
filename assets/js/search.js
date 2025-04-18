@@ -1,75 +1,4 @@
-// Main JavaScript file for Corpus Digitale
-
-document.addEventListener('DOMContentLoaded', () => {
-    // Initialize Lucide icons
-    try {
-        lucide.createIcons();
-    } catch (error) {
-        console.error('Lucide icons could not be initialized:', error);
-    }
-    // Initialize interactive elements
-    initializeForms();
-    initializeSearchFeatures();
-    initializeResponsiveMenu();
-});
-
-function initializeForms() {
-    // Add event listeners to form elements
-    const forms = document.querySelectorAll('form');
-
-    forms.forEach(form => {
-        form.addEventListener('submit', (event) => {
-            const requiredFields = form.querySelectorAll('[required]');
-            let valid = true;
-
-            requiredFields.forEach(field => {
-                if (!field.value.trim()) {
-                    valid = false;
-                    showError(field, 'Ce champ est obligatoire');
-                } else {
-                    clearError(field);
-                }
-            });
-
-
-            if (!valid) {
-                event.preventDefault();
-            }
-        });
-    });
-}
-
-function showError(field, message) {
-    // Clear any existing error
-    clearError(field);
-
-    // Create error element
-    const error = document.createElement('div');
-    error.className = 'error-message';
-    error.textContent = message;
-    error.style.color = 'red';
-    error.style.fontSize = '0.8rem';
-    error.style.marginTop = '5px';
-
-    // Insert error after field
-    field.parentNode.insertBefore(error, field.nextSibling);
-
-    // Highlight the field
-    field.style.borderColor = 'red';
-}
-
-function clearError(field) {
-    // Remove error message if exists
-    const error = field.parentNode.querySelector('.error-message');
-    if (error) {
-        error.remove();
-    }
-
-    // Reset field style
-    field.style.borderColor = '';
-}
-
-function initializeSearchFeatures() {
+export function initializeSearchFeatures() {
     const searchInput = document.getElementById('search-input');
     if (!searchInput) return;
 
@@ -208,57 +137,10 @@ function truncateText(text, length = 150, searchTerm = '') {
     }
 
     if (searchTerm && searchTerm.trim() !== '') {
-        // Escape special regex characters
         const escapedSearchTerm = searchTerm.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
         const regex = new RegExp(`(${escapedSearchTerm})`, 'gi');
         text = text.replace(regex, '<mark>$1</mark>');
     }
 
     return text;
-}
-
-
-
-function initializeResponsiveMenu() {
-    const menuToggle = document.getElementById('menuToggle');
-    const mainNav = document.getElementById('mainNav');
-    
-    if (menuToggle && mainNav) {
-        menuToggle.addEventListener('click', () => {
-            mainNav.classList.toggle('active');
-            
-            // Optional: toggle aria-expanded attribute for accessibility
-            const expanded = mainNav.classList.contains('active');
-            menuToggle.setAttribute('aria-expanded', expanded);
-        });
-        
-        // Close menu when clicking outside
-        document.addEventListener('click', (event) => {
-            if (!mainNav.contains(event.target) && !menuToggle.contains(event.target) && mainNav.classList.contains('active')) {
-                mainNav.classList.remove('active');
-                menuToggle.setAttribute('aria-expanded', 'false');
-            }
-        });
-    }
-}
-
-function editAccount() {
-    const form = document.getElementById('accountForm');
-    const inputs = form.querySelectorAll('input, select');
-    const editButton = document.getElementById('editButton');
-    const saveButton = document.getElementById('saveButton');
-    const cancelButton = document.getElementById('cancelButton');
-
-    editButton.style.display = 'none';
-    saveButton.style.display = 'inline-block';
-    cancelButton.style.display = 'inline-block';
-
-    inputs.forEach(input => {
-        input.removeAttribute('disabled');
-    });
-
-    cancelButton.addEventListener('click', () => {
-        window.location.reload();
-    });
-
 }
