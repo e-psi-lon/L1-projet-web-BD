@@ -45,10 +45,41 @@ CREATE TABLE suggestions (
     suggestion_id INTEGER PRIMARY KEY AUTOINCREMENT,
     user_id INTEGER NOT NULL,
     suggestion_type VARCHAR(20) NOT NULL,
-    content TEXT NOT NULL,
     status VARCHAR(20) NOT NULL DEFAULT 'pending',
     admin_notes TEXT,
     reviewed_by INTEGER,
     FOREIGN KEY (user_id) REFERENCES users(user_id),
     FOREIGN KEY (reviewed_by) REFERENCES users(user_id)
+);
+
+-- Suggestions will be separated. Each type of suggestion will have its own table.
+CREATE TABLE author_suggestions (
+    suggestion_id INTEGER PRIMARY KEY,
+    author_name VARCHAR(100) NOT NULL,
+    author_url_name VARCHAR(100) NOT NULL UNIQUE,
+    birth_year INTEGER,
+    death_year INTEGER,
+    biography TEXT,
+    FOREIGN KEY (suggestion_id) REFERENCES suggestions(suggestion_id)
+);
+
+CREATE TABLE book_suggestions (
+    suggestion_id INTEGER PRIMARY KEY,
+    author_id INTEGER NOT NULL,
+    title VARCHAR(255) NOT NULL,
+    url_title VARCHAR(255) NOT NULL,
+    publication_year INTEGER,
+    description TEXT,
+    FOREIGN KEY (author_id) REFERENCES authors(author_id),
+    FOREIGN KEY (suggestion_id) REFERENCES suggestions(suggestion_id)
+);
+
+CREATE TABLE chapter_suggestions (
+    suggestion_id INTEGER PRIMARY KEY,
+    book_id INTEGER NOT NULL,
+    title VARCHAR(255),
+    chapter_number INTEGER NOT NULL,
+    content TEXT NOT NULL,
+    FOREIGN KEY (book_id) REFERENCES books(book_id),
+    FOREIGN KEY (suggestion_id) REFERENCES suggestions(suggestion_id)
 );

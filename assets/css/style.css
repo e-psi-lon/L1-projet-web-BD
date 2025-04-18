@@ -432,3 +432,14 @@ mark {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 1.5rem;
 }
+
+
+.suggestion-type-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 2rem;
+}
+
+.suggestion-type-buttons .btn {
+    flex: 1;
+}
