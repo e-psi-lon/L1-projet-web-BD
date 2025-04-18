@@ -13,6 +13,22 @@ $isAdmin = $loggedIn && isset($_SESSION['user']) && $_SESSION['user']['is_admin'
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Corpus Digitale</title>
     <link rel="stylesheet" href="/assets/css/style.css">
+    <!-- Load this before everything else to ensure the dark mode is applied immediately -->
+    <script>
+        // Récupérer la préférence utilisateur depuis localStorage
+        const darkMode = localStorage.getItem('darkMode') === 'true';
+        // Applique immédiatement la classe au document
+        if (darkMode) {
+            document.documentElement.classList.add('dark-mode');
+        } else if (localStorage.getItem('darkMode') === null &&
+            window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+            // Si pas de préférence enregistrée et que le système préfère le thème sombre
+            document.documentElement.classList.add('dark-mode');
+            localStorage.setItem('darkMode', 'true');
+        }
+    </script>
+    <script src="/assets/js/dark-mode.js">
+    </script>
 </head>
 <body>
     <header>
