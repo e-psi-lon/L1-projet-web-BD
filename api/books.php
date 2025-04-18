@@ -1,22 +1,44 @@
 <?php
 require_once 'includes/utils.php';
-header('Content-Type: application/json');
 
 // Get database connection
 $db = getDbConnection();
 
-// Query all data
-$query = "SELECT * FROM books ORDER BY title";
+$attributes = [
+    'book_id' => 'id',
+    'title' => 'title',
+    'publication_year' => 'publication_year',
+    'description' => 'description',
+    'author_id' => 'author_id'
+];
+
+
+
+
+// If a query parameter is provided, filter the books based on all the attributes
+$query = "SELECT * FROM books";
+$conditions = [];
+$params = [];
+foreach ($attributes as $dbField => $paramName) {
+    if (!empty($_GET[$paramName])) {
+        $conditions[] = "$dbField = :$dbField";
+        $params[":$dbField"] = $_GET[$paramName];
+    }
+}
+if (!empty($conditions)) {
+    $query .= " WHERE " . implode(" AND ", $conditions);
+}
 $stmt = $db->prepare($query);
-$stmt->execute();
-
-$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-$stmt = null;
+$stmt->execute($params);
+$books = $stmt->fetchAll(PDO::FETCH_ASSOC);
+// Include a chapter_count for each book
+foreach ($books as &$book) {
+    $book['chapter_count'] = 0;
+    $stmt = $db->prepare("SELECT COUNT(*) FROM chapters WHERE book_id = :book_id");
+    $stmt->bindParam(':book_id', $book['book_id']);
+    $stmt->execute();
+    $book['chapter_count'] = $stmt->fetchColumn();
+}
+// Close the database connection
 $db = null;
-
-// Output a JSON formatted response
-echo json_encode($result);
-
-
-// It goes the same for all API endpoints
+echo json_encode($books, JSON_PRETTY_PRINT);

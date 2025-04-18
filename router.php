@@ -95,7 +95,15 @@ class Router {
         } catch (Throwable $e) {
             header("HTTP/1.0 500 Internal Server Error");
             ob_clean();
-            include "errors/500.php";
+            // if the content type is supposed to be JSON, return a JSON error response
+            // Otherwise, include the error page
+            if (isset($_SERVER['HTTP_ACCEPT']) && str_contains($_SERVER['HTTP_ACCEPT'], 'application/json')) {
+                header('Content-Type: application/json');
+                echo json_encode(['error' => 'Internal Server Error', 'message' => $e->getMessage()]);
+            } else {
+                ob_clean();
+                include "errors/500.php";
+            }
             return false;
         }
     }
