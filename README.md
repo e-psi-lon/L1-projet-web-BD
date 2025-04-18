@@ -37,9 +37,8 @@ Le projet est divisé en plusieurs parties :
 - **[includes](/includes/)** : Composants réutilisables (header, footer)
 
 ## Base de données
-## Base de données
 
-Le projet utilise SQLite comme système de gestion de base de données. Le schéma est défini dans `schema.sql` et comprend les tables suivantes :
+Le projet utilise SQLite comme système de gestion de base de données pour le développement mais MySQL sinon. Le schéma est défini dans `schema.sql` et comprend les tables suivantes :
 
 ### Tables
 
