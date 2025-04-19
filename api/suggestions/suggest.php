@@ -7,8 +7,6 @@ $selectedType = $_POST['suggestion_type'] ?? 'author';
 $errorMessages = [];
 $successMessage = '';
 $user = $_SESSION['user'];
-error_log(json_encode($_POST));
-error_log(json_encode($user));
 if (!$user) {
     $errorMessages[] = "Vous devez être connecté pour soumettre une suggestion."; // You must be logged in to submit a suggestion
     $_SESSION['error_messages'] = $errorMessages;

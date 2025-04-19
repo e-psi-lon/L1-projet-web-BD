@@ -8,8 +8,6 @@ $errorMessages = [];
 $successMessage = '';
 $user = $_SESSION['user'];
 $suggestionId = $_POST['suggestion_id'] ?? 0;
-error_log(json_encode($_POST));
-error_log(json_encode($user));
 if (!$user) {
     $errorMessages[] = "Vous devez être connecté pour soumettre une suggestion.";
     $_SESSION['error_messages'] = $errorMessages;
