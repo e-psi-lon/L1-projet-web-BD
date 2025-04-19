@@ -1,5 +1,8 @@
 <?php
-session_start();
+if (session_status() === PHP_SESSION_NONE) {
+    session_start();
+}
+
 require_once 'includes/utils.php';
 
 // Check if user is logged in
@@ -45,7 +48,7 @@ $isAdmin = $loggedIn && isset($_SESSION['user']) && $_SESSION['user']['is_admin'
                     <li><a onclick='window.location.href="/authors"'>Auteurs</a></li>
                     <li><a onclick='window.location.href="/search"'>Recherche</a></li>
                     <?php if ($loggedIn): ?>
-                        <li><a onclick='window.location.href="/suggestions/suggest"'>Suggérer du contenu</a></li>
+                        <li><a onclick='window.location.href="/suggestions/my/suggestions"'>Suggestions</a></li>
                         <?php if ($isAdmin): ?>
                             <li><a onclick='window.location.href="/admin/dashboard"'>Admin</a></li>
                         <?php endif; ?>
