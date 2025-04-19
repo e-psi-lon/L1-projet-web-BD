@@ -45,7 +45,7 @@ if ($author_info) {
 <div class="container">
     <?php if ($author_info): ?>
         <div class="author-header">
-            <h1><?php echo htmlspecialchars($author_info['name']); ?></h1>
+            <h1 class="card-title"><?php echo htmlspecialchars($author_info['name']); ?></h1>
             <p class="author-years">
                 <?php echo ($author_info['birth_year'] ?: '?'); ?> -
                 <?php echo ($author_info['death_year'] ?: '?'); ?>

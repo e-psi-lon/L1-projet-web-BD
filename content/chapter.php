@@ -62,7 +62,7 @@ $db = null;
 <div class="container">
     <?php if ($book_info && $chapter_info): ?>
         <div class="book-header">
-            <h1><?php echo htmlspecialchars($book_info['title']); ?></h1>
+            <h1 class="card-title"><?php echo htmlspecialchars($book_info['title']); ?></h1>
             <p class="book-year">
                 <?php echo ($book_info['publication_year'] ? 'Publié en ' . $book_info['publication_year'] : 'Date de publication inconnue'); ?>
             </p>

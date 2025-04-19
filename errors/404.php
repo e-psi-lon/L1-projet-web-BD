@@ -1,7 +1,7 @@
 <?php include 'includes/header.php'; ?>
     <div class="container">
         <div class="card">
-            <h1>Page non trouvée</h1>
+            <h1 class="card-title">Page non trouvée</h1>
             <p>La page que vous cherchez n'existe pas.</p>
             <a href="/" class="btn">Retourner à l'accueil</a>
         </div>
