@@ -179,6 +179,7 @@ $typeLabels = [
 
                         <div class="form-group">
                             <button type="submit" class="btn">Mettre à jour</button>
+                            <button type="button" class="btn btn-secondary" onclick="window.location.href='/suggestions/my/suggestions'">Annuler</button>
                         </div>
                     </form>
                 <?php elseif ($suggestionType === 'book'): ?>
@@ -215,6 +216,7 @@ $typeLabels = [
 
                         <div class="form-group">
                             <button type="submit" class="btn">Mettre à jour</button>
+                            <button type="button" class="btn btn-secondary" onclick="window.location.href='/suggestions/my/suggestions'">Annuler</button>
                         </div>
                     </form>
                 <?php elseif ($suggestionType === 'chapter'): ?>
@@ -263,6 +265,7 @@ $typeLabels = [
 
                         <div class="form-group">
                             <button type="submit" class="btn">Mettre à jour</button>
+                            <button type="button" class="btn btn-secondary" onclick="window.location.href='/suggestions/my/suggestions'">Annuler</button>
                         </div>
                     </form>
                 <?php endif; ?>
