@@ -165,7 +165,7 @@ $router->addRoute('GET', '', 'index.php')
     ->addRoute('GET', 'authors/{author}/books/{book}/chapters/{chapter}', ['content/chapter.php', ['author' => '$1', 'book' => '$2', 'chapter' => '$3']])
     ->addRoute('GET', 'suggestions/suggest', 'content/suggestions/suggest.php')
     ->addRoute('GET', 'suggestions/my/suggestions', 'content/suggestions/my-suggestion.php')
-    ->addRoute('GET', 'suggestions/edit', 'content/suggestions/edit.php');
+    ->addRoute('GET', 'suggestions/{suggestionId}/edit', ['content/suggestions/edit.php', ['suggestionId' => '$1']]);
 
 // ----- Auth & Account -----
 $router->addRoute('GET', 'auth/login', 'account/login.php')
@@ -191,7 +191,11 @@ $router->addRoute('ANY', 'api/authors', function() {
     })
     ->addRoute('POST', 'api/suggest', function() {;
         header('Content-Type: application/json');
-        include 'api/suggest.php';
+        include 'api/suggestions/suggest.php';
+    })
+    ->addRoute('POST', 'api/suggestions/edit', function() {
+        header('Content-Type: application/json');
+        include 'api/suggestions/edit.php';
     });
 
 // ----- Admin routes -----
