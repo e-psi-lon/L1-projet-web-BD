@@ -2,12 +2,14 @@
 
 <div class="container">
     <h1>Auteurs</h1>
-    
-    <div class="search-box">
-        <label for="author-search"></label>
-        <input type="text" id="author-search" placeholder="Rechercher des auteurs..." onkeyup="filterAuthors()">
+
+    <div class="search-container">
+        <div class="search-box">
+            <label for="author-search"></label>
+            <input type="text" id="author-search" placeholder="Rechercher des auteurs..." onkeyup="filterAuthors()">
+        </div>
     </div>
-    
+
     <div class="author-list">
         <?php
         // Get database connection
