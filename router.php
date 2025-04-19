@@ -197,11 +197,16 @@ $router->addRoute('ANY', 'api/authors', function() {
     ->addRoute('POST', 'api/suggestions/edit', function() {
         header('Content-Type: application/json');
         include 'api/suggestions/edit.php';
+    })
+    ->addRoute('GET', 'api/suggestion-details', function() {
+        header('Content-Type: application/json');
+        include 'api/suggestion-details.php';
     });
 
 // ----- Admin routes -----
 $router->addRoute('GET', 'admin/dashboard', 'admin/dashboard.php')
-    ->addRoute('GET', 'admin/users', 'admin/users.php');
+    ->addRoute('GET', 'admin/users', 'admin/users.php')
+    ->addRoute('GET', 'admin/suggestions', 'admin/suggestions.php');
 
 
 // Set 404 handler

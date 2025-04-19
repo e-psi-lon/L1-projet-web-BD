@@ -7,6 +7,8 @@ if (!isset($_SESSION['user'])) {
     exit;
 }
 
+unset($_SESSION['from']);
+
 $user_id = $_SESSION['user']['id'];
 
 // Get user suggestions
