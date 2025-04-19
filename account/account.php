@@ -100,8 +100,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </div>
                 <div class="form-group">
                     <button id="editButton" type="button">Modifier</button>
-                    <button id="saveButton" style="display: none;" type="submit">Enregistrer</button>
-                    <button id="cancelButton" style="display: none;" type="button">Annuler</button>
+                    <button id="saveButton" class="btn btn-success" style="display: none;" type="submit">Enregistrer</button>
+                    <button id="cancelButton" class="btn btn-secondary" style="display: none;" type="button">Annuler</button>
                 </div>
             </form>
         </div>

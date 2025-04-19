@@ -178,7 +178,7 @@ $typeLabels = [
                         </div>
 
                         <div class="form-group">
-                            <button type="submit" class="btn">Mettre à jour</button>
+                            <button type="submit" class="btn btn-success">Mettre à jour</button>
                             <button type="button" class="btn btn-secondary" onclick="window.location.href='/suggestions/my/suggestions'">Annuler</button>
                         </div>
                     </form>
@@ -215,7 +215,7 @@ $typeLabels = [
                         </div>
 
                         <div class="form-group">
-                            <button type="submit" class="btn">Mettre à jour</button>
+                            <button type="submit" class="btn btn-success">Mettre à jour</button>
                             <button type="button" class="btn btn-secondary" onclick="window.location.href='/suggestions/my/suggestions'">Annuler</button>
                         </div>
                     </form>
@@ -264,7 +264,7 @@ $typeLabels = [
                         </div>
 
                         <div class="form-group">
-                            <button type="submit" class="btn">Mettre à jour</button>
+                            <button type="submit" class="btn btn-success">Mettre à jour</button>
                             <button type="button" class="btn btn-secondary" onclick="window.location.href='/suggestions/my/suggestions'">Annuler</button>
                         </div>
                     </form>

@@ -87,7 +87,7 @@ try {
                         </div>
 
                         <div class="form-group">
-                            <button type="submit" class="btn">Soumettre</button>
+                            <button type="submit" class="btn btn-success">Soumettre</button>
                         </div>
                     </form>
                 <?php elseif ($selectedType === 'book'): ?>
@@ -122,7 +122,7 @@ try {
                         </div>
 
                         <div class="form-group">
-                            <button type="submit" class="btn">Soumettre</button>
+                            <button type="submit" class="btn btn-success">Soumettre</button>
                         </div>
                     </form>
                 <?php elseif ($selectedType === 'chapter'): ?>
@@ -163,7 +163,7 @@ try {
                         </div>
 
                         <div class="form-group">
-                            <button type="submit" class="btn">Soumettre</button>
+                            <button type="submit" class="btn btn-success">Soumettre</button>
                         </div>
                     </form>
                 <?php endif; ?>
