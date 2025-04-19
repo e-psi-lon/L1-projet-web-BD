@@ -82,7 +82,7 @@ $suggestions = $stmt->fetchAll();
         <?php endif; ?>
         
         <div class="mt-4">
-            <a href="/content/suggestions/suggest" class="btn">Proposer du nouveau contenu</a>
+            <a href="/suggestions/suggest" class="btn">Proposer du nouveau contenu</a>
         </div>
     </div>
 </div>
