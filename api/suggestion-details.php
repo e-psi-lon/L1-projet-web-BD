@@ -7,7 +7,7 @@ if (!isset($_SESSION['user'])) {
     exit;
 }
 
-include 'includes/utils.php';
+require_once 'includes/utils.php';
 
 // Check if suggestion ID is provided and is valid
 if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
@@ -19,9 +19,13 @@ if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
 $suggestionId = (int) $_GET['id'];
 $userId = $_SESSION['user']['id'];
 
-// Check if the user has access to the suggestion
+// Check if the user has access to the suggestion OR is an admin
 $pdo = getDbConnection();
-$stmt = $pdo->prepare("SELECT * FROM suggestions WHERE suggestion_id = ? AND user_id = ?");
+$stmt = $pdo->prepare("
+    SELECT s.*
+    FROM suggestions s
+    LEFT JOIN users u ON s.user_id = u.user_id
+    WHERE s.suggestion_id = ? AND (s.user_id = ? OR u.is_admin = TRUE);");
 $stmt->execute([$suggestionId, $userId]);
 $suggestion = $stmt->fetch(PDO::FETCH_ASSOC);
 
