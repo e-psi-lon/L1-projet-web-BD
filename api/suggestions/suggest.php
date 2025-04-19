@@ -10,20 +10,20 @@ $user = $_SESSION['user'];
 error_log(json_encode($_POST));
 error_log(json_encode($user));
 if (!$user) {
-    $errorMessages[] = "Vous devez être connecté pour soumettre une suggestion.";
+    $errorMessages[] = "Vous devez être connecté pour soumettre une suggestion."; // You must be logged in to submit a suggestion
     $_SESSION['error_messages'] = $errorMessages;
     header("Location: /suggestions/suggest?type=$selectedType");
 }
 
 if (!in_array($selectedType, $suggestionTypes)) {
-    $errorMessages[] = "Type de suggestion invalide";
+    $errorMessages[] = "Type de suggestion invalide"; // Invalid suggestion type
     $_SESSION['error_messages'] = $errorMessages;
 } else {
     $connection = getDbConnection();
     try {
         $connection->beginTransaction();
 
-        // Insérer d'abord dans la table suggestions
+        // Insert first in the table suggestions
         $stmt = $connection->prepare('INSERT INTO suggestions (user_id, suggestion_type, status) VALUES (:user_id, :suggestion_type, :status)');
         $stmt->execute([
             'user_id' => $user['id'],
@@ -33,7 +33,7 @@ if (!in_array($selectedType, $suggestionTypes)) {
 
         $suggestionId = $connection->lastInsertId();
 
-        // Traiter selon le type de suggestion
+        // Handle according to the suggestion type
         switch ($selectedType) {
             case 'author':
                 // Validation
@@ -47,14 +47,21 @@ if (!in_array($selectedType, $suggestionTypes)) {
                     throw new Exception("Le nom de l'auteur est obligatoire");
                 }
 
-                // Vérifier si l'URL name existe déjà
+                // Check if a suggestion with the same URL name already exists
                 $checkStmt = $connection->prepare('SELECT COUNT(*) FROM author_suggestions WHERE author_url_name = :url_name AND suggestion_id != :suggestion_id');
                 $checkStmt->execute(['url_name' => $authorUrlName, 'suggestion_id' => $suggestionId]);
                 if ($checkStmt->fetchColumn() > 0) {
                     throw new Exception("Un auteur avec ce nom existe déjà dans les suggestions");
                 }
 
-                // Insertion dans author_suggestions
+                // Check if the author already exists in the 'authors' table
+                $checkStmt = $connection->prepare('SELECT COUNT(*) FROM authors WHERE url_name = :url_name');
+                $checkStmt->execute(['url_name' => $authorUrlName]);
+                if ($checkStmt->fetchColumn() > 0) {
+                    throw new Exception("Un auteur avec ce nom existe déjà dans la base de données");
+                }
+
+                // Insert into author_suggestions
                 $stmt = $connection->prepare('INSERT INTO author_suggestions (suggestion_id, author_name, author_url_name, birth_year, death_year, biography) 
                                             VALUES (:suggestion_id, :author_name, :author_url_name, :birth_year, :death_year, :biography)');
                 $stmt->execute([
@@ -82,7 +89,35 @@ if (!in_array($selectedType, $suggestionTypes)) {
                     throw new Exception("Veuillez sélectionner un auteur valide");
                 }
 
-                // Insertion dans book_suggestions
+                // Check if a suggestion with the same URL title already exists for this author
+                $checkStmt = $connection->prepare('SELECT COUNT(*) FROM book_suggestions WHERE author_id = :author_id AND url_title = :url_title AND suggestion_id != :suggestion_id');
+                $checkStmt->execute([
+                    'author_id' => $authorId,
+                    'url_title' => $urlTitle,
+                    'suggestion_id' => $suggestionId
+                ]);
+                if ($checkStmt->fetchColumn() > 0) {
+                    throw new Exception("Un livre avec ce titre existe déjà dans les suggestions pour cet auteur");
+                }
+
+                // Check if the book already exists in the 'books' table
+                $checkStmt = $connection->prepare('SELECT COUNT(*) FROM books WHERE author_id = :author_id AND url_title = :url_title');
+                $checkStmt->execute([
+                    'author_id' => $authorId,
+                    'url_title' => $urlTitle
+                ]);
+                if ($checkStmt->fetchColumn() > 0) {
+                    throw new Exception("Un livre avec ce titre existe déjà dans la base de données pour cet auteur");
+                }
+
+                // Check if the author exists
+                $checkStmt = $connection->prepare('SELECT COUNT(*) FROM authors WHERE author_id = :author_id');
+                $checkStmt->execute(['author_id' => $authorId]);
+                if ($checkStmt->fetchColumn() == 0) {
+                    throw new Exception("L'auteur sélectionné n'existe pas");
+                }
+
+                // Insert into book_suggestions
                 $stmt = $connection->prepare('INSERT INTO book_suggestions (suggestion_id, author_id, title, url_title, publication_year, description) 
                                             VALUES (:suggestion_id, :author_id, :title, :url_title, :publication_year, :description)');
                 $stmt->execute([
@@ -112,7 +147,35 @@ if (!in_array($selectedType, $suggestionTypes)) {
                     throw new Exception("Le contenu du chapitre est obligatoire");
                 }
 
-                // Insertion dans chapter_suggestions
+                // Check if the book exists
+                $checkStmt = $connection->prepare('SELECT COUNT(*) FROM books WHERE book_id = :book_id');
+                $checkStmt->execute(['book_id' => $bookId]);
+                if ($checkStmt->fetchColumn() == 0) {
+                    throw new Exception("Le livre sélectionné n'existe pas");
+                }
+
+                // Check if a chapter with this number already exists in suggestions
+                $checkStmt = $connection->prepare('SELECT COUNT(*) FROM chapter_suggestions WHERE book_id = :book_id AND chapter_number = :chapter_number AND suggestion_id != :suggestion_id');
+                $checkStmt->execute([
+                    'book_id' => $bookId,
+                    'chapter_number' => $chapterNumber,
+                    'suggestion_id' => $suggestionId
+                ]);
+                if ($checkStmt->fetchColumn() > 0) {
+                    throw new Exception("Un chapitre avec ce numéro existe déjà dans les suggestions pour ce livre");
+                }
+
+                // Check if a chapter with this number already exists in the 'chapters' table
+                $checkStmt = $connection->prepare('SELECT COUNT(*) FROM chapters WHERE book_id = :book_id AND chapter_number = :chapter_number');
+                $checkStmt->execute([
+                    'book_id' => $bookId,
+                    'chapter_number' => $chapterNumber
+                ]);
+                if ($checkStmt->fetchColumn() > 0) {
+                    throw new Exception("Un chapitre avec ce numéro existe déjà dans la base de données pour ce livre");
+                }
+
+                // Insert into chapter_suggestions
                 $stmt = $connection->prepare('INSERT INTO chapter_suggestions (suggestion_id, book_id, title, chapter_number, content) 
                                             VALUES (:suggestion_id, :book_id, :title, :chapter_number, :content)');
                 $stmt->execute([
@@ -126,13 +189,13 @@ if (!in_array($selectedType, $suggestionTypes)) {
         }
 
         $connection->commit();
-        $successMessage = "Votre suggestion a été soumise avec succès et sera examinée par nos administrateurs.";
+        $successMessage = "Votre suggestion a été soumise avec succès et sera examinée par nos administrateurs."; // Your suggestion has been successfully submitted and will be reviewed by our administrators
         $_SESSION['error_messages'] = $errorMessages;
         $_SESSION['success_message'] = $successMessage;
 
     } catch (Exception $e) {
         $connection->rollBack();
-        $errorMessages[] = "Erreur lors de la soumission : " . $e->getMessage();
+        $errorMessages[] = "Erreur lors de la soumission : " . $e->getMessage(); // Error during submission
         $_SESSION['error_messages'] = $errorMessages;
         $_SESSION['success_message'] = $successMessage;
 
