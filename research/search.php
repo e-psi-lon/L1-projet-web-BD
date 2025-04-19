@@ -89,7 +89,7 @@
                     }
 
                     if ($currentBook != '') {
-                        echo '</div>'; // ENd the chapter container
+                        echo '</div>'; // End the chapter container
                         echo '</div>'; // End the book card
                     }
                 } else {

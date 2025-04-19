@@ -165,6 +165,7 @@ $router->addRoute('GET', '', 'index.php')
     ->addRoute('GET', 'authors/{author}/books/{book}/chapters/{chapter}', ['content/chapter.php', ['author' => '$1', 'book' => '$2', 'chapter' => '$3']])
     ->addRoute('GET', 'suggestions/suggest', 'content/suggestions/suggest.php')
     ->addRoute('GET', 'suggestions/my/suggestions', 'content/suggestions/my-suggestion.php')
+    ->addRoute('GET', 'suggestions/{suggestionId}/view', ['content/suggestions/view.php', ['suggestionId' => '$1']])
     ->addRoute('GET', 'suggestions/{suggestionId}/edit', ['content/suggestions/edit.php', ['suggestionId' => '$1']]);
 
 // ----- Auth & Account -----

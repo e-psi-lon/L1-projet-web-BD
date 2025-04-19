@@ -443,3 +443,75 @@ mark {
 .suggestion-type-buttons .btn {
     flex: 1;
 }
+
+.suggestion-type-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+/* Table Styles */
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 1.5rem;
+}
+
+.table th,
+.table td {
+    padding: 0.75rem;
+    border-bottom: 1px solid var(--border-color);
+    text-align: left;
+}
+
+.table th {
+    background-color: rgba(196, 160, 92, 0.1);
+    color: var(--primary-color);
+    font-weight: 600;
+}
+
+.table tr:hover {
+    background-color: rgba(196, 160, 92, 0.05);
+}
+
+.table tr:last-child td {
+    border-bottom: none;
+}
+
+/* Badge Styles */
+.badge {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.badge-success {
+    background-color: var(--success-color);
+    color: white;
+}
+
+.badge-warning {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+
+.badge-danger {
+    background-color: var(--danger-color);
+    color: white;
+}
+
+/* Button Small Size */
+.btn-small {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.9rem;
+    margin-right: 0.5rem;
+}
+
+/* Margin utilities */
+.mt-4 {
+    margin-top: 1.5rem;
+}
