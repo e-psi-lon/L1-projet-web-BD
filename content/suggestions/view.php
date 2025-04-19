@@ -13,6 +13,8 @@ if (empty($suggestionId)) {
 
 $user = $_SESSION['user'];
 $errorMessages = $_SESSION['error_messages'] ?? [];
+$from = $_SESSION['from'] ?? '';
+unset($_SESSION['from']);
 
 unset($_SESSION['error_messages']);
 
@@ -32,14 +34,14 @@ try {
         throw new Exception("Suggestion non trouvée ou vous n'êtes pas autorisé à la modifier");
     }
 
-    if ($suggestion['user_id'] !== $user['id']) {
+    if ($suggestion['user_id'] !== $user['id'] && !$user['is_admin']) {
         // It's not the user's suggestion, they don't have access to it
         header('Location: /suggestions/my/suggestions');
     }
 
     $suggestionType = $suggestion['suggestion_type'];
 
-    // Récupérer les données spécifiques selon le type de suggestion
+    // Fetch the suggestion details based on the type
     $stmt = match ($suggestionType) {
         'author' => $connection->prepare('
                 SELECT author_name, birth_year, death_year, biography
@@ -71,7 +73,7 @@ try {
     $books = [];
 
     if ($suggestionType === 'chapter' && isset($suggestionData['book_id'])) {
-        // Pour les chapitres, récupérer également le author_id à partir du book_id
+        // For the chapter, fetch the book details
         $stmt = $connection->prepare('
             SELECT b.book_id, b.title, b.author_id
             FROM books b
@@ -81,7 +83,7 @@ try {
         $book = $stmt->fetch();
 
         if ($book) {
-            // Récupérer tous les livres de cet auteur
+            // Fetch all books by the same author
             $stmt = $connection->prepare('
                 SELECT book_id, title, author_id
                 FROM books
@@ -91,11 +93,11 @@ try {
             $stmt->execute(['author_id' => $book['author_id']]);
             $books = $stmt->fetchAll();
 
-            // Ajouter author_id aux données de suggestion pour préremplir la liste déroulante
+            // Add author_id to suggestion data to pre-fill the dropdown
             $suggestionData['author_id'] = $book['author_id'];
         }
     } else if ($suggestionType === 'book' && isset($suggestionData['author_id'])) {
-        // Pour les livres, récupérer les livres de l'auteur sélectionné
+        // For the books, fetch the books by the selected author
         $stmt = $connection->prepare('
             SELECT book_id, title, author_id
             FROM books
@@ -143,7 +145,11 @@ $typeLabels = [
             <div class="suggestion-type-info">
                 <p>Type de suggestion : <strong><?php echo $typeLabels[$suggestionType] ?? $suggestionType; ?></strong></p>
             </div>
-
+            <?php if ($user['is_admin'] && $suggestion['user_id'] !== $user['id']): ?>
+                <div class="suggestion-author-info">
+                    <p>Suggestion faite par : <strong><?php echo htmlspecialchars($user['username']); ?></strong></p>
+                </div>
+            <?php endif; ?>
             <div>
                 <div class="card">
                     <div class="suggestion-status">
@@ -214,8 +220,14 @@ $typeLabels = [
                     </table>
 
                     <div class="form-group">
-                        <a href="/suggestions/edit/<?php echo $suggestionId; ?>" class="btn">Modifier</a>
-                        <a href="/suggestions/my/suggestions" class="btn btn-secondary">Retour</a>
+                        <?php if ($suggestion['status'] === 'pending' && !$user['is_admin']): ?>
+                            <a href="/suggestions/edit/<?php echo $suggestionId; ?>" class="btn">Modifier</a>
+                        <?php endif; ?>
+                        <?php if ($from === 'admin'): ?>
+                            <a href="/admin/suggestions" class="btn btn-secondary">Retour à la gestion</a>
+                        <?php else: ?>
+                            <a href="/suggestions/my/suggestions" class="btn btn-secondary">Retour</a>
+                        <?php endif; ?>
                     </div>
                 </div>
                 <?php elseif ($suggestionType === 'chapter'): ?>
@@ -257,6 +269,14 @@ $typeLabels = [
                                 $chapterNumber = htmlspecialchars($suggestionData['chapter_number'] ?? '');
                                 echo $chapterNumber ? "Chapitre n°$chapterNumber" : 'Non spécifié';
                                 ?>
+                        </tr>
+                        <tr>
+                            <th>Examen</th>
+                            <td>
+                                <?php
+                                echo htmlspecialchars($suggestion['admin_notes'] ?? 'Cette suggestion n\'a pas encore été examinée, il n\'y a donc pas de notes.');
+                                ?>
+                            </td>
                         </tr>
                     </table>
                     <!-- Content of the chapter -->

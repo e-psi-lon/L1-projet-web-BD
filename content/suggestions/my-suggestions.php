@@ -44,6 +44,7 @@ $suggestions = $stmt->fetchAll();
                         <th>Titre ou Nom</th>
                         <th>Statut</th>
                         <th>Actions</th>
+                        <th>Notes Admin</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -62,6 +63,8 @@ $suggestions = $stmt->fetchAll();
                             <td>
                                 <?php if ($suggestion['status'] === 'pending'): ?>
                                     <span class="badge badge-warning">En attente</span>
+                                <?php elseif ($suggestion['status'] === 'reviewed'): ?>
+                                    <span class="badge badge-info">Examinée</span>
                                 <?php elseif ($suggestion['status'] === 'approved'): ?>
                                     <span class="badge badge-success">Approuvée</span>
                                 <?php elseif ($suggestion['status'] === 'rejected'): ?>
@@ -73,6 +76,13 @@ $suggestions = $stmt->fetchAll();
                                 <?php if ($suggestion['status'] === 'pending'): ?>
                                     <a href="/suggestions/<?= $suggestion['suggestion_id'] ?>/edit" class="btn btn-small btn-secondary">Modifier</a>
                                 <?php endif; ?>
+                            </td>
+                            <td>
+                            <?php if ($suggestion['admin_notes']): ?>
+                                    <button class="btn btn-small" data-toggle="tooltip" title="<?= htmlspecialchars($suggestion['admin_notes']) ?>">
+                                        <i class="icon lucide-alert-triangle"></i>
+                                    </button>
+                            <?php endif; ?>
                             </td>
                         </tr>
                     <?php endforeach; ?>
