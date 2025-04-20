@@ -216,7 +216,6 @@ $_SESSION['from'] = 'admin';
             fetch(`/api/suggestion-details?id=${suggestionId}`)
                 .then(response => response.json())
                 .then(data => {
-                    console.log(data);
                     if (data.error) {
                         alert(data.error);
                         return;

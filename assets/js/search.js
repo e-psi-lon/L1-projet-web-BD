@@ -15,11 +15,9 @@ export function initializeSearchFeatures() {
 }
 
 function performLiveSearch(query) {
-    console.log("Querying for: ", query);
     fetch(`/api/search?q=${encodeURIComponent(query)}`)
         .then(response => response.json())
         .then(data => {
-            console.log(data);
             const resultsContainer = document.getElementById('search-results');
             if (!resultsContainer) return;
 
@@ -153,7 +151,6 @@ export function filterSuggestions() {
     let status = Array.from(document.querySelectorAll('#status-filter input[type="checkbox"]:checked')).map(input => input.value);
     type = type.map(t => t.toLowerCase());
     status = status.map(s => s.toLowerCase());
-    console.log(`search: ${search}, types: ${type}, status: ${status}`);
 
     const suggestions = document.querySelectorAll('tbody tr');
 
