@@ -350,6 +350,14 @@ button:hover, .btn:hover {
     width: 100%;
 }
 
+.sortable {
+    cursor: pointer;
+    position: relative;
+    align-items: center;
+}
+
+
+
 /* Search Components Styles */
 .search-container {
     margin: 2rem 0;

@@ -139,7 +139,7 @@ function truncateText(text, length = 150, searchTerm = '') {
     }
 
     if (searchTerm && searchTerm.trim() !== '') {
-        const escapedSearchTerm = searchTerm.replace(/[-\/\\^$*+?.()|[\]{}]/g, '\\$&');
+        const escapedSearchTerm = cleanupSearchInput(searchTerm);
         const regex = new RegExp(`(${escapedSearchTerm})`, 'gi');
         text = text.replace(regex, '<mark>$1</mark>');
     }
@@ -187,4 +187,25 @@ export function filterSuggestions() {
             suggestion.style.display = 'none';
         }
     });
+}
+
+export function filterUserTable() {
+    const searchTerm = document.getElementById('user-search').value.toLowerCase();
+    const search = cleanupSearchInput(searchTerm);
+
+    const users = document.querySelectorAll('tbody tr');
+
+    users.forEach(user => {
+        const username = cleanupSearchInput(user.querySelector('td:nth-child(2)').textContent);
+        const email = cleanupSearchInput(user.querySelector('td:nth-child(3)').textContent);
+
+        const matchesSearch = username.includes(search) || email.includes(search) || searchTerm === '';
+
+        if (matchesSearch) {
+            user.style.display = '';
+        } else {
+            user.style.display = 'none';
+        }
+    });
+
 }
