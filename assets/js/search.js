@@ -14,6 +14,10 @@ export function initializeSearchFeatures() {
     });
 }
 
+export function cleanupSearchInput(input) {
+    return input.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+}
+
 function performLiveSearch(query) {
     fetch(`/api/search?q=${encodeURIComponent(query)}`)
         .then(response => response.json())
@@ -146,7 +150,7 @@ function truncateText(text, length = 150, searchTerm = '') {
 
 export function filterSuggestions() {
     const searchTerm = document.getElementById('suggestion-search').value.toLowerCase();
-    const search = searchTerm.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+    const search = cleanupSearchInput(searchTerm);
     let type = Array.from(document.querySelectorAll('#type-filter input[type="checkbox"]:checked')).map(input => input.value);
     let status = Array.from(document.querySelectorAll('#status-filter input[type="checkbox"]:checked')).map(input => input.value);
     type = type.map(t => t.toLowerCase());
@@ -155,7 +159,7 @@ export function filterSuggestions() {
     const suggestions = document.querySelectorAll('tbody tr');
 
     suggestions.forEach(suggestion => {
-        const title = suggestion.querySelector('td:nth-child(2)').textContent.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+        const title = cleanupSearchInput(suggestion.querySelector('td:nth-child(2)').textContent);
         const typeText = suggestion.querySelector('td:nth-child(1)').textContent.trim().toLowerCase();
 
         let suggestionType = '';

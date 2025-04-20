@@ -6,7 +6,7 @@
     <div class="search-container">
         <div class="search-box">
             <label for="author-search"></label>
-            <input type="text" id="author-search" placeholder="Rechercher des auteurs..." onkeyup="filterAuthors()">
+            <input type="text" id="author-search" placeholder="Rechercher des auteurs...">
         </div>
     </div>
 
@@ -38,14 +38,16 @@
     </div>
 </div>
 
-<script>
+<script type="module">
+import { cleanupSearchInput} from "/assets/js/search.js";
+
 function filterAuthors() {
     const searchTerm = document.getElementById('author-search').value.toLowerCase();
-    const search = searchTerm.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+    const search = cleanupSearchInput(searchTerm);
     const authors = document.querySelectorAll('.author-card');
 
     authors.forEach(author => {
-        const authorName = author.querySelector('h3').textContent.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+        const authorName = cleanupSearchInput(author.querySelector('h3').textContent);
         if (authorName.includes(search) || searchTerm === '') {
             author.style.display = '';
         } else {
@@ -53,6 +55,7 @@ function filterAuthors() {
         }
     });
 }
+document.getElementById('author-search').addEventListener('keyup', filterAuthors);
 </script>
 
 <?php include 'includes/footer.php'; ?>
