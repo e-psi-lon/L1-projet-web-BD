@@ -28,7 +28,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (!empty($password) && $password !== $_POST['confirm-password']) {
         $errors[] = "Les mots de passe ne correspondent pas";
     }
-
     if (empty($errors)) {
         try {
             $connection = getDbConnection();
@@ -39,14 +38,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     'username' => $username,
                     'email' => $email,
                     'password' => password_hash($password, PASSWORD_DEFAULT),
-                    'id' => $user['user_id']
+                    'id' => $user['id']
                 ]);
             } else {
                 $stmt = $connection->prepare('UPDATE users SET username = :username, email = :email WHERE user_id = :id');
                 $stmt->execute([
                     'username' => $username,
                     'email' => $email,
-                    'id' => $user['user_id']
+                    'id' => $user['id']
                 ]);
             }
 
