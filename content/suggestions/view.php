@@ -187,8 +187,6 @@ $typeLabels = [
                                     <p>Image actuelle</p>
                                 </div>
                             <?php endif; ?>
-                            <input type="file" id="author_image" name="author_image" accept="image/jpeg,image/png,image/gif">
-                            <small class="form-text">Format recommandé: JPG, PNG ou GIF (max 2MB)</small>
                         </div>
                         <table class="table mt-4">
                             <tr>

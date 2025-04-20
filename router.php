@@ -202,6 +202,10 @@ $router->addRoute('GET', 'api/authors', function() {
         header('Content-Type: application/json');
         include 'api/suggestion-details.php';
     })
+    ->addRoute('GET', 'api/author-image', function() {
+        header('Content-Type: application/json');
+        include 'api/author-image.php';
+    })
     ->addRoute('POST', 'api/suggestions/approve', function() {
         header('Content-Type: application/json');
         include 'api/suggestions/approve.php';

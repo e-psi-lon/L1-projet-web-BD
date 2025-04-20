@@ -225,6 +225,7 @@ $_SESSION['from'] = 'admin';
                         <p><strong>Nom :</strong> ${data.details.author_name}</p>
                         <p><strong>Dates :</strong> ${data.details.birth_year || ''} - ${data.details.death_year || ''}</p>
                         <p><strong>Biographie :</strong> ${data.details.biography || ''}</p>
+                        ${data.details.author_image_url ? `<p><strong>Image :</strong><br><img src="${data.details.author_image_url}" alt="Portrait de ${data.details.author_name}" style="max-width: 200px; max-height: 200px;"></p>` : ''}
                     `;
                     } else if (data.type === 'book') {
                         detailsHtml = `
