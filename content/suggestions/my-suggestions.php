@@ -24,8 +24,16 @@ $stmt = $pdo->prepare("
     LEFT JOIN author_suggestions a ON s.suggestion_id = a.suggestion_id AND s.suggestion_type = 'author'
     LEFT JOIN book_suggestions b ON s.suggestion_id = b.suggestion_id AND s.suggestion_type = 'book'
     LEFT JOIN chapter_suggestions c ON s.suggestion_id = c.suggestion_id AND s.suggestion_type = 'chapter'
-    WHERE s.user_id = :user_id
-    ORDER BY s.suggestion_id DESC
+    WHERE s.user_id = :user_id 
+    ORDER BY 
+        CASE 
+            WHEN s.status = 'pending' THEN 1
+            WHEN s.status = 'reviewed' THEN 1
+            WHEN s.status = 'approved' THEN 2
+            WHEN s.status = 'rejected' THEN 3
+            ELSE 4
+        END,
+        s.suggestion_id DESC
 ");
 $stmt->execute(['user_id' => $user_id]);
 $suggestions = $stmt->fetchAll();

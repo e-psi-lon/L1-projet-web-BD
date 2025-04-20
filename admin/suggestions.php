@@ -22,11 +22,12 @@ $stmt = $pdo->prepare("
                WHEN s.suggestion_type = 'author' THEN a.author_name
                WHEN s.suggestion_type = 'book' THEN b.title
                WHEN s.suggestion_type = 'chapter' THEN c.title
-           END as title
+           END as title, u.username
     FROM suggestions s
     LEFT JOIN author_suggestions a ON s.suggestion_id = a.suggestion_id AND s.suggestion_type = 'author'
     LEFT JOIN book_suggestions b ON s.suggestion_id = b.suggestion_id AND s.suggestion_type = 'book'
     LEFT JOIN chapter_suggestions c ON s.suggestion_id = c.suggestion_id AND s.suggestion_type = 'chapter'
+    JOIN users u ON s.user_id = u.user_id
     ORDER BY 
         CASE 
             WHEN s.status = 'pending' THEN 1
@@ -45,7 +46,15 @@ if (!$suggestions) {
 $_SESSION['from'] = 'admin';
 ?>
 
+<script type="module">
+    import { filterSuggestions } from '/assets/js/search.js';
 
+    // For all checkboxes and input, when you keyup in the input, call the function filterSuggestions
+    document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+        checkbox.addEventListener('onclick', filterSuggestions);
+    });
+    document.getElementById('suggestion-search').addEventListener('keyup', filterSuggestions);
+</script>
 <div class="container">
     <div class="card">
         <h1 class="card-title">Gestion des suggestions</h1>
@@ -53,6 +62,46 @@ $_SESSION['from'] = 'admin';
         <?php if (empty($suggestions)): ?>
             <p>Vous n'avez pas encore fait de suggestions. <a href="/suggestions/suggest">Proposer du contenu</a></p>
         <?php else: ?>
+            <div class="search-container">
+                <div class="search-box">
+                    <label for="suggestion-search"></label>
+                    <input type="text" id="suggestion-search" placeholder="Rechercher dans les suggestions...">
+                </div>
+                <div class="filters-container">
+                    <div class="filters" id="type-filter">
+                        <div class="filter-item">
+                            <input name="type" value="author" type="checkbox" id="type-author" checked/>
+                            <label for="type-author">Auteur</label>
+                        </div>
+                        <div class="filter-item">
+                            <input name="type" value="book" type="checkbox" id="type-book" checked/>
+                            <label for="type-book">Livre</label>
+                        </div>
+                        <div class="filter-item">
+                            <input name="type" value="chapter" type="checkbox" id="type-chapter" checked/>
+                            <label for="type-chapter">Chapitre</label>
+                        </div>
+                    </div>
+                    <div class="filters" id="status-filter">
+                        <div class="filter-item">
+                            <input name="status" value="pending" type="checkbox" id="status-pending" checked/>
+                            <label for="status-pending">En attente</label>
+                        </div>
+                        <div class="filter-item">
+                            <input name="status" value="reviewed" type="checkbox" id="status-reviewed" checked/>
+                            <label for="status-reviewed">Examinée</label>
+                        </div>
+                        <div class="filter-item">
+                            <input name="status" value="approved" type="checkbox" id="status-approved" checked/>
+                            <label for="status-approved">Approuvée</label>
+                        </div>
+                        <div class="filter-item">
+                            <input name="status" value="refused" type="checkbox" id="status-refused" checked/>
+                            <label for="status-refused">Rejetée</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="table-container">
                 <table class="table">
                 <thead>
@@ -60,6 +109,7 @@ $_SESSION['from'] = 'admin';
                     <th>Type</th>
                     <th>Titre ou Nom</th>
                     <th>Statut</th>
+                    <th>Créateur</th>
                     <th>Actions</th>
                 </tr>
                 </thead>
@@ -86,6 +136,9 @@ $_SESSION['from'] = 'admin';
                             <?php elseif ($suggestion['status'] === 'rejected'): ?>
                                 <span class="badge badge-danger">Rejetée</span>
                             <?php endif; ?>
+                        </td>
+                        <td>
+                            <?= htmlspecialchars($suggestion['username']) ?>
                         </td>
                         <td>
                             <a href="/suggestions/<?= $suggestion['suggestion_id'] ?>/view" class="btn btn-small">Détails</a>
