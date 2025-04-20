@@ -5,7 +5,7 @@ require_once 'includes/utils.php';
 $db = getDbConnection();
 
 $attributes = [
-    'book_id' => 'id',
+    'books.book_id' => 'id',
     'title' => 'title',
     'publication_year' => 'publication_year',
     'description' => 'description',
@@ -18,19 +18,20 @@ $attributes = [
 // If a query parameter is provided, filter the books based on all the attributes
 $query = "SELECT books.*, COUNT(*) as chapter_count 
               FROM chapters 
-              JOIN books ON books.book_id = chapters.book_id
-              GROUP BY book_id, books.title";
+              RIGHT JOIN books ON books.book_id = chapters.book_id";
 $conditions = [];
 $params = [];
 foreach ($attributes as $dbField => $paramName) {
     if (!empty($_GET[$paramName])) {
-        $conditions[] = "$dbField = :$dbField";
-        $params[":$dbField"] = $_GET[$paramName];
+        $conditions[] = "$dbField = :".dbFieldToParamName($dbField);
+        $params[":".dbFieldToParamName($dbField)] = is_numeric($_GET[$paramName]) ? (int)$_GET[$paramName] : $_GET[$paramName];
     }
 }
 if (!empty($conditions)) {
     $query .= " WHERE " . implode(" AND ", $conditions);
 }
+// Add GROUP BY clause to group by book_id
+$query .= " GROUP BY books.book_id, books.title;";
 $stmt = $db->prepare($query);
 $stmt->execute($params);
 $books = $stmt->fetchAll(PDO::FETCH_ASSOC);

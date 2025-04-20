@@ -135,3 +135,14 @@ function ensureAdminError(string $redirectUrl = null) {
         }
     }
 }
+
+// Misc
+function dbFieldToParamName(string $dbField): string {
+    // Replace . with underscore
+    $paramName = str_replace('.', '_', $dbField);
+    $paramName = str_replace(' ', '_', $paramName);
+    // Remove any leading or trailing underscores
+    $paramName = trim($paramName, '_');
+    // Convert to lowercase
+    return strtolower($paramName);
+}
