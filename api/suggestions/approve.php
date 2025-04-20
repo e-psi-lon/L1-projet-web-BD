@@ -35,7 +35,7 @@ try {
     switch ($suggestion['suggestion_type']) {
         case 'author':
             $stmt = $pdo->prepare("
-                INSERT INTO authors (name, url_name, birth_year, death_year, biography, author_image)
+                INSERT INTO authors (name, url_name, birth_year, death_year, biography, image)
                 SELECT author_name, author_url_name, birth_year, death_year, biography, author_image
                 FROM author_suggestions 
                 WHERE suggestion_id = ?

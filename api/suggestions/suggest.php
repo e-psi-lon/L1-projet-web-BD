@@ -38,6 +38,8 @@ if (!in_array($selectedType, $suggestionTypes)) {
                 $birthYear = !empty($_POST['birth_year']) ? intval($_POST['birth_year']) : null;
                 $deathYear = !empty($_POST['death_year']) ? intval($_POST['death_year']) : null;
                 $biography = trim($_POST['biography'] ?? '');
+
+                $authorImage = null;
                 if (isset($_FILES['author_image']) && $_FILES['author_image']['error'] == 0) {
                     // Vérification du type de fichier
                     $allowedTypes = ['image/jpeg', 'image/png', 'image/gif'];
@@ -77,7 +79,7 @@ if (!in_array($selectedType, $suggestionTypes)) {
                 }
 
                 // Insert into author_suggestions
-                $stmt = $connection->prepare('INSERT INTO author_suggestions (suggestion_id, author_name, author_url_name, birth_year, death_year, biography, author_image) ) 
+                $stmt = $connection->prepare('INSERT INTO author_suggestions (suggestion_id, author_name, author_url_name, birth_year, death_year, biography, author_image) 
                                             VALUES (:suggestion_id, :author_name, :author_url_name, :birth_year, :death_year, :biography, :author_image)');
                 $stmt->execute([
                     'suggestion_id' => $suggestionId,
