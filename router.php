@@ -202,11 +202,11 @@ $router->addRoute('ANY', 'api/authors', function() {
         header('Content-Type: application/json');
         include 'api/suggestion-details.php';
     })
-    ->addRoute('GET', 'api/suggestions/approve', function() {
+    ->addRoute('POST', 'api/suggestions/approve', function() {
         header('Content-Type: application/json');
         include 'api/suggestions/approve.php';
     })
-    ->addRoute('GET', 'api/suggestions/reject', function() {
+    ->addRoute('POST', 'api/suggestions/reject', function() {
         header('Content-Type: application/json');
         include 'api/suggestions/reject.php';
     });
