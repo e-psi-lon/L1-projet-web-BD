@@ -17,7 +17,7 @@ $pdo = getDbConnection();
 $stmt = $pdo->prepare("
     SELECT u.user_id, u.username, u.email, u.is_admin,
     COUNT(s.suggestion_id) AS suggestions_count,
-    SUM(CASE WHEN s.status = 'approved' THEN 1 ELSE 0 END) AS approved_count
+    SUM(IF(s.status = 'approved', 1, 0)) AS approved_count
     FROM users u
     LEFT JOIN suggestions s ON u.user_id = s.user_id
     GROUP BY u.user_id, u.username, u.email, u.is_admin
