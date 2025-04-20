@@ -106,30 +106,5 @@
         </div>
     </div>
 
-<?php
-function truncateText($text, $length = 150, $searchTerm = '') {
-    $text = strip_tags($text);
-
-    if (!empty($searchTerm)) {
-        $pos = stripos($text, $searchTerm);
-        if ($pos !== false) {
-            $start = max(0, $pos - $length / 2);
-            if ($start > 0) {
-                $text = '...' . substr($text, $start);
-            }
-        }
-    }
-
-    if (strlen($text) > $length) {
-        $text = substr($text, 0, $length) . '...';
-    }
-
-    if (!empty($searchTerm)) {
-        $text = preg_replace('/(' . preg_quote($searchTerm, '/') . ')/i', '<mark>$1</mark>', $text);
-    }
-
-    return $text;
-}
-?>
 
 <?php include 'includes/footer.php'; ?>

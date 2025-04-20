@@ -1,23 +1,23 @@
 <?php
 
 function getDbConnection() {
-    // Define database path relative to this file
-    $db_path = dirname(__DIR__) . '/database/database.db';
+    // MySQL configuration
+    $host = 'localhost:3306';
+    $dbname = 'web-project';
+    $username = 'root';
+    $password = '';
 
     try {
-        // Use SQLite with the database file
-        $conn = new PDO('sqlite:' . $db_path);
+        // Connection to MySQL
+        $conn = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
 
-        // Set error mode and some SQLite specific attributes
+        // Config of PDO attributes
         $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         $conn->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 
-        // Enable foreign keys in SQLite
-        $conn->exec('PRAGMA foreign_keys = ON');
-
         return $conn;
     } catch(PDOException $e) {
-        echo "Connection error: " . $e->getMessage();
+        echo "Erreur de connexion : " . $e->getMessage();
         exit();
     }
 }
@@ -53,4 +53,28 @@ function toUrlName(string $name): string {
     $url_name = preg_replace('/-+/', '-', $url_name);
 
     return trim($url_name, '-');
+}
+
+function truncateText($text, $length = 150, $searchTerm = '') {
+    $text = strip_tags($text);
+
+    if (!empty($searchTerm)) {
+        $pos = stripos($text, $searchTerm);
+        if ($pos !== false) {
+            $start = max(0, $pos - $length / 2);
+            if ($start > 0) {
+                $text = '...' . substr($text, $start);
+            }
+        }
+    }
+
+    if (strlen($text) > $length) {
+        $text = substr($text, 0, $length) . '...';
+    }
+
+    if (!empty($searchTerm)) {
+        $text = preg_replace('/(' . preg_quote($searchTerm, '/') . ')/i', '<mark>$1</mark>', $text);
+    }
+
+    return $text;
 }

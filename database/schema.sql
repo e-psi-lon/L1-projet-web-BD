@@ -2,7 +2,7 @@
 
 -- Authors' table
 CREATE TABLE authors (
-    author_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    author_id INTEGER PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(100) NOT NULL,
     url_name VARCHAR(100) NOT NULL UNIQUE,
     birth_year INTEGER,
@@ -12,7 +12,7 @@ CREATE TABLE authors (
 
 -- Books' table
 CREATE TABLE books (
-    book_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    book_id INTEGER PRIMARY KEY AUTO_INCREMENT,
     author_id INTEGER NOT NULL,
     title VARCHAR(255) NOT NULL,
     url_title VARCHAR(255) NOT NULL,
@@ -23,17 +23,17 @@ CREATE TABLE books (
 
 -- Chapters' table
 CREATE TABLE chapters (
-    chapter_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    chapter_id INTEGER PRIMARY KEY AUTO_INCREMENT,
     book_id INTEGER NOT NULL,
     title VARCHAR(255),
     chapter_number INTEGER NOT NULL,
-    content TEXT NOT NULL,
+    content LONGTEXT NOT NULL,
     FOREIGN KEY (book_id) REFERENCES books(book_id)
 );
 
 -- Users' table
 CREATE TABLE users (
-    user_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    user_id INTEGER PRIMARY KEY AUTO_INCREMENT,
     username VARCHAR(50) NOT NULL UNIQUE,
     email VARCHAR(100) NOT NULL UNIQUE,
     password VARCHAR(255) NOT NULL,
@@ -42,7 +42,7 @@ CREATE TABLE users (
 
 -- Suggestions table (for new content)
 CREATE TABLE suggestions (
-    suggestion_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    suggestion_id INTEGER PRIMARY KEY AUTO_INCREMENT,
     user_id INTEGER NOT NULL,
     suggestion_type VARCHAR(20) NOT NULL,
     status VARCHAR(20) NOT NULL DEFAULT 'pending',
@@ -79,7 +79,7 @@ CREATE TABLE chapter_suggestions (
     book_id INTEGER NOT NULL,
     title VARCHAR(255),
     chapter_number INTEGER NOT NULL,
-    content TEXT NOT NULL,
+    content LONGTEXT NOT NULL,
     FOREIGN KEY (book_id) REFERENCES books(book_id),
     FOREIGN KEY (suggestion_id) REFERENCES suggestions(suggestion_id)
 );

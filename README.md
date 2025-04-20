@@ -44,7 +44,7 @@ Le projet est divisé en plusieurs dossiers pour une meilleure organisation :
 
 ## Base de données
 
-Le projet utilise MySQL comme système de gestion de base de données, mais SQLite pour le développement local. Le schéma est défini dans `schema.sql` et comprend les tables suivantes :
+Le projet utilise MySQL comme système de gestion de base de données. Le schéma est défini dans `schema.sql` et comprend les tables suivantes :
 
 ### Tables
 
