@@ -166,9 +166,12 @@ export function filterSuggestions() {
         const statusBadge = suggestion.querySelector('td:nth-child(3) span.badge');
         let suggestionStatus = '';
         if (statusBadge.classList.contains('badge-warning')) suggestionStatus = 'pending';
-        else if (statusBadge.classList.contains('badge')) suggestionStatus = 'reviewed';
         else if (statusBadge.classList.contains('badge-success')) suggestionStatus = 'approved';
         else if (statusBadge.classList.contains('badge-danger')) suggestionStatus = 'rejected';
+        else if (statusBadge.classList.contains('badge') &&
+            !statusBadge.classList.contains('badge-warning') &&
+            !statusBadge.classList.contains('badge-success') &&
+            !statusBadge.classList.contains('badge-danger')) suggestionStatus = 'reviewed';
 
         const matchesSearch = title.includes(search) || searchTerm === '';
         const matchesType = type.length === 0 || type.includes(suggestionType);

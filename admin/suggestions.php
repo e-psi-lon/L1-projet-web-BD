@@ -51,7 +51,7 @@ $_SESSION['from'] = 'admin';
 
     // For all checkboxes and input, when you keyup in the input, call the function filterSuggestions
     document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
-        checkbox.addEventListener('onclick', filterSuggestions);
+        checkbox.addEventListener('change', filterSuggestions);
     });
     document.getElementById('suggestion-search').addEventListener('keyup', filterSuggestions);
 </script>
@@ -96,7 +96,7 @@ $_SESSION['from'] = 'admin';
                             <label for="status-approved">Approuvée</label>
                         </div>
                         <div class="filter-item">
-                            <input name="status" value="refused" type="checkbox" id="status-refused" checked/>
+                            <input name="status" value="rejected" type="checkbox" id="status-refused" checked/>
                             <label for="status-refused">Rejetée</label>
                         </div>
                     </div>
@@ -142,7 +142,7 @@ $_SESSION['from'] = 'admin';
                         </td>
                         <td>
                             <a href="/suggestions/<?= $suggestion['suggestion_id'] ?>/view" class="btn btn-small">Détails</a>
-                            <?php if ($suggestion['status'] === 'pending'): ?>
+                            <?php if ($suggestion['status'] === 'pending' || $suggestion['status'] === 'reviewed'): ?>
                                 <button type="button" class="btn btn-small btn-success accept" id="approve-<?= $suggestion['suggestion_id'] ?>">Approuver</button>
                                 <button type="button" class="btn btn-small btn-danger reject" id="reject-<?= $suggestion['suggestion_id'] ?>">Rejeter</button>
                                 <button type="button" class="btn btn-small btn-secondary review" id="review-<?= $suggestion['suggestion_id'] ?>">Examiner</button>

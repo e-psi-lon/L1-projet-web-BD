@@ -45,7 +45,7 @@ $suggestions = $stmt->fetchAll();
 
     // For all checkboxes and input, when you keyup in the input, call the function filterSuggestions
     document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
-        checkbox.addEventListener('onclick', filterSuggestions);
+        checkbox.addEventListener('change', filterSuggestions);
     });
     document.getElementById('suggestion-search').addEventListener('keyup', filterSuggestions);
 </script>
@@ -90,7 +90,7 @@ $suggestions = $stmt->fetchAll();
                             <label for="status-approved">Approuvée</label>
                         </div>
                         <div class="filter-item">
-                            <input name="status" value="refused" type="checkbox" id="status-refused" checked/>
+                            <input name="status" value="rejected" type="checkbox" id="status-refused" checked/>
                             <label for="status-refused">Rejetée</label>
                         </div>
                     </div>
@@ -133,14 +133,14 @@ $suggestions = $stmt->fetchAll();
                             </td>
                             <td>
                                 <a href="/suggestions/<?= $suggestion['suggestion_id'] ?>/view" class="btn btn-small">Détails</a>
-                                <?php if ($suggestion['status'] === 'pending'): ?>
+                                <?php if ($suggestion['status'] === 'pending' || $suggestion['status'] === 'reviewed'): ?>
                                     <a href="/suggestions/<?= $suggestion['suggestion_id'] ?>/edit" class="btn btn-small btn-secondary">Modifier</a>
                                 <?php endif; ?>
                             </td>
                             <td>
                             <?php if ($suggestion['admin_notes']): ?>
-                                    <button class="btn btn-small" data-toggle="tooltip" title="<?= htmlspecialchars($suggestion['admin_notes']) ?>">
-                                        <i class="icon lucide-alert-triangle"></i>
+                                    <button class="btn btn-small" data-toggle="tooltip" title="Examen effectué par <?= htmlspecialchars($suggestion['reviewed_by']) ?>: <?= htmlspecialchars($suggestion['admin_notes']) ?>">
+                                        <i data-lucide="alert-triangle" class="icon"></i>
                                     </button>
                             <?php endif; ?>
                             </td>
