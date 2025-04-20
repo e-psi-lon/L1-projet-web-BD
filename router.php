@@ -178,15 +178,15 @@ $router->addRoute('GET', 'auth/login', 'account/login.php')
     ->addRoute('POST', 'account', 'account/account.php');
 
 // ----- API Routes -----
-$router->addRoute('ANY', 'api/authors', function() {
+$router->addRoute('GET', 'api/authors', function() {
     header('Content-Type: application/json');
     include 'api/authors.php';
 })
-    ->addRoute('ANY', 'api/books', function() {
+    ->addRoute('GET', 'api/books', function() {
         header('Content-Type: application/json');
         include 'api/books.php';
     })
-    ->addRoute('ANY', 'api/search', function() {
+    ->addRoute('GET', 'api/search', function() {
         header('Content-Type: application/json');
         include 'api/search.php';
     })
