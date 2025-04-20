@@ -14,7 +14,14 @@ $suggestionId = $_POST['suggestion_id'] ?? null;
 if (!$suggestionId) {
     http_response_code(400);
     echo json_encode(['error' => 'ID de la suggestion manquant']);
-exit;
+    exit;
+}
+
+$notes = $_POST['notes'] ?? null;
+if (!$notes) {
+    http_response_code(400);
+    echo json_encode(['error' => 'Notes à ajouter manquantes']);
+    exit;
 }
 
 try {
@@ -31,16 +38,17 @@ try {
     }
 
     // Update suggestion status
-    $stmt = $pdo->prepare("UPDATE suggestions SET status = 'rejected', reviewed_by = ? WHERE suggestion_id = ?");
-    $stmt->execute([$_SESSION['user']['id'], $suggestionId]);
+    $stmt = $pdo->prepare("UPDATE suggestions SET status = 'reviewed', admin_notes = ?, reviewed_by = ? WHERE suggestion_id = ?");
+    $stmt->execute([$notes, $_SESSION['user']['id'], $suggestionId]);
+    $pdo->commit();
 
+    http_response_code(200);
     echo json_encode(['success' => true]);
 } catch (Exception $e) {
-    // Rollback the transaction in case of error
     if (isset($pdo)) {
         $pdo->rollBack();
     }
-
     http_response_code(500);
-    echo json_encode(['error' => 'Erreur lors du traitement de la demande: ' . $e->getMessage()]);
+    echo json_encode(['error' => $e->getMessage()]);
 }
+

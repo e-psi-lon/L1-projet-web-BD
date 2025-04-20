@@ -31,8 +31,8 @@ try {
     }
 
     // Update suggestion status
-    $stmt = $pdo->prepare("UPDATE suggestions SET status = 'approved' WHERE suggestion_id = ?");
-    $stmt->execute([$suggestionId]);
+    $stmt = $pdo->prepare("UPDATE suggestions SET status = 'approved', reviewed_by = ? WHERE suggestion_id = ?");
+    $stmt->execute([$_SESSION['user']['id'], $suggestionId]);
 
     // Move data to the appropriate table based on suggestion_type
     switch ($suggestion['suggestion_type']) {

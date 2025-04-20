@@ -23,8 +23,9 @@ try {
 
     // Fetch the main suggestion details
     $stmt = $connection->prepare('
-        SELECT s.suggestion_id, s.user_id, s.suggestion_type, s.status
+        SELECT s.suggestion_id, s.user_id, s.suggestion_type, s.status, s.admin_notes, u.username as reviewed_by
         FROM suggestions s
+        LEFT JOIN users u ON s.reviewed_by = u.user_id
         WHERE s.suggestion_id = :id
     ');
     $stmt->execute(['id' => $suggestionId]);
@@ -197,39 +198,61 @@ $typeLabels = [
                             <th>Biographie</th>
                             <td><?php echo nl2br(htmlspecialchars($suggestionData['biography'] ?? '')); ?></td>
                         </tr>
+                        <?php if ($suggestion['admin_notes']): ?>
+                            <tr>
+                                <th>Examen (effectué par <?php echo htmlspecialchars($suggestion['reviewed_by']); ?>)</th>
+                                <td><?php echo nl2br(htmlspecialchars($suggestion['admin_notes'])); ?></td>
+                            </tr>
+                        <?php endif; ?>
                     </table>
+                    </div>
+                    <div class="form-group">
+                        <?php if ($suggestion['status'] === 'pending' && !$user['is_admin']): ?>
+                            <a href="/suggestions/edit/<?php echo $suggestionId; ?>" class="btn">Modifier</a>
+                        <?php endif; ?>
+                        <?php if ($from === 'admin'): ?>
+                            <a href="/admin/suggestions" class="btn btn-secondary">Retour à la gestion</a>
+                        <?php else: ?>
+                            <a href="/suggestions/my/suggestions" class="btn btn-secondary">Retour</a>
+                        <?php endif; ?>
                     </div>
                 <?php elseif ($suggestionType === 'book'): ?>
                     <div class="table-container">
                         <table class="table mt-4">
-                        <tr>
-                            <th>Auteur</th>
-                            <td>
-                                <?php
-                                $authorName = '';
-                                foreach ($authors as $author) {
-                                    if ($author['author_id'] == ($suggestionData['author_id'] ?? '')) {
-                                        $authorName = htmlspecialchars($author['name']);
-                                        break;
+                            <tr>
+                                <th>Auteur</th>
+                                <td>
+                                    <?php
+                                    $authorName = '';
+                                    foreach ($authors as $author) {
+                                        if ($author['author_id'] == ($suggestionData['author_id'] ?? '')) {
+                                            $authorName = htmlspecialchars($author['name']);
+                                            break;
+                                        }
                                     }
-                                }
-                                echo $authorName;
-                                ?>
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>Titre du livre</th>
-                            <td><?php echo htmlspecialchars($suggestionData['title'] ?? ''); ?></td>
-                        </tr>
-                        <tr>
-                            <th>Année de publication</th>
-                            <td><?php echo htmlspecialchars($suggestionData['publication_year'] ?? 'Non spécifiée'); ?></td>
-                        </tr>
-                        <tr>
-                            <th>Description</th>
-                            <td><?php echo nl2br(htmlspecialchars($suggestionData['description'] ?? '')); ?></td>
-                        </tr>
-                    </table>
+                                    echo $authorName;
+                                    ?>
+                                </td>
+                            </tr>
+                            <tr>
+                                <th>Titre du livre</th>
+                                <td><?php echo htmlspecialchars($suggestionData['title'] ?? ''); ?></td>
+                            </tr>
+                            <tr>
+                                <th>Année de publication</th>
+                                <td><?php echo htmlspecialchars($suggestionData['publication_year'] ?? 'Non spécifiée'); ?></td>
+                            </tr>
+                            <tr>
+                                <th>Description</th>
+                                <td><?php echo nl2br(htmlspecialchars($suggestionData['description'] ?? '')); ?></td>
+                            </tr>
+                            <?php if ($suggestion['admin_notes']): ?>
+                                <tr>
+                                    <th>Examen (effectué par <?php echo htmlspecialchars($suggestion['reviewed_by']); ?>)</th>
+                                    <td><?php echo nl2br(htmlspecialchars($suggestion['admin_notes'])); ?></td>
+                                </tr>
+                            <?php endif; ?>
+                        </table>
                     </div>
                     <div class="form-group">
                         <?php if ($suggestion['status'] === 'pending' && !$user['is_admin']): ?>
@@ -284,15 +307,23 @@ $typeLabels = [
                                 echo $chapterNumber ? "Chapitre n°$chapterNumber" : 'Non spécifié';
                                 ?>
                         </tr>
-                        <tr>
-                            <th>Examen</th>
-                            <td>
-                                <?php
-                                echo htmlspecialchars($suggestion['admin_notes'] ?? 'Cette suggestion n\'a pas encore été examinée, il n\'y a donc pas de notes.');
-                                ?>
-                            </td>
-                        </tr>
+                        <?php if ($suggestion['admin_notes']): ?>
+                            <tr>
+                                <th>Examen (effectué par <?php echo htmlspecialchars($suggestion['reviewed_by']); ?>)</th>
+                                <td><?php echo nl2br(htmlspecialchars($suggestion['admin_notes'])); ?></td>
+                            </tr>
+                        <?php endif; ?>
                     </table>
+                    </div>
+                    <div class="form-group">
+                        <?php if ($suggestion['status'] === 'pending' && !$user['is_admin']): ?>
+                            <a href="/suggestions/edit/<?php echo $suggestionId; ?>" class="btn">Modifier</a>
+                        <?php endif; ?>
+                        <?php if ($from === 'admin'): ?>
+                            <a href="/admin/suggestions" class="btn btn-secondary">Retour à la gestion</a>
+                        <?php else: ?>
+                            <a href="/suggestions/my/suggestions" class="btn btn-secondary">Retour</a>
+                        <?php endif; ?>
                     </div>
                     <!-- Content of the chapter -->
                     <div class="chapter-content">

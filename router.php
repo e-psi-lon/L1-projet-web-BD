@@ -209,6 +209,10 @@ $router->addRoute('ANY', 'api/authors', function() {
     ->addRoute('POST', 'api/suggestions/reject', function() {
         header('Content-Type: application/json');
         include 'api/suggestions/reject.php';
+    })
+    ->addRoute('POST', 'api/suggestions/update-notes', function() {
+        header('Content-Type: application/json');
+        include 'api/suggestions/updateNotes.php';
     });
 
 // ----- Admin routes -----

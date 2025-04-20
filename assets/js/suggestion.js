@@ -1,7 +1,7 @@
 export function saveAdminNotes(suggestionId, notes) {
     const formData = new FormData();
     formData.append('suggestion_id', suggestionId);
-    formData.append('admin_notes', notes);
+    formData.append('notes', notes);
     fetch('/api/suggestions/update-notes', {
         method: 'POST',
         body: formData
