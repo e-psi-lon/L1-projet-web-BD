@@ -6,7 +6,7 @@ require_once 'includes/utils.php';
 
 // Check if the user is logged in
 if (!isset($_SESSION['user'])) {
-    header('Location: /login.php');
+    header('Location: /auth/login');
     exit;
 }
 // Check if the user is an admin
@@ -53,7 +53,8 @@ $_SESSION['from'] = 'admin';
         <?php if (empty($suggestions)): ?>
             <p>Vous n'avez pas encore fait de suggestions. <a href="/suggestions/suggest">Proposer du contenu</a></p>
         <?php else: ?>
-            <table class="table">
+            <div class="table-container">
+                <table class="table">
                 <thead>
                 <tr>
                     <th>Type</th>
@@ -98,6 +99,7 @@ $_SESSION['from'] = 'admin';
                 <?php endforeach; ?>
                 </tbody>
             </table>
+            </div>
         <?php endif; ?>
     </div>
 </div>

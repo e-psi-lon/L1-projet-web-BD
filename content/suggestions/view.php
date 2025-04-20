@@ -170,7 +170,8 @@ $typeLabels = [
                         </span>
                     </div>
                 <?php if ($suggestionType === 'author'): ?>
-                    <table class="table mt-4">
+                    <div class="table-container">
+                        <table class="table mt-4">
                         <tr>
                             <th>Nom de l'auteur</th>
                             <td><?php echo htmlspecialchars($suggestionData['author_name'] ?? ''); ?></td>
@@ -188,8 +189,10 @@ $typeLabels = [
                             <td><?php echo nl2br(htmlspecialchars($suggestionData['biography'] ?? '')); ?></td>
                         </tr>
                     </table>
+                    </div>
                 <?php elseif ($suggestionType === 'book'): ?>
-                    <table class="table mt-4">
+                    <div class="table-container">
+                        <table class="table mt-4">
                         <tr>
                             <th>Auteur</th>
                             <td>
@@ -218,7 +221,7 @@ $typeLabels = [
                             <td><?php echo nl2br(htmlspecialchars($suggestionData['description'] ?? '')); ?></td>
                         </tr>
                     </table>
-
+                    </div>
                     <div class="form-group">
                         <?php if ($suggestion['status'] === 'pending' && !$user['is_admin']): ?>
                             <a href="/suggestions/edit/<?php echo $suggestionId; ?>" class="btn">Modifier</a>
@@ -231,7 +234,9 @@ $typeLabels = [
                     </div>
                 </div>
                 <?php elseif ($suggestionType === 'chapter'): ?>
-                    <table class="table mt-4">
+
+                    <div class="table-container">
+                        <table class="table mt-4">
                         <tr>
                             <th>Auteur</th>
                             <td>
@@ -279,6 +284,7 @@ $typeLabels = [
                             </td>
                         </tr>
                     </table>
+                    </div>
                     <!-- Content of the chapter -->
                     <div class="chapter-content">
                         <h3>Contenu du chapitre</h3>
