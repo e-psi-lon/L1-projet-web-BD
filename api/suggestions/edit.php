@@ -42,6 +42,28 @@ if (!in_array($selectedType, $suggestionTypes)) {
                     throw new Exception("Le nom de l'auteur est obligatoire");
                 }
 
+                $imageParams = [];
+                if (isset($_FILES['author_image']) && $_FILES['author_image']['error'] == 0) {
+                    // Vérification du type de fichier
+                    $allowedTypes = ['image/jpeg', 'image/png', 'image/gif'];
+                    $fileInfo = finfo_open(FILEINFO_MIME_TYPE);
+                    $mimeType = finfo_file($fileInfo, $_FILES['author_image']['tmp_name']);
+                    finfo_close($fileInfo);
+
+                    if (!in_array($mimeType, $allowedTypes)) {
+                        throw new Exception("Type de fichier non autorisé. Formats acceptés: JPEG, PNG, GIF");
+                    }
+
+                    // Vérification de la taille (2MB max)
+                    if ($_FILES['author_image']['size'] > 2 * 1024 * 1024) {
+                        throw new Exception("L'image est trop volumineuse (max 2MB)");
+                    }
+
+                    // Lecture de l'image en binaire
+                    $authorImage = file_get_contents($_FILES['author_image']['tmp_name']);
+                    $imageParams = ['author_image' => $authorImage];
+                }
+
                 // Check if a suggestion with the same URL name already exists
                 $checkStmt = $connection->prepare('SELECT COUNT(*) FROM author_suggestions WHERE author_url_name = :url_name AND suggestion_id != :suggestion_id');
                 $checkStmt->execute(['url_name' => $authorUrlName, 'suggestion_id' => $suggestionId]);
@@ -56,15 +78,27 @@ if (!in_array($selectedType, $suggestionTypes)) {
                 }
 
                 // Update author_suggestions
-                $stmt = $connection->prepare('UPDATE author_suggestions SET author_name = :author_name, author_url_name = :author_url_name, birth_year = :birth_year, death_year = :death_year, biography = :biography WHERE suggestion_id = :suggestion_id');
-                $stmt->execute([
+                $updateFields = 'author_name = :author_name, author_url_name = :author_url_name, birth_year = :birth_year, death_year = :death_year, biography = :biography';
+                if (!empty($imageParams)) {
+                    $updateFields .= ', author_image = :author_image';
+                }
+
+                // Update author_suggestions
+                $stmt = $connection->prepare("UPDATE author_suggestions SET {$updateFields} WHERE suggestion_id = :suggestion_id");
+                $params = [
                     'suggestion_id' => $suggestionId,
                     'author_name' => $authorName,
                     'author_url_name' => $authorUrlName,
                     'birth_year' => $birthYear,
                     'death_year' => $deathYear,
                     'biography' => $biography,
-                ]);
+                ];
+
+                if (!empty($imageParams)) {
+                    $params = array_merge($params, $imageParams);
+                }
+
+                $stmt->execute($params);
                 break;
 
             case 'book':

@@ -44,7 +44,7 @@ try {
     $stmt = null;
     if ($suggestionType === 'author') {
         $stmt = $connection->prepare('
-            SELECT author_name, birth_year, death_year, biography
+            SELECT author_name, birth_year, death_year, biography, author_image
             FROM author_suggestions
             WHERE suggestion_id = :id
         ');
@@ -179,30 +179,41 @@ $typeLabels = [
                     </div>
                 <?php if ($suggestionType === 'author'): ?>
                     <div class="table-container">
+                        <div class="form-group">
+                            <label for="author_image">Image de l'auteur</label>
+                            <?php if (!empty($suggestionData['author_image'])): ?>
+                                <div class="current-image">
+                                    <img src="data:image/jpeg;base64,<?php echo base64_encode($suggestionData['author_image']); ?>" alt="Image actuelle" class="author-thumbnail">
+                                    <p>Image actuelle</p>
+                                </div>
+                            <?php endif; ?>
+                            <input type="file" id="author_image" name="author_image" accept="image/jpeg,image/png,image/gif">
+                            <small class="form-text">Format recommandé: JPG, PNG ou GIF (max 2MB)</small>
+                        </div>
                         <table class="table mt-4">
-                        <tr>
-                            <th>Nom de l'auteur</th>
-                            <td><?php echo h($suggestionData['author_name'] ?? ''); ?></td>
-                        </tr>
-                        <tr>
-                            <th>Année de naissance</th>
-                            <td><?php echo h($suggestionData['birth_year'] ?? 'Non spécifiée'); ?></td>
-                        </tr>
-                        <tr>
-                            <th>Année de décès</th>
-                            <td><?php echo h($suggestionData['death_year'] ?? 'Non spécifiée'); ?></td>
-                        </tr>
-                        <tr>
-                            <th>Biographie</th>
-                            <td><?php echo nl2br(h($suggestionData['biography'] ?? '')); ?></td>
-                        </tr>
-                        <?php if ($suggestion['admin_notes']): ?>
                             <tr>
-                                <th>Examen (effectué par <?php echo h($suggestion['reviewed_by']); ?>)</th>
-                                <td><?php echo nl2br(h($suggestion['admin_notes'])); ?></td>
+                                <th>Nom de l'auteur</th>
+                                <td><?php echo h($suggestionData['author_name'] ?? ''); ?></td>
                             </tr>
-                        <?php endif; ?>
-                    </table>
+                            <tr>
+                                <th>Année de naissance</th>
+                                <td><?php echo h($suggestionData['birth_year'] ?? 'Non spécifiée'); ?></td>
+                            </tr>
+                            <tr>
+                                <th>Année de décès</th>
+                                <td><?php echo h($suggestionData['death_year'] ?? 'Non spécifiée'); ?></td>
+                            </tr>
+                            <tr>
+                                <th>Biographie</th>
+                                <td><?php echo nl2br(h($suggestionData['biography'] ?? '')); ?></td>
+                            </tr>
+                            <?php if ($suggestion['admin_notes']): ?>
+                                <tr>
+                                    <th>Examen (effectué par <?php echo h($suggestion['reviewed_by']); ?>)</th>
+                                    <td><?php echo nl2br(h($suggestion['admin_notes'])); ?></td>
+                                </tr>
+                            <?php endif; ?>
+                        </table>
                     </div>
                     <div class="form-group">
                         <?php if ($suggestion['status'] === 'pending' && !$user['is_admin']): ?>

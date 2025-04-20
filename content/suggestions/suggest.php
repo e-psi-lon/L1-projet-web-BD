@@ -60,12 +60,18 @@ try {
 
             <div class="suggestion-form">
                 <?php if ($selectedType === 'author'): ?>
-                    <form class="form-group" method="POST" action="/api/suggest">
+                    <form class="form-group" method="POST" action="/api/suggest" enctype="multipart/form-data">
                         <input type="hidden" name="suggestion_type" value="author">
 
                         <div class="form-group">
                             <label for="author_name">Nom de l'auteur</label>
                             <input type="text" id="author_name" name="author_name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="author_image">Image de l'auteur</label>
+                            <input type="file" id="author_image" name="author_image" accept="image/jpeg, image/png, image/gif" required>
+                            <small class="form-text">Format recommandé: JPG, PNG ou GIF (max 2MB)</small>
                         </div>
 
                         <div class="form-group">

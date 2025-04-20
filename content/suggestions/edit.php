@@ -158,7 +158,7 @@ $typeLabels = [
 
             <div class="suggestion-form">
                 <?php if ($suggestionType === 'author'): ?>
-                    <form class="form-group" method="POST" action="/api/suggestions/edit">
+                    <form class="form-group" method="POST" action="/api/suggestions/edit" enctype="multipart/form-data">
                         <input type="hidden" name="suggestion_id" value="<?php echo $suggestionId; ?>">
                         <input type="hidden" name="suggestion_type" value="author">
 
@@ -175,6 +175,18 @@ $typeLabels = [
                         <div class="form-group">
                             <label for="death_year">Année de décès</label>
                             <input type="number" id="death_year" name="death_year" value="<?php echo h($suggestionData['death_year'] ?? ''); ?>" placeholder="Ex: 44 pour 44 apr. J.-C.">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="author_image">Image de l'auteur</label>
+                            <?php if (!empty($suggestionData['author_image'])): ?>
+                                <div class="current-image">
+                                    <img src="data:image/jpeg;base64,<?php echo base64_encode($suggestionData['author_image']); ?>" alt="Image actuelle" class="author-thumbnail">
+                                    <p>Image actuelle</p>
+                                </div>
+                            <?php endif; ?>
+                            <input type="file" id="author_image" name="author_image" accept="image/jpeg,image/png,image/gif">
+                            <small class="form-text">Format recommandé: JPG, PNG ou GIF (max 2MB)</small>
                         </div>
 
                         <div class="form-group">

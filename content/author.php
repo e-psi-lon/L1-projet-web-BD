@@ -45,6 +45,11 @@ if ($author_info) {
 <div class="container">
     <?php if ($author_info): ?>
         <div class="author-header">
+            <?php if (!empty($author_info['author_image'])): ?>
+                <div class="author-portrait">
+                    <img src="data:image/jpeg;base64,<?php echo base64_encode($author_info['author_image']); ?>" alt="<?php echo h($author_info['name']); ?>">
+                </div>
+            <?php endif; ?>
             <h1 class="card-title"><?php echo h($author_info['name']); ?></h1>
             <p class="author-years">
                 <?php echo ($author_info['birth_year'] ?: '?'); ?> -
