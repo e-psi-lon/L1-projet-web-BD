@@ -1,10 +1,7 @@
 <?php
 include 'includes/header.php';
 
-if (!isset($_SESSION['user'])) {
-    header('Location: auth/login');
-    exit();
-}
+ensureLoggedIn();
 
 $user = $_SESSION['user'];
 $updateSuccess = false;

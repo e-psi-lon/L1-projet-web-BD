@@ -1,10 +1,8 @@
 <?php
 include 'includes/header.php';
 
-if (!isset($_SESSION['user'])) {
-    header('Location: /auth/login');
-    exit();
-}
+// Check if the user is logged in
+ensureLoggedIn();
 
 if (empty($suggestionId)) {
     header('Location: /suggestions/my/suggestions');

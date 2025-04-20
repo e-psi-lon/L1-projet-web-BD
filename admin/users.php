@@ -2,15 +2,8 @@
 include 'includes/header.php';
 
 // Check if the user is logged in
-if (!isset($_SESSION['user'])) {
-    header('Location: /auth/login');
-    exit;
-}
-// Check if the user is an admin
-if (!$_SESSION['user']['is_admin']) {
-    header('Location: /index');
-    exit;
-}
+ensureLoggedIn();
+ensureAdmin();
 
 $pdo = getDbConnection();
 $pdo = getDbConnection();

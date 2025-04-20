@@ -6,13 +6,9 @@ $suggestionTypes = ['author', 'book', 'chapter'];
 $selectedType = $_POST['suggestion_type'] ?? 'author';
 $errorMessages = [];
 $successMessage = '';
+ensureLoggedInError("/suggestions/suggest?type=$selectedType");
 $user = $_SESSION['user'];
-if (!$user) {
-    $errorMessages[] = "Vous devez être connecté pour soumettre une suggestion."; // You must be logged in to submit a suggestion
-    $_SESSION['error_messages'] = $errorMessages;
-    http_response_code(403);
-    header("Location: /suggestions/suggest?type=$selectedType");
-}
+
 
 if (!in_array($selectedType, $suggestionTypes)) {
     $errorMessages[] = "Type de suggestion invalide"; // Invalid suggestion type

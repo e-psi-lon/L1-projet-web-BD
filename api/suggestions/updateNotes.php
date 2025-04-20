@@ -3,11 +3,8 @@ session_start();
 
 require_once 'includes/utils.php';
 // Check user authentication and admin privileges
-if (!isset($_SESSION['user']) || !$_SESSION['user']['is_admin']) {
-    http_response_code(403);
-    echo json_encode(['error' => 'Accès non autorisé']);
-    exit;
-}
+ensureLoggedInError();
+ensureAdminError();
 
 // Get suggestion ID from POST data
 $suggestionId = $_POST['suggestion_id'] ?? null;

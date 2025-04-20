@@ -1,10 +1,8 @@
 <?php include 'includes/header.php';
 
 // Check if the user is logged in and is an admin
-if (!isset($_SESSION['user']) || !$_SESSION['user']['is_admin']) {
-    header('Location: /index');
-    exit;
-}
+ensureLoggedIn();
+ensureAdmin();
 
 // Fetch all counts (users, authors, books, chapters and suggestions)
 $pdo = getDbConnection();

@@ -2,10 +2,7 @@
 include 'includes/header.php';
 
 // Check if the user is logged in
-if (!isset($_SESSION['user'])) {
-    header('Location: /auth/login');
-    exit;
-}
+ensureLoggedIn();
 
 unset($_SESSION['from']);
 

@@ -22,6 +22,7 @@ function getDbConnection() {
     }
 }
 
+// URL Building
 function toUrlName(string $name): string {
     // Transliterate accented characters to their ASCII equivalents
     if (function_exists('transliterator_transliterate')) {
@@ -67,6 +68,7 @@ function getChapterUrl(string $authorUrlName, string $bookUrlTitle, string $chap
     return getBookUrl($authorUrlName, $bookUrlTitle) . '/chapters/' . $chapterNumber;
 }
 
+// Text formatting
 function h(string $text): string {
     return htmlspecialchars($text, ENT_QUOTES, 'UTF-8');
 }
@@ -93,4 +95,43 @@ function truncateText($text, $length = 150, $searchTerm = '') {
     }
 
     return $text;
+}
+
+// Security
+function ensureLoggedIn() {
+    if (!isset($_SESSION['user'])) {
+        header('Location: /auth/login');
+        exit();
+    }
+}
+
+function ensureLoggedInError(string $redirectUrl = null) {
+    if (!isset($_SESSION['user'])) {
+        http_response_code(403);
+        echo json_encode(['error' => 'Vous devez être connecté pour effectuer cette action.']);
+        if ($redirectUrl) {
+            header('Location: ' . $redirectUrl);
+        } else {
+            exit();
+        }
+    }
+}
+
+function ensureAdmin() {
+    if (!isset($_SESSION['user']) || !$_SESSION['user']['is_admin']) {
+        header('Location: /index');
+        exit();
+    }
+}
+
+function ensureAdminError(string $redirectUrl = null) {
+    if (!isset($_SESSION['user']) || !$_SESSION['user']['is_admin']) {
+        http_response_code(403);
+        echo json_encode(['error' => 'Accès non autorisé']);
+        if ($redirectUrl) {
+            header('Location: ' . $redirectUrl);
+        } else {
+            exit();
+        }
+    }
 }
