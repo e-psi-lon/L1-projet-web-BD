@@ -32,6 +32,7 @@ $isAdmin = $loggedIn && isset($_SESSION['user']) && $_SESSION['user']['is_admin'
     </script>
     <script src="/assets/js/dark-mode.js">
     </script>
+    <script src="https://unpkg.com/lucide@latest" defer></script>
 </head>
 <body>
     <header>

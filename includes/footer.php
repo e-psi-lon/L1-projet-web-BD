@@ -6,7 +6,6 @@
     </footer>
     
     <!-- Scripts -->
-    <script src="https://unpkg.com/lucide@latest" defer></script>
     <script src="/assets/js/core.js" type="module" defer></script>
 </body>
 </html>
