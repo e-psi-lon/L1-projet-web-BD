@@ -5,7 +5,7 @@ CREATE TABLE authors (
     author_id INTEGER PRIMARY KEY AUTO_INCREMENT,
     name VARCHAR(100) NOT NULL,
     url_name VARCHAR(100) NOT NULL UNIQUE,
-    image BLOB DEFAULT NULL,
+    image LONGBLOB DEFAULT NULL,
     birth_year INTEGER,
     death_year INTEGER,
     biography TEXT
@@ -58,7 +58,7 @@ CREATE TABLE author_suggestions (
     suggestion_id INTEGER PRIMARY KEY,
     author_name VARCHAR(100) NOT NULL,
     author_url_name VARCHAR(100) NOT NULL UNIQUE,
-    author_image BLOB DEFAULT NULL,
+    author_image LONGBLOB DEFAULT NULL,
     birth_year INTEGER,
     death_year INTEGER,
     biography TEXT,
