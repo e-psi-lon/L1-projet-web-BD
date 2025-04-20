@@ -144,3 +144,43 @@ function truncateText(text, length = 150, searchTerm = '') {
 
     return text;
 }
+
+
+export function filterSuggestions() {
+    const searchTerm = document.getElementById('suggestion-search').value.toLowerCase();
+    const search = searchTerm.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+    let type = Array.from(document.querySelectorAll('#type-filter input[type="checkbox"]:checked')).map(input => input.value);
+    let status = Array.from(document.querySelectorAll('#status-filter input[type="checkbox"]:checked')).map(input => input.value);
+    type = type.map(t => t.toLowerCase());
+    status = status.map(s => s.toLowerCase());
+    console.log(`search: ${search}, types: ${type}, status: ${status}`);
+
+    const suggestions = document.querySelectorAll('tbody tr');
+
+    suggestions.forEach(suggestion => {
+        const title = suggestion.querySelector('td:nth-child(2)').textContent.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
+        const typeText = suggestion.querySelector('td:nth-child(1)').textContent.trim().toLowerCase();
+
+        let suggestionType = '';
+        if (typeText === 'auteur') suggestionType = 'author';
+        else if (typeText === 'livre') suggestionType = 'book';
+        else if (typeText === 'chapitre') suggestionType = 'chapter';
+
+        const statusBadge = suggestion.querySelector('td:nth-child(3) span.badge');
+        let suggestionStatus = '';
+        if (statusBadge.classList.contains('badge-warning')) suggestionStatus = 'pending';
+        else if (statusBadge.classList.contains('badge')) suggestionStatus = 'reviewed';
+        else if (statusBadge.classList.contains('badge-success')) suggestionStatus = 'approved';
+        else if (statusBadge.classList.contains('badge-danger')) suggestionStatus = 'rejected';
+
+        const matchesSearch = title.includes(search) || searchTerm === '';
+        const matchesType = type.length === 0 || type.includes(suggestionType);
+        const matchesStatus = status.length === 0 || status.includes(suggestionStatus);
+
+        if (matchesSearch && matchesType && matchesStatus) {
+            suggestion.style.display = '';
+        } else {
+            suggestion.style.display = 'none';
+        }
+    });
+}

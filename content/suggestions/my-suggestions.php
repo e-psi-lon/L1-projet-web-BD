@@ -31,7 +31,15 @@ $stmt->execute(['user_id' => $user_id]);
 $suggestions = $stmt->fetchAll();
 
 ?>
+<script type="module">
+    import { filterSuggestions } from '/assets/js/search.js';
 
+    // For all checkboxes and input, when you keyup in the input, call the function filterSuggestions
+    document.querySelectorAll('input[type="checkbox"]').forEach(checkbox => {
+        checkbox.addEventListener('onclick', filterSuggestions);
+    });
+    document.getElementById('suggestion-search').addEventListener('keyup', filterSuggestions);
+</script>
 <div class="container">
     <div class="card">
         <h1 class="card-title">Mes suggestions</h1>
@@ -42,39 +50,39 @@ $suggestions = $stmt->fetchAll();
             <div class="search-container">
                 <div class="search-box">
                     <label for="suggestion-search"></label>
-                    <input type="text" id="suggestion-search" placeholder="Rechercher dans les suggestions..." onkeyup="filterSuggestions()">
+                    <input type="text" id="suggestion-search" placeholder="Rechercher dans les suggestions...">
                 </div>
                 <div class="filters-container">
                     <div class="filters" id="type-filter">
                         <div class="filter-item">
-                            <input name="type" value="author" type="checkbox" id="type-author" onclick="filterSuggestions()" checked/>
+                            <input name="type" value="author" type="checkbox" id="type-author" checked/>
                             <label for="type-author">Auteur</label>
                         </div>
                         <div class="filter-item">
-                            <input name="type" value="book" type="checkbox" id="type-book" onclick="filterSuggestions()" checked/>
+                            <input name="type" value="book" type="checkbox" id="type-book" checked/>
                             <label for="type-book">Livre</label>
                         </div>
                         <div class="filter-item">
-                            <input name="type" value="chapter" type="checkbox" id="type-chapter" onclick="filterSuggestions()" checked/>
+                            <input name="type" value="chapter" type="checkbox" id="type-chapter" checked/>
                             <label for="type-chapter">Chapitre</label>
                         </div>
                     </div>
                     <div class="filters" id="status-filter">
                         <div class="filter-item">
-                            <input name="status" value="all" type="checkbox" id="status-all" onclick="filterSuggestions()" checked/>
-                            <label for="status-all">Tous</label>
-                        </div>
-                        <div class="filter-item">
-                            <input name="status" value="pending" type="checkbox" id="status-pending" onclick="filterSuggestions()" checked/>
+                            <input name="status" value="pending" type="checkbox" id="status-pending" checked/>
                             <label for="status-pending">En attente</label>
                         </div>
                         <div class="filter-item">
-                            <input name="status" value="reviewed" type="checkbox" id="status-reviewed" onclick="filterSuggestions()" checked/>
+                            <input name="status" value="reviewed" type="checkbox" id="status-reviewed" checked/>
                             <label for="status-reviewed">Examinée</label>
                         </div>
                         <div class="filter-item">
-                            <input name="status" value="approved" type="checkbox" id="status-approved" onclick="filterSuggestions()" checked/>
+                            <input name="status" value="approved" type="checkbox" id="status-approved" checked/>
                             <label for="status-approved">Approuvée</label>
+                        </div>
+                        <div class="filter-item">
+                            <input name="status" value="refused" type="checkbox" id="status-refused" checked/>
+                            <label for="status-refused">Rejetée</label>
                         </div>
                     </div>
                 </div>
@@ -138,46 +146,6 @@ $suggestions = $stmt->fetchAll();
             <a href="/suggestions/suggest" class="btn">Proposer du nouveau contenu</a>
         </div>
     </div>
-    <script>
-        function filterSuggestions() {
-            const searchTerm = document.getElementById('suggestion-search').value.toLowerCase();
-            const search = searchTerm.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
-            let type = Array.from(document.querySelectorAll('#type-filter input[type="checkbox"]:checked')).map(input => input.value);
-            let status = Array.from(document.querySelectorAll('#status-filter input[type="checkbox"]:checked')).map(input => input.value);
-            type = type.map(t => t.toLowerCase());
-            status = status.map(s => s.toLowerCase());
-            console.log(`search: ${search}, types: ${type}, status: ${status}`);
-
-            const suggestions = document.querySelectorAll('tbody tr');
-
-            suggestions.forEach(suggestion => {
-                const title = suggestion.querySelector('td:nth-child(2)').textContent.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase();
-                const typeText = suggestion.querySelector('td:nth-child(1)').textContent.trim().toLowerCase();
-
-                let suggestionType = '';
-                if (typeText === 'auteur') suggestionType = 'author';
-                else if (typeText === 'livre') suggestionType = 'book';
-                else if (typeText === 'chapitre') suggestionType = 'chapter';
-
-                const statusBadge = suggestion.querySelector('td:nth-child(3) span.badge');
-                let suggestionStatus = '';
-                if (statusBadge.classList.contains('badge-warning')) suggestionStatus = 'pending';
-                else if (statusBadge.classList.contains('badge')) suggestionStatus = 'reviewed';
-                else if (statusBadge.classList.contains('badge-success')) suggestionStatus = 'approved';
-                else if (statusBadge.classList.contains('badge-danger')) suggestionStatus = 'rejected';
-
-                const matchesSearch = title.includes(search) || searchTerm === '';
-                const matchesType = type.length === 0 || type.includes(suggestionType);
-                const matchesStatus = status.length === 0 || status.includes(suggestionStatus);
-
-                if (matchesSearch && matchesType && matchesStatus) {
-                    suggestion.style.display = '';
-                } else {
-                    suggestion.style.display = 'none';
-                }
-            });
-        }
-    </script>
 </div>
 
 <?php include 'includes/footer.php'; ?>
