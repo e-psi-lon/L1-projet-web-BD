@@ -107,7 +107,7 @@
     </div>
 
 <?php
-function truncateText($text, $length = 150, $searchTerm = ''): array|string|null {
+function truncateText($text, $length = 150, $searchTerm = '') {
     $text = strip_tags($text);
 
     if (!empty($searchTerm)) {

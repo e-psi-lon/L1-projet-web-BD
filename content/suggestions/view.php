@@ -42,24 +42,28 @@ try {
     $suggestionType = $suggestion['suggestion_type'];
 
     // Fetch the suggestion details based on the type
-    $stmt = match ($suggestionType) {
-        'author' => $connection->prepare('
-                SELECT author_name, birth_year, death_year, biography
-                FROM author_suggestions
-                WHERE suggestion_id = :id
-            '),
-        'book' => $connection->prepare('
-                SELECT author_id, title, publication_year, description
-                FROM book_suggestions
-                WHERE suggestion_id = :id
-            '),
-        'chapter' => $connection->prepare('
-                SELECT book_id, title, chapter_number, content
-                FROM chapter_suggestions
-                WHERE suggestion_id = :id
-            '),
-        default => throw new Exception("Type de suggestion non reconnu"),
-    };
+    $stmt = null;
+    if ($suggestionType === 'author') {
+        $stmt = $connection->prepare('
+            SELECT author_name, birth_year, death_year, biography
+            FROM author_suggestions
+            WHERE suggestion_id = :id
+        ');
+    } elseif ($suggestionType === 'book') {
+        $stmt = $connection->prepare('
+            SELECT author_id, title, publication_year, description
+            FROM book_suggestions
+            WHERE suggestion_id = :id
+        ');
+    } elseif ($suggestionType === 'chapter') {
+        $stmt = $connection->prepare('
+            SELECT book_id, title, chapter_number, content
+            FROM chapter_suggestions
+            WHERE suggestion_id = :id
+        ');
+    } else {
+        throw new Exception("Type de suggestion non reconnu");
+    }
 
     $stmt->execute(['id' => $suggestionId]);
     $suggestionData = $stmt->fetch(PDO::FETCH_ASSOC);
@@ -154,18 +158,23 @@ $typeLabels = [
                 <div class="card">
                     <div class="suggestion-status">
                         <span class="badge <?php
-                        echo match($suggestion['status']) {
-                            'approved' => 'badge-success',
-                            'rejected' => 'badge-danger',
-                            default => 'badge-warning'
-                        };
+                        $status = $suggestion['status'];
+                        if ($status === 'approved') {
+                            echo 'badge-success';
+                        } elseif ($status === 'rejected') {
+                            echo 'badge-danger';
+                        } else {
+                            echo 'badge-warning';
+                        }
                         ?>">
                             <?php
-                            echo match($suggestion['status']) {
-                                'approved' => 'Approuvée',
-                                'rejected' => 'Rejetée',
-                                default => 'En attente'
-                            };
+                            if ($status === 'approved') {
+                                echo 'Approuvée';
+                            } elseif ($status === 'rejected') {
+                                echo 'Rejetée';
+                            } else {
+                                echo 'En attente';
+                            }
                             ?>
                         </span>
                     </div>

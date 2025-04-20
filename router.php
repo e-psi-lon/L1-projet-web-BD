@@ -31,14 +31,14 @@ if (file_exists($filePath) && isset($mimeTypes[$extension])) {
  * Handles all incoming requests and routes them to the appropriate controllers
  */
 class Router {
-    private array $routes = [];
+    private $routes = [];
     /** @var callable|null */
     private $notFoundHandler;
 
     /**
      * Register a new route
      */
-    public function addRoute(string $method, string $path, callable|array|string|null $handler): static {
+    public function addRoute(string $method, string $path, $handler): Router {
         $this->routes[] = [
             'method' => $method,
             'path' => $path,
@@ -50,7 +50,7 @@ class Router {
     /**
      * Set 404 handler
      */
-    public function setNotFoundHandler(callable $handler): static {
+    public function setNotFoundHandler(callable $handler): Router {
         $this->notFoundHandler = $handler;
         return $this;
     }
@@ -97,7 +97,7 @@ class Router {
             ob_clean();
             // if the content type is supposed to be JSON, return a JSON error response
             // Otherwise, include the error page
-            if (isset($_SERVER['HTTP_ACCEPT']) && str_contains($_SERVER['HTTP_ACCEPT'], 'application/json')) {
+            if (isset($_SERVER['HTTP_ACCEPT']) && strpos($_SERVER['HTTP_ACCEPT'], 'application/json') !== false) {
                 header('Content-Type: application/json');
                 echo json_encode(['error' => 'Internal Server Error', 'message' => $e->getMessage()]);
             } else {
@@ -119,7 +119,7 @@ class Router {
     /**
      * Execute the route handler
      */
-    private function executeHandler(string|array|callable $handler, array $params = []): bool {
+    private function executeHandler($handler, array $params = []): bool {
         if (is_callable($handler)) {
             return $handler(...$params) !== false;
         } elseif (is_string($handler) && file_exists($handler)) {
@@ -133,7 +133,7 @@ class Router {
 
             // Replace placeholder values with actual parameters
             foreach ($variables as $key => $value) {
-                if (is_string($value) && str_starts_with($value, '$')) {
+                if (is_string($value) && substr($value,0, 1) === '$') {
                     $index = (int)substr($value, 1) - 1;
                     if (isset($params[$index])) {
                         $variables[$key] = $params[$index];
@@ -190,7 +190,7 @@ $router->addRoute('ANY', 'api/authors', function() {
         header('Content-Type: application/json');
         include 'api/search.php';
     })
-    ->addRoute('POST', 'api/suggest', function() {;
+    ->addRoute('POST', 'api/suggest', function() {
         header('Content-Type: application/json');
         include 'api/suggestions/suggest.php';
     })

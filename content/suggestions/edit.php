@@ -41,24 +41,29 @@ try {
     $suggestionType = $suggestion['suggestion_type'];
     
     // Récupérer les données spécifiques selon le type de suggestion
-    $stmt = match ($suggestionType) {
-        'author' => $connection->prepare('
-                SELECT author_name, birth_year, death_year, biography
-                FROM author_suggestions
-                WHERE suggestion_id = :id
-            '),
-        'book' => $connection->prepare('
-                SELECT author_id, title, publication_year, description
-                FROM book_suggestions
-                WHERE suggestion_id = :id
-            '),
-        'chapter' => $connection->prepare('
-                SELECT book_id, title, chapter_number, content
-                FROM chapter_suggestions
-                WHERE suggestion_id = :id
-            '),
-        default => throw new Exception("Type de suggestion non reconnu"),
-    };
+    // Récupérer les données spécifiques selon le type de suggestion
+    $stmt = null;
+    if ($suggestionType === 'author') {
+        $stmt = $connection->prepare('
+        SELECT author_name, birth_year, death_year, biography
+        FROM author_suggestions
+        WHERE suggestion_id = :id
+    ');
+    } elseif ($suggestionType === 'book') {
+        $stmt = $connection->prepare('
+        SELECT author_id, title, publication_year, description
+        FROM book_suggestions
+        WHERE suggestion_id = :id
+    ');
+    } elseif ($suggestionType === 'chapter') {
+        $stmt = $connection->prepare('
+        SELECT book_id, title, chapter_number, content
+        FROM chapter_suggestions
+        WHERE suggestion_id = :id
+    ');
+    } else {
+        throw new Exception("Type de suggestion non reconnu");
+    }
     
     $stmt->execute(['id' => $suggestionId]);
     $suggestionData = $stmt->fetch(PDO::FETCH_ASSOC);

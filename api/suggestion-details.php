@@ -36,21 +36,28 @@ if (!$suggestion) {
 }
 
 // Fetch the details based on the suggestion type
-$stmt = match ($suggestion['suggestion_type']) {
-    'author' => $pdo->prepare("SELECT * FROM author_suggestions WHERE suggestion_id = ?"),
-    'book' => $pdo->prepare("
+$stmt = null;
+if ($suggestion['suggestion_type'] === 'author') {
+    $stmt = $pdo->prepare("SELECT * FROM author_suggestions WHERE suggestion_id = ?");
+} elseif ($suggestion['suggestion_type'] === 'book') {
+    $stmt = $pdo->prepare("
         SELECT bs.*, a.name as author_name 
         FROM book_suggestions bs
         LEFT JOIN authors a ON bs.author_id = a.author_id
         WHERE bs.suggestion_id = ?
-    "),
-    'chapter' => $pdo->prepare("
+    ");
+} elseif ($suggestion['suggestion_type'] === 'chapter') {
+    $stmt = $pdo->prepare("
         SELECT cs.*, b.title as book_title 
         FROM chapter_suggestions cs
         LEFT JOIN books b ON cs.book_id = b.book_id
         WHERE cs.suggestion_id = ?
-    "),
-};
+    ");
+} else {
+    header('Content-Type: application/json');
+    echo json_encode(['error' => 'Type de suggestion non valide.']);
+    exit;
+}
 $stmt->execute([$suggestionId]);
 $details = $stmt->fetch(PDO::FETCH_ASSOC);
 if (!$details) {
