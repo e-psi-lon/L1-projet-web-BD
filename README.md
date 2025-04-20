@@ -5,7 +5,7 @@ Ce dépôt contient le code source du projet de web et base de données de premi
 ## Lancement
 
 Ce projet utilise la fonctionnalité de PHP permettant de définir un routeur.
-Pour lancer le projet, il faut donc démarrer le serveur en précisant d'utiliser le fichier router.php comme routeur. Ci-dessous vous trouverez comment lancer le serveur correctement selon diverses méthodes :
+Pour lancer le projet, il faut donc démarrer le serveur en précisant d'utiliser le fichier router.php comme routeur. Ci-dessous, vous trouverez comment lancer le serveur correctement selon diverses méthodes :
 
 ### Ligne de commande PHP
 
@@ -20,8 +20,8 @@ php -S localhost:8000 router.php
 3. Vérifiez que le module mod_rewrite est activé dans Apache
 4. Le fichier `.htaccess` fourni dans le projet est déjà configuré pour rediriger les requêtes vers le routeur
 5. Démarrez les services Apache et MySQL depuis le panneau de configuration d'UWamp
-6. Accédez au site via l'URL: `http://localhost/[nom-du-dossier-projet]`
-  - Par exemple, si votre dossier s'appelle "corpus-digitale": [`http://localhost/corpus-digitale`](http://localhost/corpus-digitale)
+6. Accédez au site via l'URL: `http://localhost`
+  - Il est nécessaire pour le bon fonctionnement des routes de mettre le projet à la racine web: [`http://localhost/`](http://localhost/)
 
 ## Structure
 
