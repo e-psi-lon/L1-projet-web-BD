@@ -14,7 +14,7 @@ $user_id = $_SESSION['user']['id'];
 // Get user suggestions
 $pdo = getDbConnection();
 $stmt = $pdo->prepare("
-    SELECT s.suggestion_id, s.suggestion_type, s.status, s.admin_notes, 
+    SELECT s.suggestion_id, s.suggestion_type, s.status, s.admin_notes, s.reviewed_by, u.username as reviewed_by,
            CASE 
                WHEN s.suggestion_type = 'author' THEN a.author_name
                WHEN s.suggestion_type = 'book' THEN b.title
@@ -24,6 +24,7 @@ $stmt = $pdo->prepare("
     LEFT JOIN author_suggestions a ON s.suggestion_id = a.suggestion_id AND s.suggestion_type = 'author'
     LEFT JOIN book_suggestions b ON s.suggestion_id = b.suggestion_id AND s.suggestion_type = 'book'
     LEFT JOIN chapter_suggestions c ON s.suggestion_id = c.suggestion_id AND s.suggestion_type = 'chapter'
+    LEFT JOIN users u ON s.reviewed_by = u.user_id
     WHERE s.user_id = :user_id 
     ORDER BY 
         CASE 
