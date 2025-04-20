@@ -9,13 +9,15 @@ $successMessage = '';
 $user = $_SESSION['user'];
 $suggestionId = $_POST['suggestion_id'] ?? 0;
 if (!$user) {
-    $errorMessages[] = "Vous devez être connecté pour soumettre une suggestion.";
+    $errorMessages[] = "Vous devez être connecté pour modifier une suggestion.";
     $_SESSION['error_messages'] = $errorMessages;
+    http_response_code(403);
     header("Location: /suggestions/suggest?type=$selectedType");
 }
 
 if (!in_array($selectedType, $suggestionTypes)) {
     $errorMessages[] = "Type de suggestion invalide";
+    http_response_code(400);
     $_SESSION['error_messages'] = $errorMessages;
 } else {
     $connection = getDbConnection();
@@ -186,10 +188,11 @@ if (!in_array($selectedType, $suggestionTypes)) {
         $successMessage = "Votre suggestion a été mise à jour avec succès et sera examinée par nos administrateurs.";
         $_SESSION['error_messages'] = $errorMessages;
         $_SESSION['success_message'] = $successMessage;
-
+        http_response_code(200);
     } catch (Exception $e) {
         $connection->rollBack();
         $errorMessages[] = "Erreur lors de la modification : " . $e->getMessage();
+        http_response_code(500);
         $_SESSION['error_messages'] = $errorMessages;
         $_SESSION['success_message'] = $successMessage;
 

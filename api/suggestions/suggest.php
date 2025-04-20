@@ -10,12 +10,14 @@ $user = $_SESSION['user'];
 if (!$user) {
     $errorMessages[] = "Vous devez être connecté pour soumettre une suggestion."; // You must be logged in to submit a suggestion
     $_SESSION['error_messages'] = $errorMessages;
+    http_response_code(403);
     header("Location: /suggestions/suggest?type=$selectedType");
 }
 
 if (!in_array($selectedType, $suggestionTypes)) {
     $errorMessages[] = "Type de suggestion invalide"; // Invalid suggestion type
     $_SESSION['error_messages'] = $errorMessages;
+    http_response_code(400);
 } else {
     $connection = getDbConnection();
     try {
@@ -199,5 +201,6 @@ if (!in_array($selectedType, $suggestionTypes)) {
 
     }
     $connection = null;
+    http_response_code(200);
     header("Location: /suggestions/suggest?type=$selectedType");
 }
