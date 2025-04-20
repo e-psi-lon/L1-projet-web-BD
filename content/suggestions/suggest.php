@@ -33,7 +33,7 @@ try {
 
             <?php if (!empty($successMessage)): ?>
                 <div class="alert alert-success">
-                    <?php echo htmlspecialchars($successMessage); ?>
+                    <?php echo h($successMessage); ?>
                 </div>
             <?php endif; ?>
 
@@ -41,7 +41,7 @@ try {
                 <div class="alert alert-danger">
                     <ul>
                         <?php foreach ($errorMessages as $error): ?>
-                            <li><?php echo htmlspecialchars($error); ?></li>
+                            <li><?php echo h($error); ?></li>
                         <?php endforeach; ?>
                     </ul>
                 </div>
@@ -100,7 +100,7 @@ try {
                                 <option value="">Sélectionnez un auteur</option>
                                 <?php foreach ($authors as $author): ?>
                                     <option value="<?php echo $author['author_id']; ?>">
-                                        <?php echo htmlspecialchars($author['name']); ?>
+                                        <?php echo h($author['name']); ?>
                                     </option>
                                 <?php endforeach; ?>
                             </select>
@@ -134,7 +134,7 @@ try {
                                 <option value="">Sélectionnez un auteur</option>
                                 <?php foreach ($authors as $author): ?>
                                     <option value="<?php echo $author['author_id']; ?>">
-                                        <?php echo htmlspecialchars($author['name']); ?>
+                                        <?php echo h($author['name']); ?>
                                     </option>
                                 <?php endforeach; ?>
                             </select>

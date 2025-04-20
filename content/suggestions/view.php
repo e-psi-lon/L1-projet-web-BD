@@ -134,13 +134,13 @@ $typeLabels = [
 
 <div class="container">
     <div class="card">
-        <h2 class="card-title">Information sur la suggestion n° <?php echo htmlspecialchars($suggestionId); ?></h2>
+        <h2 class="card-title">Information sur la suggestion n° <?php echo h($suggestionId); ?></h2>
 
         <?php if (!empty($errorMessages)): ?>
             <div class="alert alert-danger">
                 <ul>
                     <?php foreach ($errorMessages as $error): ?>
-                        <li><?php echo htmlspecialchars($error); ?></li>
+                        <li><?php echo h($error); ?></li>
                     <?php endforeach; ?>
                 </ul>
             </div>
@@ -152,7 +152,7 @@ $typeLabels = [
             </div>
             <?php if ($user['is_admin'] && $suggestion['user_id'] !== $user['id']): ?>
                 <div class="suggestion-author-info">
-                    <p>Suggestion faite par : <strong><?php echo htmlspecialchars($user['username']); ?></strong></p>
+                    <p>Suggestion faite par : <strong><?php echo h($user['username']); ?></strong></p>
                 </div>
             <?php endif; ?>
             <div>
@@ -184,24 +184,24 @@ $typeLabels = [
                         <table class="table mt-4">
                         <tr>
                             <th>Nom de l'auteur</th>
-                            <td><?php echo htmlspecialchars($suggestionData['author_name'] ?? ''); ?></td>
+                            <td><?php echo h($suggestionData['author_name'] ?? ''); ?></td>
                         </tr>
                         <tr>
                             <th>Année de naissance</th>
-                            <td><?php echo htmlspecialchars($suggestionData['birth_year'] ?? 'Non spécifiée'); ?></td>
+                            <td><?php echo h($suggestionData['birth_year'] ?? 'Non spécifiée'); ?></td>
                         </tr>
                         <tr>
                             <th>Année de décès</th>
-                            <td><?php echo htmlspecialchars($suggestionData['death_year'] ?? 'Non spécifiée'); ?></td>
+                            <td><?php echo h($suggestionData['death_year'] ?? 'Non spécifiée'); ?></td>
                         </tr>
                         <tr>
                             <th>Biographie</th>
-                            <td><?php echo nl2br(htmlspecialchars($suggestionData['biography'] ?? '')); ?></td>
+                            <td><?php echo nl2br(h($suggestionData['biography'] ?? '')); ?></td>
                         </tr>
                         <?php if ($suggestion['admin_notes']): ?>
                             <tr>
-                                <th>Examen (effectué par <?php echo htmlspecialchars($suggestion['reviewed_by']); ?>)</th>
-                                <td><?php echo nl2br(htmlspecialchars($suggestion['admin_notes'])); ?></td>
+                                <th>Examen (effectué par <?php echo h($suggestion['reviewed_by']); ?>)</th>
+                                <td><?php echo nl2br(h($suggestion['admin_notes'])); ?></td>
                             </tr>
                         <?php endif; ?>
                     </table>
@@ -226,7 +226,7 @@ $typeLabels = [
                                     $authorName = '';
                                     foreach ($authors as $author) {
                                         if ($author['author_id'] == ($suggestionData['author_id'] ?? '')) {
-                                            $authorName = htmlspecialchars($author['name']);
+                                            $authorName = h($author['name']);
                                             break;
                                         }
                                     }
@@ -236,20 +236,20 @@ $typeLabels = [
                             </tr>
                             <tr>
                                 <th>Titre du livre</th>
-                                <td><?php echo htmlspecialchars($suggestionData['title'] ?? ''); ?></td>
+                                <td><?php echo h($suggestionData['title'] ?? ''); ?></td>
                             </tr>
                             <tr>
                                 <th>Année de publication</th>
-                                <td><?php echo htmlspecialchars($suggestionData['publication_year'] ?? 'Non spécifiée'); ?></td>
+                                <td><?php echo h($suggestionData['publication_year'] ?? 'Non spécifiée'); ?></td>
                             </tr>
                             <tr>
                                 <th>Description</th>
-                                <td><?php echo nl2br(htmlspecialchars($suggestionData['description'] ?? '')); ?></td>
+                                <td><?php echo nl2br(h($suggestionData['description'] ?? '')); ?></td>
                             </tr>
                             <?php if ($suggestion['admin_notes']): ?>
                                 <tr>
-                                    <th>Examen (effectué par <?php echo htmlspecialchars($suggestion['reviewed_by']); ?>)</th>
-                                    <td><?php echo nl2br(htmlspecialchars($suggestion['admin_notes'])); ?></td>
+                                    <th>Examen (effectué par <?php echo h($suggestion['reviewed_by']); ?>)</th>
+                                    <td><?php echo nl2br(h($suggestion['admin_notes'])); ?></td>
                                 </tr>
                             <?php endif; ?>
                         </table>
@@ -276,7 +276,7 @@ $typeLabels = [
                                 $authorName = '';
                                 foreach ($authors as $author) {
                                     if ($author['author_id'] == ($suggestionData['author_id'] ?? '')) {
-                                        $authorName = htmlspecialchars($author['name']);
+                                        $authorName = h($author['name']);
                                         break;
                                     }
                                 }
@@ -291,7 +291,7 @@ $typeLabels = [
                                 $bookTitle = '';
                                 foreach ($books as $book) {
                                     if ($book['book_id'] == ($suggestionData['book_id'] ?? '')) {
-                                        $bookTitle = htmlspecialchars($book['title']);
+                                        $bookTitle = h($book['title']);
                                         break;
                                     }
                                 }
@@ -303,14 +303,14 @@ $typeLabels = [
                             <th>Chapitre</th>
                             <td>
                                 <?php
-                                $chapterNumber = htmlspecialchars($suggestionData['chapter_number'] ?? '');
+                                $chapterNumber = h($suggestionData['chapter_number'] ?? '');
                                 echo $chapterNumber ? "Chapitre n°$chapterNumber" : 'Non spécifié';
                                 ?>
                         </tr>
                         <?php if ($suggestion['admin_notes']): ?>
                             <tr>
-                                <th>Examen (effectué par <?php echo htmlspecialchars($suggestion['reviewed_by']); ?>)</th>
-                                <td><?php echo nl2br(htmlspecialchars($suggestion['admin_notes'])); ?></td>
+                                <th>Examen (effectué par <?php echo h($suggestion['reviewed_by']); ?>)</th>
+                                <td><?php echo nl2br(h($suggestion['admin_notes'])); ?></td>
                             </tr>
                         <?php endif; ?>
                     </table>
@@ -328,7 +328,7 @@ $typeLabels = [
                     <!-- Content of the chapter -->
                     <div class="chapter-content">
                         <h3>Contenu du chapitre</h3>
-                        <p><?php echo nl2br(htmlspecialchars($suggestionData['content'] ?? '')); ?></p>
+                        <p><?php echo nl2br(h($suggestionData['content'] ?? '')); ?></p>
                     </div>
                 <?php endif; ?>
             </div>

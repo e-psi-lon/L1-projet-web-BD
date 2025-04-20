@@ -45,7 +45,7 @@ if ($author_info) {
 <div class="container">
     <?php if ($author_info): ?>
         <div class="author-header">
-            <h1 class="card-title"><?php echo htmlspecialchars($author_info['name']); ?></h1>
+            <h1 class="card-title"><?php echo h($author_info['name']); ?></h1>
             <p class="author-years">
                 <?php echo ($author_info['birth_year'] ?: '?'); ?> -
                 <?php echo ($author_info['death_year'] ?: '?'); ?>
@@ -55,7 +55,7 @@ if ($author_info) {
         <div class="card">
             <h2 class="card-title">Biographie</h2>
             <div class="text-content">
-                <?php echo nl2br(htmlspecialchars($author_info['biography'])); ?>
+                <?php echo nl2br(h($author_info['biography'])); ?>
             </div>
         </div>
 
@@ -65,10 +65,10 @@ if ($author_info) {
             <div class="book-list">
                 <?php foreach ($books as $book): ?>
                     <div class="book-card">
-                        <h3><a href="/authors/<?php echo $author; ?>/books/<?php echo $book['url_title'] ?? $book['book_id']; ?>"><?php echo htmlspecialchars($book['title']); ?></a></h3>
+                        <h3><a href="<?=getBookUrl($author, $book['url_title'] ?? $book['book_id']);?>"><?php echo h($book['title']); ?></a></h3>
                         <p>Année: <?php echo ($book['publication_year'] ?: 'Inconnue'); ?></p>
-                        <p><?php echo (strlen($book['description']) > 100 ? substr(htmlspecialchars($book['description']), 0, 100) . '...' : htmlspecialchars($book['description'])); ?></p>
-                        <a href="/authors/<?php echo $author; ?>/books/<?php echo $book['url_title'] ?? $book['book_id']; ?>" class="btn">En savoir plus</a>
+                        <p><?php echo (strlen($book['description']) > 100 ? substr(h($book['description']), 0, 100) . '...' : h($book['description'])); ?></p>
+                        <a href="<?=getBookUrl($author, $book['url_title'] ?? $book['book_id']);?>" class="btn">En savoir plus</a>
                     </div>
                 <?php endforeach; ?>
             </div>

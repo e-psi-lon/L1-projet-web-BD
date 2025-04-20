@@ -125,7 +125,7 @@ $_SESSION['from'] = 'admin';
                                 Chapitre
                             <?php endif; ?>
                         </td>
-                        <td><?= htmlspecialchars($suggestion['title']) ?></td>
+                        <td><?= h($suggestion['title']) ?></td>
                         <td>
                             <?php if ($suggestion['status'] === 'pending'): ?>
                                 <span class="badge badge-warning">En attente</span>
@@ -138,7 +138,7 @@ $_SESSION['from'] = 'admin';
                             <?php endif; ?>
                         </td>
                         <td>
-                            <?= htmlspecialchars($suggestion['username']) ?>
+                            <?= h($suggestion['username']) ?>
                         </td>
                         <td>
                             <a href="/suggestions/<?= $suggestion['suggestion_id'] ?>/view" class="btn btn-small">Détails</a>

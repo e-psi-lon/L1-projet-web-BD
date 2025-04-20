@@ -8,14 +8,14 @@ if (empty($author)) {
 }
 
 if (empty($book)) {
-    header("Location: /authors/" . $author);
+    header("Location:" . getAuthorUrl($author));
     exit();
 }
 ?>
 
 <?php
 if (empty($chapter)) {
-    header("Location: /authors/" . $author . "/books/" . $book);
+    header("Location: " . getBookUrl($author, $book));
     exit();
 }
 
@@ -40,7 +40,7 @@ $stmt->execute();
 $result = $stmt->fetch(PDO::FETCH_ASSOC);
 
 if (!$result) {
-    header("Location: /authors/" . $author . "/books/" . $book);
+    header("Location: " . getBookUrl($author, $book));
     exit();
 }
 
@@ -62,19 +62,19 @@ $db = null;
 <div class="container">
     <?php if ($book_info && $chapter_info): ?>
         <div class="book-header">
-            <h1 class="card-title"><?php echo htmlspecialchars($book_info['title']); ?></h1>
+            <h1 class="card-title"><?php echo h($book_info['title']); ?></h1>
             <p class="book-year">
                 <?php echo ($book_info['publication_year'] ? 'Publié en ' . $book_info['publication_year'] : 'Date de publication inconnue'); ?>
             </p>
             <div class="text-content">
-                <?php echo nl2br(htmlspecialchars($book_info['description'] ?: 'Aucune description disponible.')); ?>
+                <?php echo nl2br(h($book_info['description'] ?: 'Aucune description disponible.')); ?>
             </div>
         </div>
 
         <div class="chapter-content">
-            <h2><?php echo htmlspecialchars($chapter_info['title'] ?: 'Chapitre ' . $chapter_info['chapter_number']); ?></h2>
+            <h2><?php echo h($chapter_info['title'] ?: 'Chapitre ' . $chapter_info['chapter_number']); ?></h2>
             <div class="text-content">
-                <?php echo nl2br(htmlspecialchars($chapter_info['content'])); ?>
+                <?php echo nl2br(h($chapter_info['content'])); ?>
             </div>
         </div>
     <?php else: ?>

@@ -1,14 +1,14 @@
 <?php
 include 'includes/header.php';
 
-// Check if author parameter is provided
+// Check if the author parameter is provided
 if (empty($author)) {
     header("Location: /authors");
     exit();
 }
 
 if (empty($book)) {
-    header("Location: /authors/" . $author);
+    header("Location: ".getAuthorUrl($author));
     exit();
 }
 
@@ -55,7 +55,7 @@ if ($result) {
     $stmt->execute();
     $chapters = $stmt->fetchAll(PDO::FETCH_ASSOC);
 } else {
-    header("Location: /authors/" . $author);
+    header("Location: " .getAuthorUrl($author));
     exit();
 }
 
@@ -65,7 +65,7 @@ $db = null;
     <div class="container">
         <?php if ($book_info): ?>
             <div class="book-header">
-                <h1 class="card-title"><?php echo htmlspecialchars($book_info['title']); ?></h1>
+                <h1 class="card-title"><?php echo h($book_info['title']); ?></h1>
                 <p class="book-year">
                     <?php echo ($book_info['publication_year'] ? 'Publié en ' . $book_info['publication_year'] : 'Date de publication inconnue'); ?>
                 </p>
@@ -74,23 +74,24 @@ $db = null;
             <div class="card">
                 <h2 class="card-title">Description</h2>
                 <div class="text-content">
-                    <?php echo nl2br(htmlspecialchars($book_info['description'] ?: 'Aucune description disponible.')); ?>
+                    <?php echo nl2br(h($book_info['description'] ?: 'Aucune description disponible.')); ?>
                 </div>
             </div>
 
             <div class="author-section card">
                 <h2 class="card-title">À propos de l'auteur</h2>
-                <h3><a href="/authors/<?php echo $author_info['url_name']; ?>"><?php echo htmlspecialchars($author_info['name']); ?></a></h3>
+
+                <h3><a href="<?= getAuthorUrl($author_info['url_name']); ?>"><?php echo h($author_info['name']); ?></a></h3>
                 <p class="author-years">
                     <?php echo ($author_info['birth_year'] ?: '?'); ?> -
                     <?php echo ($author_info['death_year'] ?: '?'); ?>
                 </p>
                 <div class="author-bio-preview">
                     <?php echo (strlen($author_info['biography']) > 200 ?
-                        substr(htmlspecialchars($author_info['biography']), 0, 200) . '...' :
-                        htmlspecialchars($author_info['biography'])); ?>
+                        substr(h($author_info['biography']), 0, 200) . '...' :
+                        h($author_info['biography'])); ?>
                 </div>
-                <a href="/authors/<?php echo $author_info['url_name']; ?>" class="btn">Voir la page de l'auteur</a>
+                <a href="<?= getAuthorUrl($author_info['url_name']); ?>" class="btn">Voir la page de l'auteur</a>
             </div>
 
             <?php if (count($chapters) > 0): ?>
@@ -98,11 +99,11 @@ $db = null;
                 <div class="chapter-list">
                     <?php foreach ($chapters as $chapter): ?>
                         <div class="chapter-item card">
-                            <h3><?php echo htmlspecialchars($chapter['title'] ?: 'Chapitre ' . $chapter['chapter_number']); ?></h3>
+                            <h3><?php echo h($chapter['title'] ?: 'Chapitre ' . $chapter['chapter_number']); ?></h3>
                             <p><?php echo (strlen($chapter['content']) > 100 ?
-                                    substr(htmlspecialchars($chapter['content']), 0, 100) . '...' :
-                                    htmlspecialchars($chapter['content'])); ?></p>
-                            <a href="/authors/<?php echo $author_info['url_name']; ?>/books/<?php echo $book_info['url_title']; ?>/chapters/<?php echo $chapter['chapter_number']; ?>" class="btn">Lire le chapitre</a>
+                                    substr(h($chapter['content']), 0, 100) . '...' :
+                                    h($chapter['content'])); ?></p>
+                            <a href="<?=getChapterUrl($author_info['url_name'], $book_info['url_title'], $chapter['chapter_number']);?>" class="btn">Lire le chapitre</a>
                         </div>
                     <?php endforeach; ?>
                 </div>

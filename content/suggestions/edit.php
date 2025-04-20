@@ -137,7 +137,7 @@ $typeLabels = [
 
         <?php if (!empty($successMessage)): ?>
             <div class="alert alert-success">
-                <?php echo htmlspecialchars($successMessage); ?>
+                <?php echo h($successMessage); ?>
             </div>
         <?php endif; ?>
 
@@ -145,7 +145,7 @@ $typeLabels = [
             <div class="alert alert-danger">
                 <ul>
                     <?php foreach ($errorMessages as $error): ?>
-                        <li><?php echo htmlspecialchars($error); ?></li>
+                        <li><?php echo h($error); ?></li>
                     <?php endforeach; ?>
                 </ul>
             </div>
@@ -164,22 +164,22 @@ $typeLabels = [
 
                         <div class="form-group">
                             <label for="author_name">Nom de l'auteur</label>
-                            <input type="text" id="author_name" name="author_name" value="<?php echo htmlspecialchars($suggestionData['author_name'] ?? ''); ?>" required>
+                            <input type="text" id="author_name" name="author_name" value="<?php echo h($suggestionData['author_name'] ?? ''); ?>" required>
                         </div>
 
                         <div class="form-group">
                             <label for="birth_year">Année de naissance</label>
-                            <input type="number" id="birth_year" name="birth_year" value="<?php echo htmlspecialchars($suggestionData['birth_year'] ?? ''); ?>" placeholder="Ex: -100 pour 100 av. J.-C.">
+                            <input type="number" id="birth_year" name="birth_year" value="<?php echo h($suggestionData['birth_year'] ?? ''); ?>" placeholder="Ex: -100 pour 100 av. J.-C.">
                         </div>
 
                         <div class="form-group">
                             <label for="death_year">Année de décès</label>
-                            <input type="number" id="death_year" name="death_year" value="<?php echo htmlspecialchars($suggestionData['death_year'] ?? ''); ?>" placeholder="Ex: 44 pour 44 apr. J.-C.">
+                            <input type="number" id="death_year" name="death_year" value="<?php echo h($suggestionData['death_year'] ?? ''); ?>" placeholder="Ex: 44 pour 44 apr. J.-C.">
                         </div>
 
                         <div class="form-group">
                             <label for="biography">Biographie</label>
-                            <textarea id="biography" name="biography" rows="10" placeholder="Biographie de l'auteur..."><?php echo htmlspecialchars($suggestionData['biography'] ?? ''); ?></textarea>
+                            <textarea id="biography" name="biography" rows="10" placeholder="Biographie de l'auteur..."><?php echo h($suggestionData['biography'] ?? ''); ?></textarea>
                         </div>
 
                         <div class="form-group">
@@ -198,7 +198,7 @@ $typeLabels = [
                                 <option value="">Sélectionnez un auteur</option>
                                 <?php foreach ($authors as $author): ?>
                                     <option value="<?php echo $author['author_id']; ?>" <?php echo ($suggestionData['author_id'] ?? '') == $author['author_id'] ? 'selected' : ''; ?>>
-                                        <?php echo htmlspecialchars($author['name']); ?>
+                                        <?php echo h($author['name']); ?>
                                     </option>
                                 <?php endforeach; ?>
                             </select>
@@ -206,17 +206,17 @@ $typeLabels = [
 
                         <div class="form-group">
                             <label for="title">Titre du livre</label>
-                            <input type="text" id="title" name="title" value="<?php echo htmlspecialchars($suggestionData['title'] ?? ''); ?>" required>
+                            <input type="text" id="title" name="title" value="<?php echo h($suggestionData['title'] ?? ''); ?>" required>
                         </div>
 
                         <div class="form-group">
                             <label for="publication_year">Année de publication</label>
-                            <input type="number" id="publication_year" name="publication_year" value="<?php echo htmlspecialchars($suggestionData['publication_year'] ?? ''); ?>" placeholder="Ex: -44 pour 44 av. J.-C.">
+                            <input type="number" id="publication_year" name="publication_year" value="<?php echo h($suggestionData['publication_year'] ?? ''); ?>" placeholder="Ex: -44 pour 44 av. J.-C.">
                         </div>
 
                         <div class="form-group">
                             <label for="description">Description</label>
-                            <textarea id="description" name="description" rows="8" placeholder="Description du livre..."><?php echo htmlspecialchars($suggestionData['description'] ?? ''); ?></textarea>
+                            <textarea id="description" name="description" rows="8" placeholder="Description du livre..."><?php echo h($suggestionData['description'] ?? ''); ?></textarea>
                         </div>
 
                         <div class="form-group">
@@ -235,7 +235,7 @@ $typeLabels = [
                                 <option value="">Sélectionnez un auteur</option>
                                 <?php foreach ($authors as $author): ?>
                                     <option value="<?php echo $author['author_id']; ?>" <?php echo ($suggestionData['author_id'] ?? '') == $author['author_id'] ? 'selected' : ''; ?>>
-                                        <?php echo htmlspecialchars($author['name']); ?>
+                                        <?php echo h($author['name']); ?>
                                     </option>
                                 <?php endforeach; ?>
                             </select>
@@ -247,7 +247,7 @@ $typeLabels = [
                                 <option value="">Sélectionnez un livre</option>
                                 <?php foreach ($books as $book): ?>
                                     <option value="<?php echo $book['book_id']; ?>" <?php echo ($suggestionData['book_id'] ?? '') == $book['book_id'] ? 'selected' : ''; ?>>
-                                        <?php echo htmlspecialchars($book['title']); ?>
+                                        <?php echo h($book['title']); ?>
                                     </option>
                                 <?php endforeach; ?>
                             </select>
@@ -255,17 +255,17 @@ $typeLabels = [
 
                         <div class="form-group">
                             <label for="chapter_number">Numéro du chapitre</label>
-                            <input type="number" id="chapter_number" name="chapter_number" min="1" value="<?php echo htmlspecialchars($suggestionData['chapter_number'] ?? ''); ?>" required>
+                            <input type="number" id="chapter_number" name="chapter_number" min="1" value="<?php echo h($suggestionData['chapter_number'] ?? ''); ?>" required>
                         </div>
 
                         <div class="form-group">
                             <label for="title">Titre du chapitre</label>
-                            <input type="text" id="title" name="title" value="<?php echo htmlspecialchars($suggestionData['title'] ?? ''); ?>">
+                            <input type="text" id="title" name="title" value="<?php echo h($suggestionData['title'] ?? ''); ?>">
                         </div>
 
                         <div class="form-group">
                             <label for="content">Contenu du chapitre</label>
-                            <textarea id="content" name="content" rows="15" required placeholder="Texte du chapitre..."><?php echo htmlspecialchars($suggestionData['content'] ?? ''); ?></textarea>
+                            <textarea id="content" name="content" rows="15" required placeholder="Texte du chapitre..."><?php echo h($suggestionData['content'] ?? ''); ?></textarea>
                         </div>
 
                         <div class="form-group">

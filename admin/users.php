@@ -103,10 +103,10 @@ $users = $stmt->fetchAll();
                     <tbody>
                     <?php foreach ($users as $user): ?>
                         <tr>
-                            <td><?= htmlspecialchars($user['user_id']) ?></td>
-                            <td><?= htmlspecialchars($user['username']) ?></td>
-                            <td><?= htmlspecialchars($user['email']) ?></td>
-                            <td><?= htmlspecialchars($user['approved_count']) ?>/<?= htmlspecialchars($user['suggestions_count']) ?></td>
+                            <td><?= h($user['user_id']) ?></td>
+                            <td><?= h($user['username']) ?></td>
+                            <td><?= h($user['email']) ?></td>
+                            <td><?= h($user['approved_count']) ?>/<?= h($user['suggestions_count']) ?></td>
                             <td><?= $user['is_admin'] ? 'Oui' : 'Non' ?></td>
                             <td>
                                 <?php if ($user['user_id'] !== $_SESSION['user']['id']): ?>

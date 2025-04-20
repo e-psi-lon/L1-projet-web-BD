@@ -16,7 +16,10 @@ $attributes = [
 
 
 // If a query parameter is provided, filter the books based on all the attributes
-$query = "SELECT * FROM books";
+$query = "SELECT books.*, COUNT(*) as chapter_count 
+              FROM chapters 
+              JOIN books ON books.book_id = chapters.book_id
+              GROUP BY book_id, books.title";
 $conditions = [];
 $params = [];
 foreach ($attributes as $dbField => $paramName) {
@@ -31,13 +34,8 @@ if (!empty($conditions)) {
 $stmt = $db->prepare($query);
 $stmt->execute($params);
 $books = $stmt->fetchAll(PDO::FETCH_ASSOC);
-// Include a chapter_count for each book and a chapter array with the chapter_number and title
+// Include a chapter array with the chapter_number and title
 foreach ($books as &$book) {
-    $book['chapter_count'] = 0;
-    $stmt = $db->prepare("SELECT COUNT(*) FROM chapters WHERE book_id = :book_id");
-    $stmt->bindParam(':book_id', $book['book_id']);
-    $stmt->execute();
-    $book['chapter_count'] = $stmt->fetchColumn();
     $stmt = $db->prepare("SELECT chapter_number, title FROM chapters WHERE book_id = :book_id");
     $stmt->bindParam(':book_id', $book['book_id']);
     $stmt->execute();

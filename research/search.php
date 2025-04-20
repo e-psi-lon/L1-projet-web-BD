@@ -7,7 +7,7 @@
             <form method="GET" action="../router.php" class="search-form">
                 <div class="search-box">
                     <label for="search-input"></label>
-                    <input type="text" id="search-input" name="q" placeholder="Rechercher des textes..." value="<?php echo isset($_GET['q']) ? htmlspecialchars($_GET['q']) : ''; ?>">
+                    <input type="text" id="search-input" name="q" placeholder="Rechercher des textes..." value="<?php echo isset($_GET['q']) ? h($_GET['q']) : ''; ?>">
                     <button type="submit" class="btn">
                         <i data-lucide="search"></i>
                     </button>
@@ -54,7 +54,7 @@
                 $results = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
                 if (count($results) > 0) {
-                    echo '<h2>Résultats de recherche pour "' . htmlspecialchars($search) . '"</h2>';
+                    echo '<h2>Résultats de recherche pour "' . h($search) . '"</h2>';
 
                     $currentBook = '';
                     $currentAuthor = '';
@@ -72,18 +72,18 @@
 
                             echo '<div class="search-result-book card">';
                             echo '<div class="book-header">';
-                            echo '<h3><a href="/authors/' . $result['url_name'] . '/books/' . $result['url_title'] . '">' . htmlspecialchars($result['book_title']) . '</a></h3>';
-                            echo '<p>par <a href="/authors/' . $result['url_name'] . '">' . htmlspecialchars($result['author_name']) . '</a></p>';
+                            echo '<h3><a href="'. getBookUrl($result['url_name'], $result['url_title']) . '">' . h($currentBook) . '</a></h3>';
+                            echo '<p>par <a href="'. getAuthorUrl($result['url_name']) . '">' . h($currentAuthor) . '</a></p>';
                             echo '</div>';
                             echo '<div class="book-chapters">';
                         }
 
                         // Show all found chapters
-                        $chapterTitle = $result['chapter_title'] ? htmlspecialchars($result['chapter_title']) : 'Chapitre ' . $result['chapter_number'];
+                        $chapterTitle = $result['chapter_title'] ? h($result['chapter_title']) : 'Chapitre ' . $result['chapter_number'];
                         $previewText = truncateText(strip_tags($result['content']), 150, $search);
 
                         echo '<div class="search-result-chapter">';
-                        echo '<h4><a href="/authors/' . $result['url_name'] . '/books/' . $result['url_title'] . '/chapters/' . $result['chapter_number'] . '">' . $chapterTitle . '</a></h4>';
+                        echo '<h4><a href="'.getChapterUrl($result['url_name'], $result['url_title'], $result['chapter_number']).'">'.$chapterTitle.'</a></h4>';
                         echo '<div class="chapter-preview">' . $previewText . '</div>';
                         echo '</div>';
                     }
@@ -94,7 +94,7 @@
                     }
                 } else {
                     echo '<div class="alert alert-danger">';
-                    echo '<h2>Aucun résultat pour "' . htmlspecialchars($search) . '"</h2>';
+                    echo '<h2>Aucun résultat pour "' . h($search) . '"</h2>';
                     echo '<p>Essayez d\'utiliser des termes de recherche différents ou plus généraux.</p>';
                     echo '</div>';
                 }

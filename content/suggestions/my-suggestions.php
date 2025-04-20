@@ -119,7 +119,7 @@ $suggestions = $stmt->fetchAll();
                                     Chapitre
                                 <?php endif; ?>
                             </td>
-                            <td><?= htmlspecialchars($suggestion['title']) ?></td>
+                            <td><?= h($suggestion['title']) ?></td>
                             <td>
                                 <?php if ($suggestion['status'] === 'pending'): ?>
                                     <span class="badge badge-warning">En attente</span>
@@ -139,7 +139,7 @@ $suggestions = $stmt->fetchAll();
                             </td>
                             <td>
                             <?php if ($suggestion['admin_notes']): ?>
-                                    <button class="btn btn-small" data-toggle="tooltip" title="Examen effectué par <?= htmlspecialchars($suggestion['reviewed_by']) ?>: <?= htmlspecialchars($suggestion['admin_notes']) ?>">
+                                    <button class="btn btn-small" data-toggle="tooltip" title="Examen effectué par <?= h($suggestion['reviewed_by']) ?>: <?= h($suggestion['admin_notes']) ?>">
                                         <i data-lucide="alert-triangle" class="icon"></i>
                                     </button>
                             <?php endif; ?>

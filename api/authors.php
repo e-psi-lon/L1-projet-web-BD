@@ -17,7 +17,10 @@ $attributes = [
 
 
 // If a query parameter is provided, filter the books based on all the attributes
-$query = "SELECT * FROM authors";
+$query = "SELECT authors.*, COUNT(*) as chapter_count 
+              FROM books 
+              JOIN authors ON books.author_id = authors.author_id
+              GROUP BY author_id, authors.name";
 $conditions = [];
 $params = [];
 foreach ($attributes as $dbField => $paramName) {
@@ -31,19 +34,14 @@ if (!empty($conditions)) {
 }
 $stmt = $db->prepare($query);
 $stmt->execute($params);
-$books = $stmt->fetchAll(PDO::FETCH_ASSOC);
-// Include a book_count and a book array with the url_title and title
-foreach ($books as &$book) {
-    $book['book_count'] = 0;
-    $stmt = $db->prepare("SELECT COUNT(*) FROM books WHERE author_id = :author_id");
-    $stmt->bindParam(':book_id', $book['book_id']);
-    $stmt->execute();
-    $book['book_count'] = $stmt->fetchColumn();
+$authors = $stmt->fetchAll(PDO::FETCH_ASSOC);
+// Include a book array with the url_title and title
+foreach ($authors as &$author) {
     $stmt = $db->prepare("SELECT url_title, title FROM books WHERE author_id = :author_id");
-    $stmt->bindParam(':author_id', $book['author_id']);
+    $stmt->bindParam(':author_id', $author['author_id']);
     $stmt->execute();
-    $book['books'] = $stmt->fetchAll(PDO::FETCH_ASSOC);
+    $authors['books'] = $stmt->fetchAll(PDO::FETCH_ASSOC);
 }
 // Close the database connection
 $db = null;
-echo json_encode($books, JSON_PRETTY_PRINT);
+echo json_encode($authors, JSON_PRETTY_PRINT);

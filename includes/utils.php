@@ -5,7 +5,7 @@ function getDbConnection() {
     $host = 'localhost:3306';
     $dbname = 'web-project';
     $username = 'root';
-    $password = '';
+    $password = getenv('DB_PASSWORD');
 
     try {
         // Connection to MySQL
@@ -53,6 +53,22 @@ function toUrlName(string $name): string {
     $url_name = preg_replace('/-+/', '-', $url_name);
 
     return trim($url_name, '-');
+}
+
+function getAuthorUrl(string $urlName): string {
+    return '/authors/' . $urlName;
+}
+
+function getBookUrl(string $authorUrlName, string $bookUrlTitle): string  {
+    return getAuthorUrl($authorUrlName) . '/books/' . $bookUrlTitle;
+}
+
+function getChapterUrl(string $authorUrlName, string $bookUrlTitle, string $chapterNumber): string  {
+    return getBookUrl($authorUrlName, $bookUrlTitle) . '/chapters/' . $chapterNumber;
+}
+
+function h(string $text): string {
+    return htmlspecialchars($text, ENT_QUOTES, 'UTF-8');
 }
 
 function truncateText($text, $length = 150, $searchTerm = '') {

@@ -74,7 +74,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <div class="alert alert-danger">
                     <ul>
                         <?php foreach ($errors as $error): ?>
-                            <li><?php echo htmlspecialchars($error); ?></li>
+                            <li><?php echo h($error); ?></li>
                         <?php endforeach; ?>
                     </ul>
                 </div>
@@ -83,11 +83,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <form class="form-group" id="accountForm" method="POST" action="account">
                 <div class="form-group">
                     <label for="username">Nom d'utilisateur</label>
-                    <input type="text" id="username" name="username" value="<?php echo htmlspecialchars($user['username']); ?>" readonly disabled>
+                    <input type="text" id="username" name="username" value="<?php echo h($user['username']); ?>" readonly disabled>
                 </div>
                 <div class="form-group">
                     <label for="email">Adresse e-mail</label>
-                    <input type="email" id="email" name="email" value="<?php echo htmlspecialchars($user['email']); ?>" readonly disabled>
+                    <input type="email" id="email" name="email" value="<?php echo h($user['email']); ?>" readonly disabled>
                 </div>
                 <div class="form-group">
                     <label for="password">Mot de passe</label>
