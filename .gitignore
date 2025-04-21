@@ -1,5 +1,4 @@
 .idea
 database.db
 node_modules
-*.py
 images/
