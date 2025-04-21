@@ -2101,3 +2101,369 @@ inposita est; tremulae sinuantur flamine uestes. '),
 
 [1,24] C- PLINIUS BAEBIO HISPANO SUO S-
 (1) Tranquillus contubernalis meus uult emere agellum, quem uenditare amicus tuus dicitur. (2) Rogo cures, quanti aequum est emat; ita enim delectabit emisse. Nam mala emptio semper ingrata, eo maxime quod exprobrare stultitiam domino uidetur. (3) In hoc autem agello, si modo arriserit pretium, Tranquilli mei stomachum multa sollicitant, uicinitas urbis, opportunitas uiae, mediocritas uillae, modus ruris, qui auocet magis quam distringat. (4) Scholasticis porro dominis, ut hic est, sufficit abunde tantum soli, ut releuare caput, reficere oculos, reptare per limitem unamque semitam terere omnesque uiteculas suas nosse et numerare arbusculas possint. Haec tibi exposui, quo magis scires, quantum esset ille mihi ego tibi debiturus, si praediolum istud, quod commendatur his dotibus, tam salubriter emerit ut paenitentiae locum non relinquat. Vale. ');
+
+
+INSERT INTO chapter_suggestions (suggestion_id, book_id, title, chapter_number, content) VALUES
+ (6, 1, 'Livre I', 1, ' [1,1,1] At ego tibi sermone isto Milesio uarias fabulas conseram auresque tuas beniuolas lepido susurro permulceam - modo si papyrum Aegyptiam argutia Nilotici calami inscriptam non spreueris inspicere - ,
+
+[1,1,2] figuras fortunasque hominum in alias imagines conuersas et in se rursum mutuo nexu refectas ut mireris.
+
+[1,1,3] Exordior. "Quis ille?" Paucis accipe. Hymettos Attica et Isthmos Ephyrea et Taenaros Spartiatica, glebae felices aeternum libris felicioribus conditae, mea uetus prosapia est;
+
+[1,1,4] ibi linguam Atthidem primis pueritiae stipendiis merui. Mox in urbe Latia aduena studiorum Quiritium indigenam sermonem aerumnabili labore nullo magistro praeeunte aggressus excolui.
+
+[1,1,5] En ecce praefamur ueniam, siquid exotici ac forensis sermonis rudis locutor offendero.
+
+[1,1,6] Iam haec equidem ipsa uocis immutatio desultoriae scientiae stilo quem accessimus respondet. Fabulam Graecanicam incipimus. Lector intende: laetaberis.
+
+[1,2,1] Thessaliam - nam et illic originis maternae nostrae fundamenta a Plutarcho illo inclito ac mox Sexto philosopho nepote eius prodita gloriam nobis faciunt - eam Thessaliam ex negotio petebam.
+
+[1,2,2] Postquam ardua montium et lubrica uallium et roscida cespitum et glebosa camporum emensus emersi, in equo indigena peralbo uehens iam eo quoque admodum fesso,
+
+[1,2,3] ut ipse etiam fatigationem sedentariam incessus uegetatione discuterem in pedes desilio, equi sudorem fronde detergeo, frontem curiose exfrico, auris remulceo, frenos detraho, in gradum lenem sensim proueho, quoad lassitudinis incommodum alui solitum ac naturale praesidium eliquaret.
+
+[1,2,4] Ac dum is ientaculum ambulatorium prata quae praeterit ore in latus detorto pronus adfectat, duobus comitum qui forte paululum processerant tertium me facio.
+
+[1,2,5] Ac dum ausculto quid sermonis agitarent, alter exerto cachinno: "Parce" inquit "in uerba ista haec tam absurda tamque immania mentiendo."
+
+[1,2,6] Isto accepto sititor alioquin nouitatis : "Immo uero" inquam "impertite sermone non quidem curiosum sed qui uelim scire uel cuncta uel certe plurima; simul iugi quod insurgimus aspritudinem fabularum lepida iucunditas leuigabit."
+
+[1,3,1] At ille qui coeperat: "Ne" inquit ''istud mendacium tam uerum est quam siqui uelit dicere magico susurramine amnes agiles reuerti, mare pigrum conligari, uentos inanimes exspirare, solem inhiberi, lunam despumari, stellas euelli, diem tolli, noctem teneri."
+
+[1,3,2] Tunc ego in uerba fidentior: "Heus tu" inquam "qui sermonem ieceras priorem, ne pigeat te uel taedeat reliqua pertexere", et ad alium: "Tu uero crassis auribus et obstinato corde respuis quae forsitan uere perhibeantur.
+
+[1,3,3] Minus hercule calles prauissimis opinionibus ea putari mendacia quae uel auditu noua uel uisu rudia uel certe supra captum cogitationis ardua uideantur; quae si paulo accuratius exploraris, non modo compertu euidentia uerum etiam factu facilia senties.
+
+[1,4,1] Ego denique uespera, dum polentae caseatae modico secus offulam grandiorem in eonuiuas aemulus contruncare gestio, mollitie cibi glutinosi faucibus inhaerentis et meacula spiritus distinentis minimo minus interii.
+
+[1,4,2] Et tamen Athenis proxime et ante Poecilen porticum isto gemino obtutu circulatorem aspexi equestrem spatham praeacutam mucrone infesto deuorasse,
+
+[1,4,3] ac mox eundem inuitamento exiguae stipis uenatoriam lanceam, qua parte minatur exitium, in ima uiscera condidisse.
+
+[1,4,4] Et ecce pone lanceae ferrum, qua baccillum inuersi teli ad occipitium per ingluuiem subit, puer in mollitiem decorus insurgit inque flexibus tortuosis eneruam et exossam saltationem explicat cum omnium qui aderamus admiratione:
+
+[1,4,5] diceres dei medici baculo, quod ramulis semiamputatis nodosum gerit, serpentem generosum lubricis amplexibus inhaerere.
+
+[1,4,6] Sed iam cedo tu sodes, qui coeperas, fabulam remetire. Ego tibi solus haec pro isto credam, et quod ingressui primum fuerit stabulum prandio participabo. Haec tibi merces deposita est."
+
+[1,5,1] At ille: "Istud quidem quod polliceris aequi bonique facio, uerum quod inchoaueram porro exordiar. Sed tibi prius deierabo solem istum omniuidentem deum me uera comperta memorare,
+
+[1,5,2] nec uos ulterius dubitabitis si Thessaliae proximam ciuitatem perueneritis, quod ibidem passim per ora populi sermo iactetur quae palam gesta sunt.
+
+[1,5,3] Sed ut prius noritis cuiatis sim, qui sim: Aristomenes sum, Aegiensis; audite et quo quaestu me teneam: melle uel caseo et huiusce modi cauponarum mercibus per Thessaliam Aetoliam Boeotiam ultro citro discurrens.
+
+[1,5,4] Comperto itaque Hypatae, quae ciuitas cunctae Thessaliae antepollet, caseum recens et sciti saporis admodum commodo pretio distrahi, festinus adcucurri id omne praestinaturus.
+
+[1,5,5] Sed ut fieri adsolet, sinistro pede profectum me spes compendii frustrata est; omne enim pridie Lupus negotiator magnarius coemerat. Ergo igitur inefficaci celeritate fatigatus commodum uespera oriente ad balneas processeram:
+
+[1,6,1] ecce Socraten contubernalem rneum conspicio. Humi sedebat scissili palliastro semiamictus, paene alius lurore, ad miseram maciem deformatus, qualia solent fortunae decermina stipes in triuiis erogare.
+
+[1,6,2] Hunc talem, quamquam necessarium et summe cognitum, tamen dubia mente propius accessi. "Hem," inquam "mi Socrates, quid istud? Quae facies? Quod flagitium? At uero domi tuae iam defletus et conclamatus es, liberis tuis tutores iuridici prouincialis decreto dati,
+
+[1,6,3] uxor persolutis feralibus officiis luctu et maerore diuturno deformata, diffletis paene ad extremam captiuitatem oculis suis, domus infortunium nouarum nuptiarum gaudiis a suis sibi parentibus hilarare compellitur. At tu hic laruale simulacrum cum summo dedecore nostro uiseris"
+
+[1,6,4] "Aristomene," inquit "ne tu fortunarum lubricas ambages et instabiles incursiones et reciprocas uicissitudines ignoras", et cum dicto sutili centunculo faciem suam iam dudum punicantem prae pudore obtexit ita ut ab umbilico pube tenus cetera corporis renudaret.
+
+[1,6,5] Nec denique perpessus ego tam miserum aerumnae spectaculum iniecta manu ut adsurgat enitor.
+
+[1,7,1] At ille, ut erat, capite uelato: "Sine, sine" inquit "fruatur diutius tropaeo Fortuna quod fixit ipsa".
+
+[1,7,2] Effeci sequatur, et simul unam e duabus laciniis -meis exuo eumque propere uestio dicam an contego et ilico lauacro trado, quod unctui, quod tersui, ipse praeministro,
+
+[1,7,3] sordium enormem eluuiem operose effrico, probe curato ad hospitium lassus ipse fatigatum aegerrime sustinens perduco, lectulo refoueo, cibo satio, poculo mitigo, fabulis permulceo.
+
+[1,7,4] Iam adlubentia procliuis est sermonis et ioci et scitum etiam cauillum, iam dicacitas timida, cum ille imo de pectore cruciabilem suspiritum ducens dextra saeuiente frontem replaudens:
+
+[1,7,5] "Me miserum" infit "qui dum uoluptatem gladiatorii spectaculi satis famigerabilis consector in has aerumnas incidi.
+
+[1,7,6] Nam, ut scis optime, secundum quaestum Macedoniam profectus, dum mense decimo ibidem attentus nummatior reuortor, modico prius quam Larissam accederem, per transitum spectaculum obiturus in quadam auia et lacunosa conualli a uastissimis latronibus obsessus atque omnibus priuatus tandem euado,
+
+[1,7,7] et utpote ultime adfectus ad quandam cauponam Meroen, anum sed admodum scitulam, deuorto, eique causas et peregrinationis diuturnae et domuitionis anxiae et spoliationis diuturnae et dum miserae refero;
+
+[1,7,8] quae me nimis quam humane tractare adorta cenae gratae atque gratuitae ac mox urigine percita cubili suo adplicat.
+
+[1,7,9] Et statim miser, ut cum illa adquieui, ab unico congressu annosam ac pestilentem consuetudinem contraho
+
+[1,7,10] et ipsas etiam lacinias quas boni latrones contegendo mihi concesserant in eam contuli, operulas etiam quas adhuc uegetus saccariam faciens merebam, quoad me ad istam faciem quam paulo ante uidisti bona uxor et mala fortuna perduxit. "
+
+[1,8,1] "Pol quidem tu dignus" inquam "es extrema sustinere, si quid est tamen nouissimo extremius, qui uoluptatem Veneriam et scortum scorteum Lari et liberis praetulisti."
+
+[1,8,2] At ille digitum a pollice proximum ori suo admouens et in stuporem attonitus "Tace, tace" inquit et circumspiciens tutamenta sermonis: "Parce" inquit "in feminam diuinam, nequam tibi lingua intemperante noxam contrahas."
+
+[1,8,3] "Ain tandem?" inquam "Potens illa et regina caupona quid mulieris est?"
+
+[1,8,4] "Saga" inquit "et diuina, potens caelum deponere, terram suspendere, fontes durare, montes diluere, manes sublimare, deos infimare, sidera extinguere, Tartarum ipsum inluminare."
+
+[1,8,5] "Oro te" inquam "aulaeum tragicum dimoueto et siparium scaenicum complicato et cedo uerbis communibus."
+
+[1,8,6] "Vis" inquit "unum uel alterum, immo plurima eius audire facta? Nam ut se ament efflictim non modo incolae uerum etiam Indi uel Aethiopes utrique uel ipsi Anticthones, folia sunt artis et nugae merae. Sed quod in conspectum plurium perpetrauit, audi.
+
+[1,9,1] Amatorem suum, quod in aliam temerasset, unico uerbo mutauit in feram castorem,
+
+[1,9,2] quod ea bestia captiuitatis metuens ab insequentibus se praecisione genitalium liberat, ut illi quoque simile quod uenerem habuit in aliam proueniret.
+
+[1,9,3] Cauponem quoque uicinum atque ob id aemulum deformauit in ranam, et nunc senex ille dolium innatans uini sui aduentores pristinos in faece submissus officiosis roncis raucus appellat.
+
+[1,9,4] Alium de foro, quod aduersus eam locutus esset, in arietem deformauit, et nunc aries ille causas agit.
+
+[1,9,5] Eadem amatoris sui uxorem, quod in eam dicacule probrum dixerat iam in sarcina praegnationis obsepto utero et repigrato fetu perpetua praegnatione damnauit, et
+
+[1,9,6] ut cuncti numerant, iam octo annorum onere misella illa uelut elephantum paritura distenditur.
+
+[1,10,1] Quae cum subinde ac multi nocerentur, publicitus indignatio percrebruit statutumque ut in eam die altera seuerissime saxorum iaculationibus uindicaretur.
+
+[1,10,2] Quod consilium uirtutibus cantionum anteuortit et ut illa Medea unius dieculae a Creone impetratis indutiis totam eius domum filiamque cum ipso sene flammis coronalibus deusserat,
+
+[1,10,3] sic haec deuotionibus sepulchralibus in scrobem procuratis, ut mihi temulenta narrauit proxime, cunctos in suis sibi domibus tacita numinum uiolentia clausit, ut toto biduo non claustra perfringi, non fores euelli, non denique parietes ipsi quiuerint perforari,
+
+[1,10,4] quoad mutua hortatione consone clamitarent quam sanctissime deierantes sese neque ei manus admolituros, et si quis aliud cogitarit salutare laturos subsidium.
+
+[1,10,5] Et sic illa prapitiata totam ciuitatem absoluit. At uero coetus illius auctorem nocte intempesta cum tota domo, id est parietibus et ipso solo et omni fundamento, ut erat, clausa ad centesimum lapidem in aliam ciuitatem summo uertice montis exasperati sitam et ob id ad aquas sterilem transtulit.
+
+[1,10,6] Et quoniam densa inhabitantium aedificia locum nouo hospiti non dabant, ante portam proiecta domo discessit."
+
+[1,11,1] "Mira" inquam "set nec minus saeua, mi Socrates, memoras.
+
+[1,11,2] Denique mihi quoque non paruam incussisti sollicitudinem, immo uero formidinem, iniecto non scrupulo sed lancea, ne quo numinis ministerio similiter usa sermones istos nostros anus illa cognoscat.
+
+[1,11,3] Itaque maturius quieti nos reponamus et somno leuata lassitudine noctis antelucio aufugiamus istinc quam pote longissime."
+
+[1,11,4] Haec adhuc me suadente insolita uinolentia ac diuturna fatigatione pertentatus bonus Socrates iam sopitus stertebat altius.
+
+[1,11,5] Ego uero adducta fore pessulisque. firmatis grabatulo etiam pone cardinem supposito et probe adgesto super eum me recipio.
+
+[1,11,6] Ac primum prae metu aliquantisper uigilo, dein circa tertiam ferme uigiliam paululum coniueo.
+
+[1,11,7] Commodum quieueram, et repente impulsu maiore quam ut latrones crederes ianuae reserantur immo uero fractis et euolsis funditus cardinibus prosternuntur.
+
+[1,11,8] Grabatulus alioquin breuiculus et uno pede mutilus ac putris impetus tanti uiolentia prosternitur, me quoque euolutum atque excussum humi recidens in inuersum cooperit ac tegit.
+
+[1,12,1] Tunc ego sensi naturalitus quosdam affectus in contrarium prouenire. Nam ut lacrimae saepicule de gaudio prodeunt, ita et in illo nimio pauore risum nequiui continere de Aristomene testudo factus.
+
+[1,12,2] Ac dum in fimum deiectus obliquo aspectu quid rei sit grabatuli sollertia munitus opperior, uideo mulieres duas altioris aetatis;
+
+[1,12,3] 1ucernam lucidam gerebat una, spongiam et nudum gladium altera. Hoc habitu Socratem bene quietum circumstetere.
+
+[1,12,4] Infit illa cum gladio: "Hic est, soror Panthia, carus Endymion, hic Catamitus meus, qui diebus ac noctibus inlusit aetatulam meam,
+
+[1,12,5] hic qui meis amoribus subterhabitis non solum me diffamat probris uerum etiam fugam instruit.
+
+[1,12,6] At ego scilicet Vlixi astu deserta uice Calypsonis aeternam solitudinem flebo." Et porrecta dextera meque Panthiae suae demonstrato:
+
+[1,12,7] "At hic bonus" inquit "consiliator Aristomenes, qui fugae huius auctor fuit et nunc morti proximus iam humi prostratus grabattulo subcubans iacet et haec omnia conspicit, impune se laturum meas contumelias putat.
+
+[1,12,8] Faxo eum sero, immo statim, immo uero iam nunc, ut et praecedentis dicacitatis et instantis curiositatis paeniteat."
+
+[1,13,1] Haec ego ut accepi, sudore frigido miser perfluo tremore uiscera quatior. ut grabattulus etiam succussu meo inquietus super dorsum meum palpitando saltaret.
+
+[1,13,2] At bona Panthia: "Quin igitur," inquit "soror, hunc primum bacchatim discerpimus uel membris eius destinatis uirilia desecamus?"
+
+[1,13,3] Ad haec Meroe - sic enim reapse nomen eius tunc fabulis Socratis conuenire sentiebam - : "Immo" ait "supersit hic saltem qui miselli huius corpus paruo contumulet humo,"
+
+[1,13,4] et capite Socratis in alterum dimoto latus per iugulum sinistrum capulo tenus gladium totum ei demergit
+
+[1,13,5] et sanguinis eruptionem utriculo admoto excipit diligenter, ut nulla stilla compareret usquam. Haec ego meis oculis aspexi.
+
+[1,13,6] Nam etiam, ne quid demutaret, credo, a uictimae religione, immissa dextera per uulnus illud ad uiscera penitus cor miseri contubernalis mei Meroe bona scrutata protulit, cum ille inpetu teli praesecata gula uocem immo stridorem incertum per uulnus effunderet et spiritum rebulliret.
+
+[1,13,7] Quod uulnus, qua maxime patebat, spongia offulciens Panthia: "Heus tu," inquit "spongia, caue in mari nata per fluuium transeas."
+
+[1,13,8] His editis abeunt et una remoto grabattulo uaricus super faciem meam residentes uesicam exonerant, quoad me urinae spurcissimae madore perluerent.
+
+[1,14,1] Commodum limen euaserant, et fores ad pristinum statum integrae resurgunt: cardines ad foramina residunt, ad postes ad repagula redeunt, ad claustra pessuli recurrunt.
+
+[1,14,2] At ego, ut eram, etiam nunc humi proiectus inanimis nudus et frigidus et lotio perlutus, quasi recens utero matris editus, immo uero semimortuus, uerum etiam ipse mihi superuiuens et postumus uel certe destinatae iam cruci candidatus:
+
+[1,14,3] "Quid" inquam "me fiet, ubi iste iugulatus mane paruerit? Cui uidebor ueri similia dicere proferens uera?
+
+[1,14,4] "Proclamares saltem suppetiatum, si resistere uir tantus mulieri nequibas. Sub oculis tuis homo iugulatur, et siles?
+
+[1,14,5] Cur autem te simile latrocinium non peremit? Cur saeua crudelitas uel propter indicium sceleris arbitro pepercit ? Ergo, quoniam euasisti mortem, nunc illo redi "
+
+[1,14,6] Haec identidem mecum replicabam, et nox ibat in diem. Optimum itaque factu uisum est anteluculo furtim euadere et uiam licet trepido uestigio capessere.
+
+[1,14,7] Sumo sarcinulam meam, subdita claui pessulos reduco; at illae probae et fideles ianuae, quae sua sponte reseratae nocte fuerant, uix tandem et aegerrime tunc clauis suae crebra immissione patefiunt.
+
+[1,15,1] Et "Heus tu, ubi es?" inquam; "Valuas stabuli absolue, antelucio uolo ire." Ianitor pone stabuli ostium humi cubitans etiam nunc semisomnus:
+
+[1,15,2] "Quid? Tu" inquit "ignoras latronibus infestari uias, qui hoc noctis iter incipis? Nam etsi tu alicuius facinoris tibi conscius scilicet mori cupis, nos cucurbitae caput non habemus ut pro te moriamur."
+
+[1,15,3] "Non longe" inquam "lux abest. Et praeterea quid uiatori de summa pauperie latrones auferre possunt? An ignoras, inepte, nudum nec a decem palaestritis despoliari posse?"
+
+[1,15,4] Ad haec ille marcidus et semisopitus in alterum latus reuolutus: "Vnde autem" inquit "scio an conuectore illo tuo, cum quo sero deuorteras, iugulato fugae mandes praesidium?"
+
+[1,15,5] Illud horae memini me terra dehiscente ima Tartara inque his canem Cerberum prorsus esurientem mei prospexisse.
+
+[1,15,6] Ac recordabar profecto bonam Meroen non misericordia iugulo meo pepercisse, sed saeuitia cruci me reseruasse.
+
+[1,16,1] In cubiculum itaque reuersus de genere tumultuario mortis mecum deliberabam.
+
+[1,16,2] Sed cum nullum aliud telum mortiferum Eortuna quam solum mihi grabattulum subministraret, "lam iam grabattule" inquam "animo meo carissime, qui mecum tot aerumnas exanclasti conscius et arbiter quae nocte gesta sunt,
+
+[1,16,3] quem solum in meo reatu testem innocentiae citare possum, tu mihi ad inferos festinanti sumministra telum salutare,"
+
+[1,16,4] et cum dicto restim, qua erat intextus, adgredior expedire ac tigillo, quod fenestrae subditum altrinsecus prominebat, iniecta atque obdita parte funiculi et altera firmiter in nodum coacta ascenso grabattulo ad exitium sublimatus et immisso capite laqueum induo.
+
+[1,16,5] Sed dum pede altero fulcimentum quo sustinebar repello, ut ponderis deductu restis ad ingluuiem adstricta spiritus officia discluderet,
+
+[1,16,6] repente putris alioquin et uetus funis dirumpitur, atque ego de alto recidens Socraten - nam iuxta me iacebat - superruo cumque eo in terram deuoluor.
+
+[1,17,1] Et ecce in ipso momento ianitor introrumpit exerte clamitans: "Vbi es tu qui alta nocte immodice festinabas et nunc stertis inuolutus?"
+
+[1,17,2] Ad haec nescio an casu nostro an illius absono clamore experrectus Socrates exsurgit prior et "Non" inquit "inmerito stabularios hos omnes hospites detestantur.
+
+[1,17,3] Nam iste curiosus dum inportune irrumpit - credo studio rapiendi aliquid - clamore uasto marcidum alioquin me altissimo somno excussit."
+
+[1,17,4] Emergo laetus atque alacer insperato gaudio perfusus et: "Ecce, ianitor fidelissime, comes et pater meus et frater meus, quem nocte ebrius occisum a me calumniabaris", et cum dicto Socraten deosculabar amplexus.
+
+[1,17,5] At ille odore alioquin spurcissimi humoris percussus quo me Lamiae illae infecerant, uehementer aspernatur:
+
+[1,17,6] "Apage te" inquit "fetorem extremae latrinae", et causas coepit huius odoris comiter inquirere.
+
+[1,17,7] At ego miser adficto ex tempore absurdo ioco in alium sermonem intentionem eius denuo deriuo et iniecta dextra:
+
+[1,17,8] "Quin imus", inquam, "et itineris matutini gratiam capimus." Sumo sarcinulam et pretio mansionis stabulario persoluto capessimus uiam.
+
+[1,18,1] Aliquantum processeramus, et iam iubaris exortu cuncta conlustrantur. Et ego curiose sedulo arbitrabar iugulum comitis, qua parte gladium delapsum uideram,
+
+[1,18,2] et mecum: "Vesane", aio, "qui poculis et uino sepultus extrema somniasti.
+
+[1,18,3] Ecce Socrates integer, sanus, incolumis. Vbi uulnus? Spongia ubi? Vbi postremum cicatrix tam alta, tam recens?"
+
+[1,18,4] Et ad illum: "Non", inquam, "immerito medici fidi cibo et crapula distentos saeua et grauia somniare autumant;
+
+[1,18,5] mihi denique, quod poculis uesperi minus temperaui, nox acerba diras et truces imagines optulit, ut adhuc me credam cruore humano aspersum atque impiatum."
+
+[1,18,6] Ad haec ille subridens: "At tu", inquit, "non sanguine sed lotio perfusus es.
+
+[1,18,7] Verum tamen et ipse per somnium iugulari uisus sum mihi, nam et iugulum istum dolui et cor ipsum mihi auelli putaui, et nunc etiam spiritu deficior et genua quatior et gradu titubo et aliquid cibatus refouendo spiritu desidero."
+
+[1,18,8] "En", inquam, "paratum tibi adest ientaculum", et cum dicto manticam meam humero exuo, caseum cum pane propere ei porrigo et "Iuxta platanum istam residamus" aio.
+
+[1,19,1] Quo facto et ipse aliquid indidem sumo eumque auide essitantem aspiciens aliquanto intentiore macie atque pallore buxeo deficientem uideo.
+
+[1,19,2] Sic denique eum uitalis color turbauerat ut mihi prae metu, nocturnas etiam Furias illas imaginanti,
+
+[1,19,3] frustulum panis, quod primum sumseram, quamuis admodum modicum mediis faucibus inhaereret ac neque deorsum demeare neque sursum remeare posset.
+
+[1,19,4] Nam et breuitas ipsa commeantium metum mihi cumulabat.
+
+[1,19,5] Quis enim de duobus comitum alterum sine alterius noxa peremtum crederet?
+
+[1,19,6] Verum ille, ut satis detruncauerat cibum, sitire inpatienter coeperat ;
+
+[1,19,7] nam et optimi casei bonam partem auide deuorauerat; et haud ita longe radices platani lenis fluuius in speciem placidae paludis ignauus ibat argento uel uitro aemulus in colorem.
+
+[1,19,8] "En" inquam "explere latice fontis lacteo". Adsurgit ille et oppertus paululum planiorem ripae marginem complicitus in genua adpronat se auidus adfectans poculum.
+
+[1,19,9] Necdum satis extremis labiis summum aquae rorem attigerat, et iugulo eius uulnus dehiscit in profundum patorem et illa spongia de eo repente deuoluitur eamque paruus admodum comitatur cruor.
+
+[1,19,10] Denique corpus exanimatum in flumen paene cernuat, nisi ego altero eius pede retento uix et aegre ad ripam superiorem adtraxi,
+
+[1,19,11] ubi defletum pro tempore comitem misellum arenosa humo in amnis uicinia sempiterna contexi.
+
+[1,19,12] Ipse trepidus et eximie metuens mihi per diuersas et auias solitudines aufugi et quasi conscius mihi caedis humanae relicta patria et lare ultroneum exilium amplexus nunc Aetoliam nouo contracto matrimonio colo."
+
+[1,20,1] Haec Aristomenes. At ille comes eius, qui statim initio obstinata incredulitate sermonem eius respuebat:
+
+[1,20,2] "Nihil", inquit, "hac fabula fabulosius, nihil isto mendacio absurdius", et ad me conuersus: "Tu autem", inquit, "uir ut habitus et habitudo demonstrat ornatus, accedis huic fabulae?".
+
+[1,20,3] "Ego uero", inquam, "nihil impossibile arbitror, sed utcumque fata decreuerint ita cuncta mortalibus prouenire:
+
+[1,20,4] nam et mihi et tibi et cunctis hominibus multa usu uenire mira et paene infecta, quae tamen ignaro relata fidem perdant.
+
+[1,20,5] Sed ego huic et credo hercules et gratas gratias memini, quod lepidae fabulae festiuitate nos auocauit, asperam denique ac prolixam uiam sine labore ac taedio euasi.
+
+[1,20,6] Quod beneficium etiam illum uectorem meum credo laetari, sine fatigatione sui me usque ad istam ciuitatis portam non dorso illius, sed meis auribus prouecto."
+
+[1,21,1] Is finis nobis et sermonis et itineris communis fuit. Nam comites uterque ad uillulam proximam laeuorsum abierunt.
+
+[1,21,2] Ego uero quod primum ingressui stabulum conspicatus sum, accessi et de quadam anu caupona ilico percontor: "Estne", inquam, "Hypata haec ciuitas?" Adnuit.
+
+[1,21,3] "Nostine Milonem quendam e primoribus?" Adrisit et: "Vere", inquit, "primus istic perhibetur Milo, qui extra pomerium et urbem totam colit."
+
+[1,21,4] "Remoto", inquam, "ioco, parens optima, dic oro et cuiatis sit et quibus deuersetur aedibus?" "Videsne", inquit, "extremas fenestras, quae foris urbem prospiciunt, et altrinsecus fores proxumum respicientes angiportum?
+
+[1,21,5] Inibi iste Milo deuersatur ampliter nummatus et longe opulentus, uerum extremae auaritiae et sordis infimae infamis homo,
+
+[1,21,6] foenus denique copiosum sub arrabone auri et argenti crebriter exercens, exiguo Lare inclusus et aerugini semper intentus, cum uxorem etiam calamitatis suae comitem habeat.
+
+[1,21,7] Neque praeter unicam pascit ancillulam et habitu mendicantis semper incedit."
+
+[1,21,8] Ad haec ego risum subicio: "Benigne", inquam, "et prospicue Demeas meus in me consuluit, qui peregrinaturum tali uiro conciliauit, in cuius hospitio, nec fumi nec nidoris nebulam uererer";
+
+[1,22,1] et cum dicto modico secus progressus ostium accedo et ianuam firmiter oppessulatam pulsare uocaliter incipio.
+
+[1,22,2] Tandem adulescentula quaedam procedens: ''"Heus tu", inquit, "qui tam fortiter fores uerberasti, sub qua specie mutuari cupis? An tu solus ignoras praeter aurum argentumque nullum nos pignus admittere?"
+
+[1,22,3] "Meliora", inquam, "ominare et potius responde, an intra aedes erum tuum offenderim." "Plane", inquit, "sed quae causa quaestionis huius?''"
+
+[1,22,4] "Litteras ei a Corinthio Demea scriptas ad eum reddo." " Dum annuntio", inquit, "hic ibidem me opperimino",
+
+[1,22,5] et cum dicto rursum foribus oppessulatis intro capessiit. Modico deinde regressa patefactis aedibus: "Rogat te", inquit.
+
+[1,22,6] Intuli me eumque accubantem exiguo admodum tulo et commodum cenare incipientem inuenio.
+
+[1,22,7] Assidebat pedes uxor et mensa uacua posita, cuius monstratu "En" inquit "hospitium."
+
+[1,22,8] "Bene" ego, et ilico ei litteras Demeae trado. Quibus properiter lectis: "Amo", inquit, "meum Demean, qui mihi tantum conciliauit hospitem",
+
+[1,23,1] et cum dicto iubet uxorem decedere utque in eius locum adsidam iubet meque etiam nunc uerecundia cunctantem adrepta lacinia detrahens: "Adside", inquit, "istic.
+
+[1,23,2] Nam prae metu latronum nulla sessibula ac ne sufficientem supellectilem parare nobis licet." Feci.
+
+[1,23,3] Et sic "Ego te", inquit, "etiam de ista corporis speciosa habitudine deque hac uirginali prorsus uerecundia, generosa stirpe proditum et recte conicerem.
+
+[1,23,4] Sed et meus Demeas eadem litteris pronuntiat. Ergo breuitatem gurgustioli nostri ne spernas peto.
+
+[1,23,5] Erit tibi adiacens et ecce illud cubiculum honestum receptaculum. Fac libenter deuerseris in nostro.
+
+[1,23,6] Nam et maiorem domum dignatione tua feceris et tibi specimen gloriosum adrogaris, si contentus lare paruulo Thesei illius cognominis patris tui uirtutes aemulaueris, qui non est aspernatus Hecales anus hospitium tenue''"
+
+[1,23,7] et uocata ancillula: "Photis", inquit, "sarcinulas hospitis susceptas cum fide conde in illud cubiculum
+
+[1,23,8] ac simul ex promptuario oleum unctui et lintea tersui et cetera hoc eidem usui profer ociter et hospitem meum produc ad proximas balneas; satis arduo itinere atque prolixo fatigatus est."
+
+[1,24,1] His ego auditis mores atque parsimoniam ratiocinans Mlonis uolensque me artius ei conciliare: "Nihil", inquam, rerum istarum, quae itineris ubique nos comitantur, indigemus.
+
+[1,24,2] sed et balneas facile percontabimur. plane quod est mihi summe praecipuum, eqno, qui me strenue peruexit, faenum atque ordeum aeceptis istis nummulis tu, Photis, emito."
+
+[1,24,3] His actis et rebus meis in illo cubiculo conditis pergens ipse ad balneas, ut prius aliquid nobis cibatui prospicerem, forum cupidinis peto,
+
+[1,24,4] inque eo piscatum opiparem expositum uideo et percontato pretio, quod centum nummis indicaret, aspernatus uiginti denariis praestinaui.
+
+[1,24,5] Inde me commodum egredientem eontinatur Pythias condiscipulus apud Athenas Atticas meus, qui me post aliquantum multum temporis amanter agnitum inuadit amplexusque ac comiter deosculatus:
+
+[1,24,6] "Mi Luci", ait, "sat pol diu est, quod interuisimus te, at hercules exinde cum a Clytio magistro digressi sumus.
+
+[1,24,7] Quae autem tibi causa peregrinationis huius?" "Crastino die scies", inquam, "Sed quid istud? Voti gaudeo. Nam et lixas et uirgas et habitum prorsus magistratui congruentem in te uideo."
+
+[1,24,8] "Annonam curamus", ait, "et aedilem gerimus et siquid obsonare cupis, utique commodabimus." Abnuebam, quippe qui iam cenae affatim piscatum prospexeramus.
+
+[1,24,9] Sed enim Pythias uisa sportula succussisque in aspectum planiorem piscibus: "At has quisquilias quanti parasti?" "Vix", inquam, "piscatori extorsimus accipere uiginti denarium."
+
+[1,25,1] Quo audito statim adrepta dextera postliminio me in forum cupidinis reducens: "Et a quo", inquit, "istorum nugamenta haec comparasti?"
+
+[1,25,2] Demonstro seniculum: in angulo sedebat. Quem confestim pro aedilitatis imperio uoce asperrima increpans:
+
+[1,25,3] "Iam iam", inquit, "nec amicis quidem nostris uel omnino ullis hospitibus parcitis, quod tam magnis pretiis pisces friuolos indicatis et florem Thessalicae regionis ad instar solitudinis et scopuli edulium caritate deducitis?
+
+[1,25,4] Sed non impune. Iam enim faxo scias, quem ad modum sub meo magisterio mali debeant coerceri", et profusa in medium sportula iubet officialem suum insuper pisces inscendere ac pedibus suis totos obterere.
+
+[1,25,5] Qua contentus morum seueritudine meus Pythias ac mihi, ut abirem, suadens: "Sufficit mihi, o Luci", inquit, "seniculi tanta haec contumelia."
+
+[1,25,6] His actis consternatus ac prorsus obstupidus ad balneas me refero prudentis condiscipuli ualido consilio et nummis simul priuatus et cena lautusque ad hospitium Milonis ac dehinc cubiculum me reporto.
+
+[1,26,1] Et ecce Photis ancilla: "Rogat te", inquit, "hospes." At ego iam inde Milonis abstinentiae cognitor excusaui comiter, quod uiae uexationem non cibo, sed somno censerem diluendam.
+
+[1,26,2] Isto accepto pergit ipse et iniecta dextera clementer me trahere adoritur. Ac dum cunctor, dum modeste renitor, "Non prius", inquit, "discedam, quam me sequaris"
+
+[1,26,3] et dictum iure iurando secutus iam obstinationis suae me ingratis oboedientem perducit ad illum suum grabattulum et residenti: "Quam salue agit", inquit, "Demeas noster? Quid uxor? Quid liberi? Quid uernaculi?"
+
+[1,26,4] Narro singula. Percontatur accuratius causas etiam peregrinationis meae.
+
+[1,26,5] Quas ubi probe protuli, iam et de patria nostra et eius primoribus ac denique de ipso praeside scrupulosissime explorans,
+
+[1,26,6] ubi me post itineris tam saeui uexationem sensit fabularum quoque serie fatigatum in uerba media somnolentum desinere ac necquicquam, defectum iam, incerta uerborum salebra balbuttire, tandem patitur cubitum concederem.
+
+[1,26,7] Euasi aliquando rancidi senis loquax et famelicum conuiuium somno, non cibo grauatus, cenatus solis fabulis et in cubiculum reuersus optatae me quieti reddidi.')
