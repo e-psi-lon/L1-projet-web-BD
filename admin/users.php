@@ -54,6 +54,14 @@ $users = $stmt->fetchAll();
             rows.sort((a, b) => {
                 const aValue = a.children[header.cellIndex].textContent;
                 const bValue = b.children[header.cellIndex].textContent;
+                if (!isNaN(aValue) && !isNaN(bValue)) {
+                    return newSort === 'asc' ? aValue - bValue : bValue - aValue;
+                }
+                if (aValue.includes('/') && bValue.includes('/')) {
+                    const aNum = parseInt(aValue.split('/')[0], 10);
+                    const bNum = parseInt(bValue.split('/')[0], 10);
+                    return newSort === 'asc' ? aNum - bNum : bNum - aNum;
+                }
                 return newSort === 'asc' ? aValue.localeCompare(bValue) : bValue.localeCompare(aValue);
             });
 
