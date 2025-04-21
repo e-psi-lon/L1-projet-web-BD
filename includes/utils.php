@@ -69,7 +69,7 @@ function getChapterUrl(string $authorUrlName, string $bookUrlTitle, string $chap
 }
 
 // Text formatting
-function h(string $text): string {
+function h($text): string {
     return htmlspecialchars($text, ENT_QUOTES, 'UTF-8');
 }
 
