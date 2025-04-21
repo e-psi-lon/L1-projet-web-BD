@@ -310,8 +310,12 @@ $typeLabels = [
                             <th>Chapitre</th>
                             <td>
                                 <?php
-                                $chapterNumber = h($suggestionData['chapter_number'] ?? '');
-                                echo $chapterNumber ? "Chapitre n°$chapterNumber" : 'Non spécifié';
+                                $chapterName = $suggestionData['title'] ?? '';
+                                $chapterNumber = $suggestionData['chapter_number'] ?? '';
+                                if ($chapterNumber) {
+                                    $chapterName = h($chapterName) ." (Chapitre n°$chapterNumber)";
+                                }
+                                echo $chapterName;
                                 ?>
                         </tr>
                         <?php if ($suggestion['admin_notes']): ?>
