@@ -23,7 +23,11 @@
         if (count($result) > 0) {
             foreach ($result as $row) {
                 echo '<div class="author-card">';
-                echo '<h3><a href="'. getAuthorUrl($row['url_name']) . '">' . h($row['name']) . '</a></h3>';
+                echo '<h3> <a class="card-header" href="'. getAuthorUrl($row['url_name']) . '">';
+                if (!empty($row['image'])) {
+                    echo '<img src="/api/author-image?author_id=' . $row['author_id'] . '" alt="' . h($row['name']) . '" class="author-image-small">';
+                }
+                echo h($row['name']) . '</a></h3>';
                 echo '<p>(' . ($row['birth_year'] ?: '?') . ' - ' . ($row['death_year'] ?: '?') . ')</p>';
                 echo '<p>' . (strlen($row['biography']) > 150 ? substr(h($row['biography']), 0, 150) . '...' : h($row['biography'])) . '</p>';
                 echo '<a href="' . getAuthorUrl($row['url_name']) . '" class="btn btn-primary">Voir les œuvres</a>';

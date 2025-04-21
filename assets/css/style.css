@@ -231,6 +231,19 @@ input:checked + .slider:before {
     transform: translateY(-5px);
 }
 
+.author-image-small {
+    max-width: 40px;
+    max-height: 40px;
+    border-radius: 3px;
+    margin-right: 0.5rem;
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+/* TODO: Fix the author image size and placement to avoid weird spacing and overlap */
 .author-portrait {
     max-width: 200px;
     border-radius: 5px;

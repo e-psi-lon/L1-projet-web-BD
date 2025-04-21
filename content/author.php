@@ -40,14 +40,15 @@ if ($author_info) {
     $db = null;
     exit();
 }
+
 ?>
 
 <div class="container">
     <?php if ($author_info): ?>
         <div class="author-header">
-            <?php if (!empty($author_info['author_image'])): ?>
+            <?php if (!empty($author_info['image'])): ?>
                 <div class="author-portrait">
-                    <img src="data:image/jpeg;base64,<?php echo base64_encode($author_info['author_image']); ?>" alt="<?php echo h($author_info['name']); ?>">
+                    <img src="/api/author-image?author_id=<?=$author_id;?>" alt="<?=$author_info['name'];?>">
                 </div>
             <?php endif; ?>
             <h1 class="card-title"><?php echo h($author_info['name']); ?></h1>
