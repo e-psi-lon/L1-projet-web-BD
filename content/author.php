@@ -51,11 +51,14 @@ if ($author_info) {
                     <img src="/api/author-image?author_id=<?=$author_id;?>" alt="<?=$author_info['name'];?>">
                 </div>
             <?php endif; ?>
-            <h1 class="card-title"><?php echo h($author_info['name']); ?></h1>
-            <p class="author-years">
-                <?php echo ($author_info['birth_year'] ?: '?'); ?> -
-                <?php echo ($author_info['death_year'] ?: '?'); ?>
-            </p>
+
+            <div class="author-info">
+                <h2 class="card-title"><?php echo h($author_info['name']); ?></h2>
+                <p class="author-years">
+                    <?php echo ($author_info['birth_year'] ?: '?'); ?> -
+                    <?php echo ($author_info['death_year'] ?: '?'); ?>
+                </p>
+            </div>
         </div>
 
         <div class="card">
