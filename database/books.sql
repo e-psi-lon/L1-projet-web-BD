@@ -1,9 +1,34 @@
 INSERT INTO books (author_id, title, url_title, publication_year, description) VALUES
 (1, 'Les Métamorphoses', 'les-metamorphoses', 150, 'Roman en prose, rappelant un voyage spirituel mais dans un trait comique'),
 (1, 'Apologie', 'apologie', 160, 'Plaidoirie faite par Apulée après avoir été accusé de sorcellerie'),
-(34, 'Les Amours', 'les-amours', -16, 'Recueil d''élégies en trois livres où Ovide chante sa passion fictive pour une femme nommée Corinne'),
-(40, 'Lettres', 'lettres', 100, 'Recueil de lettres écrites par Pline le Jeune à des amis et à des personnalités de son temps'),
-(34, 'Les Métamorphoses', 'les-metamorphoses', 8, 'Poème épique en quinze livres relatant l''histoire du monde depuis sa création à travers des récits de métamorphoses mythologiques');
+(1, 'Florida', 'florida', 165, 'Recueil d''extraits de discours prononcés à Carthage'),
+(1, 'Du dieu de Socrate', 'du-dieu-de-socrate', 158, 'Essai philosophique sur la démonologie et les esprits intermédiaires'),
+(1, 'Du monde', 'du-monde', 162, 'Traité cosmologique inspiré d''Aristote'),
+(3, 'De Caesaribus', 'de-caesaribus', 360, 'Histoire des empereurs romains d''Auguste à Constance II'),
+(3, 'Origine du peuple romain', 'origine-du-peuple-romain', 365, 'Récit mythologique et historique des origines de Rome'),
+(3, 'Des hommes illustres de la ville de Rome', 'des-hommes-illustres-de-la-ville-de-rome', 370, 'Biographies de personnages célèbres de l''histoire romaine'),
+(2, 'Nuits Attiques', 'nuits-attiques', 175, 'Compilation d''anecdotes et de notes savantes sur divers sujets, écrite pendant les longues nuits d''hiver en Attique'),
+(10, 'Commentaires sur la Guerre des Gaules', 'commentaires-sur-la-guerre-des-gaules', -52, 'Récit en sept livres des campagnes militaires de César en Gaule'),
+(10, 'Commentaires sur la Guerre civile', 'commentaires-sur-la-guerre-civile', -48, 'Récit en trois livres du conflit entre César et Pompée'),
+(10, 'De Bello Alexandrino', 'de-bello-alexandrino', -47, 'Récit de la guerre d''Alexandrie'),
+(10, 'De Bello Africo', 'de-bello-africo', -46, 'Récit de la campagne d''Afrique contre les partisans de Pompée'),
+(10, 'De Bello Hispaniensi', 'de-bello-hispaniensi', -45, 'Récit de la campagne d''Espagne contre les fils de Pompée'),
+(11, 'De l''orateur', 'de-lorateur', -55, 'Traité sur l''art oratoire en trois livres'),
+(11, 'De la République', 'de-la-republique', -51, 'Traité politique sur la constitution idéale'),
+(11, 'Des devoirs', 'des-devoirs', -44, 'Traité de philosophie morale adressé à son fils'),
+(11, 'Catilinaires', 'catilinaires', -63, 'Quatre discours prononcés contre Catilina'),
+(11, 'Philippiques', 'philippiques', -43, 'Série de quatorze discours contre Marc Antoine'),
+(11, 'Lettres à Atticus', 'lettres-a-atticus', -68, 'Correspondance avec son ami Atticus révélant la vie politique romaine'),
+(11, 'De l''amitié', 'de-lamitie', -44, 'Dialogue sur l''importance de l''amitié dans la vie'),
+(11, 'De la vieillesse', 'de-la-vieillesse', -44, 'Réflexion sur les avantages de la vieillesse'),(34, 'Les Amours', 'les-amours', -16, 'Recueil d''élégies en trois livres où Ovide chante sa passion fictive pour une femme nommée Corinne'),
+(34, 'Les Métamorphoses', 'les-metamorphoses', 8, 'Poème épique en quinze livres relatant l''histoire du monde depuis sa création à travers des récits de métamorphoses mythologiques'),
+(34, 'L''Art d''aimer', 'lart-daimer', -1, 'Poème didactique en trois livres sur la séduction et l''amour'),
+(34, 'Les Fastes', 'les-fastes', 8, 'Poème inachevé expliquant les origines des fêtes et coutumes romaines'),
+(34, 'Les Tristes', 'les-tristes', 10, 'Cinq livres d''élégies écrites pendant son exil à Tomis'),
+(34, 'Les Pontiques', 'les-pontiques', 13, 'Quatre livres de lettres en vers adressées à ses amis depuis son exil'),
+(34, 'Les Remèdes à l''amour', 'les-remedes-a-lamour', 1, 'Traité humoristique sur les moyens de guérir de l''amour'),
+(34, 'Héroïdes', 'heroides', -5, 'Collection de lettres fictives écrites par des héroïnes mythologiques à leurs amants absents'),
+(40, 'Lettres', 'lettres', 100, 'Recueil de lettres écrites par Pline le Jeune à des amis et à des personnalités de son temps');
 
 
 INSERT INTO book_suggestions (suggestion_id, author_id, title, url_title, publication_year, description) VALUES

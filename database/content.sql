@@ -1,5 +1,5 @@
 INSERT INTO chapters (book_id, title, chapter_number, content) VALUES
-(5, 'Livre I', 1, '[1,1] In noua fert animus mutatas dicere formas
+(24, 'Livre I', 1, '[1,1] In noua fert animus mutatas dicere formas
 2 corpora; di, coeptis (nam uos mutastis et illas)
 3 adspirate meis primaque ab origine mundi
 4 ad mea perpetuum deducite tempora carmen!
@@ -857,7 +857,7 @@ INSERT INTO chapters (book_id, title, chapter_number, content) VALUES
 779 Aethiopasque suos positosque sub ignibus Indos
 
 [1,780] sidereis transit patriosque adit inpiger ortus. '),
-(5, 'Livre II', 2, '[2,0] Liber secundus.
+(24, 'Livre II', 2, '[2,0] Liber secundus.
 
 [2,1] Regia Solis erat sublimibus alta columnis,
 clara micante auro flammasque imitante pyropo,
@@ -2028,7 +2028,7 @@ inposita est; tremulae sinuantur flamine uestes. '),
 [102] (1) Quid etiam est, Aemiliane, quod non te iudice refutauerim? Quod pretium magiae meae repperisti? Cur ergo Pudentillae animum ueneficiis flecterem? Quod ut ex ea commodum caperem? Vti dotem mihi modicam potius quam a{m}mpla<m> diceret? O praeclara carmina! (2) An ut eam dotem filiis suis magis restipularetur quam penes me sineret? Quid addi ad hanc magiam potest? (3) An uti rem familiarem suam meo adhortatu pleramque filiis condonasset, quae nihil illis ante me maritum fuerat largita, mihi quicquam impertiret? O graue ueneficium dicam an ingratum beneficium?! (4) An ut testamento, quod irata filio scribebat, filium potius, cui offensa erat, quam me, cui deuincta, heredem relinqueret? Hoc quidem multis cantaminibus difficile impetraui. (5) Putate uos causam non apud Cl. Maximum agere, uirum aequum et iustitiae pertinacem, sed alium aliquem prauum et saeuum iudicem substituite, accusationum fautorem, cupidum condem{p}nandi: (6) date ei quod sequatur, ministrate uel tantulam uerisimilem occasionem secundum uos pronuntiandi. Saltim fingite aliquid, eminiscimini quod respondeatis, qui uos ita rogarit. (7) Et quoniam omnem conatum necesse est quaepiam causa praecedat, respondete qui Apuleium dicitis animum Pudentillae magicis illectamentis ad{h}ortum, quid ex ea petierit, cur fecerit. (8) Formam eius uoluerat? Negatis. Diuitias saltim concupierat? Negant tabulae dotis, negant tabulae donationis, negant tabulae testamenti, in quibus non modo non cupide appetisse, uerum etiam dure reppulisse liberalitatem suae uxoris {h}ostenditur. (9) Quae igitur alia causa est? Quid ommutuistis? Quid tacetis? Vbi illud libelli uestri atrox principium nomine priuigni mei form{orm}atum: ''hunc ego, domine Maxime, reum apud te facere institui''?
 
 [103] (1) Quin igitur addis: ''reum magistrum, reum uitricum, reum deprecatorem''? Sed quid deinde? ''Plurimorum maleficiorum et manifestissimorum''. Cedo unum de plurimis, cedo dubium uel saltem obscurum de manifestissimis. (2) Ceterum ad haec, quae obiecistis, numera an binis uerbis respondeam. ''Dentes sp<l>endidas'': ignosce munditiis. ''Specula inspicis'': debet philosophus. ''Versus facis'': licet fieri. ''Pisces exploras'': Aristoteles docet. ''Lignum consecras'': Plato suadet. (3) ''Vxorem ducis'': leges iubent. ''Prior natu''st'': solet fieri. ''Lucrum sectatu''s'': dotalis accipe, donationem recordare, testamentum lege. (4) Quae si omnia affatim retudi, si calumnias omnes refutaui, si me in omnibus non modo criminibus, uerum etiam maledictis procul a culpa {philosophiae} tutus sum, si philosophiae honorem, qui mihi salute mea antiquior est, nusquam minui, immo contra ubique si cum septem pennis eum tenui: (5) si haec, ut dico, ita sunt, possum securus existimationem tuam reuereri quam potestatem uereri, quod minus graue et uerendum mihi arbitror a{c} procons. damnari quam si a tam bono tamque emendato uiro improber. Dixi. '),
-(4, 'Livre I', 3, '[1,0] LIBER PRIMVS
+(31, 'Livre I', 3, '[1,0] LIBER PRIMVS
 
 [1,1] C- PLINIUS SEPTICIO <CLARO> SUO S-
 (1) Frequenter hortatus es, ut epistulas, si quas paulo curatius scripsissem, colligerem publicaremque. Collegi non seruato temporis ordine - neque enim historiam componebam -, sed ut quaeque in manus uenerat. (2) Superest ut nec te consilii nec me paeniteat obsequii. Ita enim fiet, ut eas quae adhuc neglectae iacent requiram et si quas addidero non supprimam. Vale.
