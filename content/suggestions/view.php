@@ -21,9 +21,10 @@ try {
 
     // Fetch the main suggestion details
     $stmt = $connection->prepare('
-        SELECT s.suggestion_id, s.user_id, s.suggestion_type, s.status, s.admin_notes, u.username as reviewed_by
+        SELECT s.suggestion_id, s.user_id, u.username as creator, s.suggestion_type, s.status, s.admin_notes, r.username as reviewed_by
         FROM suggestions s
-        LEFT JOIN users u ON s.reviewed_by = u.user_id
+        LEFT JOIN users r ON s.reviewed_by = r.user_id
+        LEFT JOIN users u ON s.user_id = u.user_id
         WHERE s.suggestion_id = :id
     ');
     $stmt->execute(['id' => $suggestionId]);
@@ -150,7 +151,7 @@ $typeLabels = [
             </div>
             <?php if ($user['is_admin'] && $suggestion['user_id'] !== $user['id']): ?>
                 <div class="suggestion-author-info">
-                    <p>Suggestion faite par : <strong><?php echo h($user['username']); ?></strong></p>
+                    <p>Suggestion faite par : <strong><?php echo h($suggestion['creator']); ?></strong></p>
                 </div>
             <?php endif; ?>
             <div>

@@ -5,7 +5,7 @@ function getDbConnection() {
     $host = 'localhost:3306';
     $dbname = 'web-project';
     $username = 'root';
-    $password = getenv('DB_PASSWORD');
+    $password = 'root';
 
     try {
         // Connection to MySQL
