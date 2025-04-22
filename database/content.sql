@@ -2466,4 +2466,1448 @@ INSERT INTO chapter_suggestions (suggestion_id, book_id, title, chapter_number, 
 
 [1,26,6] ubi me post itineris tam saeui uexationem sensit fabularum quoque serie fatigatum in uerba media somnolentum desinere ac necquicquam, defectum iam, incerta uerborum salebra balbuttire, tandem patitur cubitum concederem.
 
-[1,26,7] Euasi aliquando rancidi senis loquax et famelicum conuiuium somno, non cibo grauatus, cenatus solis fabulis et in cubiculum reuersus optatae me quieti reddidi.')
+[1,26,7] Euasi aliquando rancidi senis loquax et famelicum conuiuium somno, non cibo grauatus, cenatus solis fabulis et in cubiculum reuersus optatae me quieti reddidi.'),
+(4, 11, 'Livre I', 1, '[1,0] Liber primus.
+
+[1,1] Gallia est omnis diuisa in partes tres, quarum unam incolunt Belgae, aliam Aquitani, tertiam qui ipsorum lingua Celtae, nostra Galli appellantur. Hi omnes lingua, institutis, legibus inter se differunt. Gallos ab Aquitanis Garumna flumen, a Belgis Matrona et Sequana diuidit. Horum omnium fortissimi sunt Belgae, propterea quod a cultu atque humanitate prouinciae longissime absunt, minimeque ad eos mercatores saepe commeant atque ea quae ad effeminandos animos pertinent important, proximique sunt Germanis, qui trans Rhenum incolunt, quibuscum continenter bellum gerunt. Qua de causa Heluetii quoque reliquos Gallos uirtute praecedunt, quod fere cotidianis proeliis cum Germanis contendunt, cum aut suis finibus eos prohibent aut ipsi in eorum finibus bellum gerunt. Eorum una, pars, quam Gallos obtinere dictum est, initium capit a flumine Rhodano, continetur Garumna flumine, Oceano, finibus Belgarum, attingit etiam ab Sequanis et Heluetiis flumen Rhenum, uergit ad septentriones. Belgae ab extremis Galliae finibus oriuntur, pertinent ad inferiorem partem fluminis Rheni, spectant in septentrionem et orientem solem. Aquitania a Garumna flumine ad Pyrenaeos montes et eam partem Oceani quae est ad Hispaniam pertinet; spectat inter occasum solis et septentriones.
+
+[1,2] Apud Heluetios longe nobilissimus fuit et ditissimus Orgetorix. Is M- Messala, {et P-} M- Pisone consulibus regni cupiditate inductus coniurationem nobilitatis fecit et ciuitati persuasit ut de finibus suis cum omnibus copiis exirent: perfacile esse, cum uirtute omnibus praestarent, totius Galliae imperio potiri. Id hoc facilius iis persuasit, quod undique loci natura Heluetii continentur: una ex parte flumine Rheno latissimo atque altissimo, qui agrum Heluetium a Germanis diuidit; altera ex parte monte Iura altissimo, qui est inter Sequanos et Heluetios; tertia lacu Lemanno et flumine Rhodano, qui prouinciam nostram ab Heluetiis diuidit. His rebus fiebat ut et minus late uagarentur et minus facile finitimis bellum inferre possent; qua ex parte homines bellandi cupidi magno dolore adficiebantur. Pro multitudine autem hominum et pro gloria belli atque fortitudinis angustos se fines habere arbitrabantur, qui in longitudinem milia passuum CCXL, in latitudinem CLXXX patebant.
+
+[1,3] His rebus adducti et auctoritate Orgetorigis permoti constituerunt ea quae ad proficiscendum pertinerent comparare, iumentorum et carrorum quam maximum numerum coemere, sementes quam maximas facere, ut in itinere copia frumenti suppeteret, cum proximis ciuitatibus pacem et amicitiam confirmare. Ad eas res conficiendas biennium sibi satis esse duxerunt; in tertium annum profectionem lege confirmant. Ad eas res conficiendas Orgetorix deligitur. Is sibi legationem ad ciuitates suscipit. In eo itinere persuadet Castico, Catamantaloedis filio, Sequano, cuius pater regnum in Sequanis multos annos obtinuerat et a senatu populi Romani amicus appellatus erat, ut regnum in ciuitate sua occuparet, quod pater ante habuerit; itemque Dumnorigi Haeduo, fratri Diuiciaci, qui eo tempore principatum in ciuitate obtinebat ac maxime plebi acceptus erat, ut idem conaretur persuadet eique filiam suam in matrimonium dat. Perfacile factu esse illis probat conata perficere, propterea quod ipse suae ciuitatis imperium obtenturus esset: non esse dubium quin totius Galliae plurimum Heluetii possent; se suis copiis suoque exercitu illis regna conciliaturum confirmat. Hac oratione adducti inter se fidem et ius iurandum dant et regno occupato per tres potentissimos ac firmissimos populos totius Galliae sese potiri posse sperant.
+
+[1,4] Ea res est Heluetiis per indicium enuntiata. Moribus suis Orgetoricem ex uinculis causam dicere coegerunt; damnatum poenam sequi oportebat, ut igni cremaretur. Die constituta causae dictionis Orgetorix ad iudicium omnem suam familiam, ad hominum milia decem, undique coegit, et omnes clientes obaeratosque suos, quorum magnum numerum habebat, eodem conduxit; per eos ne causam diceret se eripuit. Cum ciuitas ob eam rem incitata armis ius suum exequi conaretur multitudinemque hominum ex agris magistratus cogerent, Orgetorix mortuus est; neque abest suspicio, ut Heluetii arbitrantur, quin ipse sibi mortem consciuerit.
+
+[1,5] Post eius mortem nihilo minus Heluetii id quod constituerant facere conantur, ut e finibus suis exeant. Ubi iam se ad eam rem paratos esse arbitrati sunt, oppida sua omnia, numero ad duodecim, uicos ad quadringentos, reliqua priuata aedificia incendunt; frumentum omne, praeter quod secum portaturi erant, comburunt, ut domum reditionis spe sublata paratiores ad omnia pericula subeunda essent; trium mensum molita cibaria sibi quemque domo efferre iubent. Persuadent Rauracis et Tulingis et Latobrigis finitimis, uti eodem usi consilio oppidis suis uicisque exustis una cum iis proficiscantur, Boiosque, qui trans Rhenum incoluerant et in agrum Noricum transierant Noreiamque oppugnabant, receptos ad se socios sibi adsciscunt.
+
+[1,6] Erant omnino itinera duo, quibus itineribus domo exire possent: unum per Sequanos, angustum et difficile, inter montem Iuram et flumen Rhodanum, uix qua singuli carri ducerentur, mons autem altissimus impendebat, ut facile perpauci prohibere possent; alterum per prouinciam nostram, multo facilius atque expeditius, propterea quod inter fines Heluetiorum et Allobrogum, qui nuper pacati erant, Rhodanus fluit isque non nullis locis uado transitur. Extremum oppidum Allobrogum est proximumque Heluetiorum finibus Genaua. Ex eo oppido pons ad Heluetios pertinet. Allobrogibus sese uel persuasuros, quod nondum bono animo in populum Romanum uiderentur, existimabant uel ui coacturos ut per suos fines eos ire paterentur. Omnibus rebus ad profectionem comparatis diem dicunt, qua die ad ripam Rhodani omnes conueniant. Is dies erat a- d- V- Kal- Apr- L- Pisone, A- Gabinio consulibus.
+
+[1,7] Caesari cum id nuntiatum esset, eos per prouinciam nostram iter facere conari, maturat ab urbe proficisci et quam maximis potest itineribus in Galliam ulteriorem contendit et ad Genauam peruenit. Prouinciae toti quam maximum potest militum numerum imperat (erat omnino in Gallia ulteriore legio una), pontem, qui erat ad Genauam, iubet rescindi. Ubi de eius aduentu Heluetii certiores facti sunt, legatos ad eum mittunt nobilissimos ciuitatis, cuius legationis Nammeius et Verucloetius principem locum obtinebant, qui dicerent sibi esse in animo sine ullo maleficio iter per prouinciam facere, propterea quod aliud iter haberent nullum: rogare ut eius uoluntate id sibi facere liceat. Caesar, quod memoria tenebat L- Cassium consulem occisum exercitumque eius ab Heluetiis pulsum et sub iugum missum, concedendum non putabat; neque homines inimico animo, data facultate per prouinciam itineris faciundi, temperaturos ab iniuria et maleficio existimabat. Tamen, ut spatium intercedere posset dum milites quos imperauerat conuenirent, legatis respondit diem se ad deliberandum sumpturum: si quid uellent, ad Id- April- reuerterentur.
+
+[1,8] Interea ea legione quam secum habebat militibusque, qui ex prouincia conuenerant, a lacu Lemanno, qui in flumen Rhodanum influit, ad montem Iuram, qui fines Sequanorum ab Heluetiis diuidit, milia passuum XVIIII murum in altitudinem pedum sedecim fossamque perducit. Eo opere perfecto praesidia disponit, castella communit, quo facilius, si se inuito transire conentur, prohibere possit. Ubi ea dies quam constituerat cum legatis uenit et legati ad eum reuerterunt, negat se more et exemplo populi Romani posse iter ulli per prouinciam dare et, si uim facere conentur, prohibiturum ostendit. Heluetii ea spe deiecti nauibus iunctis ratibusque compluribus factis, alii uadis Rhodani, qua minima altitudo fluminis erat, non numquam interdiu, saepius noctu si perrumpere possent conati, operis munitione et militum concursu et telis repulsi, hoc conatu destiterunt.
+
+[1,9] Relinquebatur una per Sequanos uia, qua Sequanis inuitis propter angustias ire non poterant. His cum sua sponte persuadere non possent, legatos ad Dumnorigem Haeduum mittunt, ut eo deprecatore a Sequanis impetrarent. Dumnorix gratia et largitione apud Sequanos plurimum poterat et Heluetiis erat amicus, quod ex ea ciuitate Orgetorigis filiam in matrimonium duxerat, et cupiditate regni adductus nouis rebus studebat et quam plurimas ciuitates suo beneficio habere obstrictas uolebat. Itaque rem suscipit et a Sequanis impetrat ut per fines suos Heluetios ire patiantur, obsidesque uti inter sese dent perficit: Sequani, ne itinere Heluetios prohibeant, Heluetii, ut sine maleficio et iniuria transeant.
+
+[1,10] Caesari renuntiatur Heluetiis esse in animo per agrum Sequanorum et Haeduorum iter in Santonum fines facere, qui non longe a Tolosatium finibus absunt, quae ciuitas est in prouincia. Id si fieret, intellegebat magno cum periculo prouinciae futurum ut homines bellicosos, populi Romani inimicos, locis patentibus maximeque frumentariis finitimos haberet. Ob eas causas ei munitioni quam fecerat T. Labienum legatum praeficit; ipse in Italiam magnis itineribus contendit duasque ibi legiones conscribit et tres, quae circum Aquileiam hiemabant, ex hibernis educit et, qua proximum iter in ulteriorem Galliam per Alpes erat, cum his quinque legionibus ire contendit. Ibi Ceutrones et Graioceli et Caturiges locis superioribus occupatis itinere exercitum prohibere conantur. Compluribus his proeliis pulsis ab Ocelo, quod est oppidum citerioris prouinciae extremum, in fines Vocontiorum ulterioris prouinciae die septimo peruenit; inde in Allobrogum fines, ab Allobrogibus in Segusiauos exercitum ducit. Hi sunt extra prouinciam trans Rhodanum primi.
+
+[1,11] Heluetii iam per angustias et fines Sequanorum suas copias traduxerant et in Haeduorum fines peruenerant eorumque agros populabantur. Haedui, cum se suaque ab iis defendere non possent, legatos ad Caesarem mittunt rogatum auxilium: ita se omni tempore de populo Romano meritos esse ut paene in conspectu exercitus nostri agri uastari, liberi {eorum} in seruitutem abduci, oppida expugnari non debuerint. Eodem tempore quo Haedui Ambarri, necessarii et consanguinei Haeduorum, Caesarem certiorem faciunt sese depopulatis agris non facile ab oppidis uim hostium prohibere. Item Allobroges, qui trans Rhodanum uicos possessionesque habebant, fuga se ad Caesarem recipiunt et demonstrant sibi praeter agri solum nihil esse reliqui. Quibus rebus adductus Caesar non expectandum sibi statuit dum, omnibus, fortunis sociorum consumptis, in Santonos Heluetii peruenirent.
+
+[1,12] Flumen est Arar, quod per fines Haeduorum et Sequanorum in Rhodanum influit, incredibili lenitate, ita ut oculis in utram partem fluat iudicari non possit. Id Heluetii ratibus ac lintribus iunctis transibant. Ubi per exploratores Caesar certior factus est tres iam partes copiarum Heluetios id flumen traduxisse, quartam uero partem citra flumen Ararim reliquam esse, de tertia uigilia cum legionibus tribus e castris profectus ad eam partem peruenit quae nondum flumen transierat. Eos impeditos et inopinantes adgressus magnam partem eorum concidit; reliqui sese fugae mandarunt atque in proximas siluas abdiderunt. Is pagus appellabatur Tigurinus; nam omnis ciuitas Heluetia in quattuor pagos diuisa est. Hic pagus unus, cum domo exisset, patrum nostrorum memoria L- Cassium consulem interfecerat et eius exercitum sub iugum miserat. Ita siue casu siue consilio deorum immortalium quae pars ciuitatis Heluetiae insignem calamitatem populo Romano intulerat, ea princeps poenam persoluit. Qua in re Caesar non solum publicas, sed etiam priuatas iniurias ultus est, quod eius soceri L- Pisonis auum, L- Pisonem legatum, Tigurini eodem proelio quo Cassium interfecerant.
+
+[1,13] Hoc proelio facto, reliquas copias Heluetiorum ut consequi posset, pontem in Arari faciendum curat atque ita exercitum traducit. Heluetii repentino eius aduentu commoti cum id quod ipsi diebus XX aegerrime confecerant, ut flumen transirent, illum uno die fecisse intellegerent, legatos ad eum mittunt; cuius legationis Diuico princeps fuit, qui bello Cassiano dux Heluetiorum fuerat. Is ita cum Caesare egit: si pacem populus Romanus cum Heluetiis faceret, in eam partem ituros atque ibi futuros Heluetios ubi eos Caesar constituisset atque esse uoluisset; sin bello persequi perseueraret, reminisceretur et ueteris incommodi populi Romani et pristinae uirtutis Heluetiorum. Quod improuiso unum pagum adortus esset, cum ii qui flumen transissent suis auxilium ferre non possent, ne ob eam rem aut suae magnopere uirtuti tribueret aut ipsos despiceret. Se ita a patribus maioribusque suis didicisse, ut magis uirtute contenderent quam dolo aut insidiis niterentur. Quare ne committeret ut is locus ubi constitissent ex calamitate populi Romani et internecione exercitus nomen caperet aut memoriam proderet.
+
+[1,14] His Caesar ita respondit: eo sibi minus dubitationis dari, quod eas res quas legati Heluetii commemorassent memoria teneret, atque eo grauius ferre quo minus merito populi Romani accidissent; qui si alicuius iniuriae sibi conscius fuisset, non fuisse difficile cauere; sed eo deceptum, quod neque commissum a se intellegeret quare timeret neque sine causa timendum putaret. Quod si ueteris contumeliae obliuisci uellet, num etiam recentium iniuriarum, quod eo inuito iter per prouinciam per uim temptassent, quod Haeduos, quod Ambarros, quod Allobrogas uexassent, memoriam deponere posse? Quod sua uictoria tam insolenter gloriarentur quodque tam diu se impune iniurias tulisse admirarentur, eodem pertinere. Consuesse enim deos immortales, quo grauius homines ex commutatione rerum doleant, quos pro scelere eorum ulcisci uelint, his secundiores interdum res et diuturniorem impunitatem concedere. Cum ea ita sint, tamen, si obsides ab iis sibi dentur, uti ea quae polliceantur facturos intellegat, et si Haeduis de iniuriis quas ipsis sociisque eorum intulerint, item si Allobrogibus satis faciunt, sese cum iis pacem esse facturum. Diuico respondit: ita Heluetios a maioribus suis institutos esse uti obsides accipere, non dare, consuerint; eius rem populum Romanum esse testem. Hoc responso dato discessit.
+
+[1,15] Postero die castra ex eo loco mouent. Idem facit Caesar equitatumque omnem, ad numerum quattuor milium, quem ex omni prouincia et Haeduis atque eorum sociis coactum habebat, praemittit, qui uideant quas in partes hostes iter faciant. Qui cupidius nouissimum agmen insecuti alieno loco cum equitatu Heluetiorum proelium committunt; et pauci de nostris cadunt. Quo proelio sublati Heluetii, quod quingentis equitibus tantam multitudinem equitum propulerant, audacius subsistere non numquam et nouissimo agmine proelio nostros lacessere coeperunt. Caesar suos a proelio continebat, ac satis habebat in praesentia hostem rapinis, pabulationibus populationibusque prohibere. Ita dies circiter XV iter fecerunt uti inter nouissimum hostium agmen et nostrum primum non amplius quinis aut senis milibus passuum interesset.
+
+[1,16] Interim cotidie Caesar Haeduos frumentum, quod essent publice polliciti, flagitare. Nam propter frigora {quod Gallia sub septentrionibus, ut ante dictum est, posita est,} non modo frumenta in agris matura non erant, sed ne pabuli quidem satis magna copia suppetebat; eo autem frumento quod flumine Arari nauibus subuexerat propterea uti minus poterat quod iter ab Arari Heluetii auerterant, a quibus discedere nolebat. Diem ex die ducere Haedui: conferri, comportari, adesse dicere. Ubi se diutius duci intellexit et diem instare quo die frumentum militibus metiri oporteret, conuocatis eorum principibus, quorum magnam copiam in castris habebat, in his Diuiciaco et Lisco, qui summo magistratui praeerat, quem uergobretum appellant Haedui, qui creatur annuus et uitae necisque in suos habet potestatem, grauiter eos accusat, quod, cum neque emi neque ex agris sumi possit, tam necessario tempore, tam propinquis hostibus ab iis non subleuetur, praesertim cum magna ex parte eorum precibus adductus bellum susceperit; multo etiam grauius quod sit destitutus queritur.
+
+[1,17] Tum demum Liscus oratione Caesaris adductus quod antea tacuerat proponit: esse non nullos, quorum auctoritas apud plebem plurimum ualeat, qui priuatim plus possint quam ipsi magistratus. Hos seditiosa atque improba oratione multitudinem deterrere, ne frumentum conferant quod debeant: praestare, si iam principatum Galliae obtinere non possint, Gallorum quam Romanorum imperia perferre, neque dubitare {debeant} quin, si Heluetios superauerint Romani, una cum reliqua Gallia Haeduis libertatem sint erepturi. Ab isdem nostra consilia quaeque in castris gerantur hostibus enuntiari; hos a se coerceri non posse. Quin etiam, quod necessariam rem coactus Caesari enuntiarit, intellegere sese quanto id cum periculo fecerit, et ob eam causam quam diu potuerit tacuisse.
+
+[1,18] Caesar hac oratione Lisci Dumnorigem, Diuiciaci fratrem, designari sentiebat, sed, quod pluribus praesentibus eas res iactari nolebat, celeriter concilium dimittit, Liscum retinet. Quaerit ex solo ea quae in conuentu dixerat. Dicit liberius atque audacius. Eadem secreto ab aliis quaerit; reperit esse uera: ipsum esse Dumnorigem, summa audacia, magna apud plebem propter liberalitatem gratia, cupidum rerum nouarum. Complures annos portoria reliquaque omnia Haeduorum uectigalia paruo pretio redempta habere, propterea quod illo licente contra liceri audeat nemo. His rebus et suam rem familiarem auxisse et facultates ad largiendum magnas comparasse; magnum numerum equitatus suo sumptu semper alere et circum se habere, neque solum domi, sed etiam apud finitimas ciuitates largiter posse, atque huius potentiae causa matrem in Biturigibus homini illic nobilissimo ac potentissimo conlocasse; ipsum ex Heluetiis uxorem habere, sororum ex matre et propinquas suas nuptum in alias ciuitates conlocasse. Fauere et cupere Heluetiis propter eam adfinitatem, odisse etiam suo nomine Caesarem et Romanos, quod eorum aduentu potentia eius deminuta et Diuiciacus frater in antiquum locum gratiae atque honoris sit restitutus. Si quid accidat Romanis, summam in spem per Heluetios regni obtinendi uenire; imperio populi Romani non modo de regno, sed etiam de ea quam habeat gratia desperare. Reperiebat etiam in quaerendo Caesar, quod proelium equestre aduersum paucis ante diebus esset factum, initium eius fugae factum a Dumnorige atque eius equitibus (nam equitatui, quem auxilio Caesari Haedui miserant, Dumnorix praeerat): eorum fuga reliquum esse equitatum perterritum.
+
+[1,19] Quibus rebus cognitis, cum ad has suspiciones certissimae res accederent, quod per fines Sequanorum Heluetios traduxisset, quod obsides inter eos dandos curasset, quod ea omnia non modo iniussu suo et ciuitatis sed etiam inscientibus ipsis fecisset, quod a magistratu Haeduorum accusaretur, satis esse causae arbitrabatur quare in eum aut ipse animaduerteret aut ciuitatem animaduertere iuberet. His omnibus rebus unum repugnabat, quod Diuiciaci fratris summum in populum Romanum studium, summum in se uoluntatem, egregiam fidem, iustitiam, temperantiam cognouerat; nam ne eius supplicio Diuiciaci animum offenderet uerebatur. Itaque prius quam quicquam conaretur, Diuiciacum ad se uocari iubet et, cotidianis interpretibus remotis, per C. Valerium Troucillum, principem Galliae prouinciae, familiarem suum, cui summam omnium rerum fidem habebat, cum eo conloquitur; simul commonefacit quae ipso praesente in concilio {Gallorum} de Dumnorige sint dicta, et ostendit quae separatim quisque de eo apud se dixerit. Petit atque hortatur ut sine eius offensione animi uel ipse de eo causa cognita statuat uel ciuitatem statuere iubeat.
+
+[1,20] Diuiciacus multis cum lacrimis Caesarem complexus obsecrare coepit ne quid grauius in fratrem statueret: scire se illa esse uera, nec quemquam ex eo plus quam se doloris capere, propterea quod, cum ipse gratia plurimum domi atque in reliqua Gallia, ille minimum propter adulescentiam posset, per se creuisset; quibus opibus ac neruis non solum ad minuendam gratiam, sed paene ad perniciem suam uteretur. Sese tamen et amore fraterno et existimatione uulgi commoueri. Quod si quid ei a Caesare grauius accidisset, cum ipse eum locum amicitiae apud eum teneret, neminem existimaturum non sua uoluntate factum; qua ex re futurum uti totius Galliae animi a se auerterentur. Haec cum pluribus uerbis flens a Caesare peteret, Caesar eius dextram prendit; consolatus rogat finem orandi faciat; tanti eius apud se gratiam esse ostendit uti et rei publicae iniuriam et suum dolorem eius uoluntati ac precibus condonet. Dumnorigem ad se uocat, fratrem adhibet; quae in eo reprehendat ostendit; quae ipse intellegat, quae ciuitas queratur proponit; monet ut in reliquum tempus omnes suspiciones uitet; praeterita se Diuiciaco fratri condonare dicit. Dumnorigi custodes ponit, ut quae agat, quibuscum loquatur scire possit.
+
+[1,21] Eodem die ab exploratoribus certior factus hostes sub monte consedisse milia passuum ab ipsius castris octo, qualis esset natura montis et qualis in circuitu ascensus qui cognoscerent misit. Renuntiatum est facilem esse. De tertia uigilia T. Labienum, legatum pro praetore, cum duabus legionibus et iis ducibus qui iter cognouerant summum iugum montis ascendere iubet; quid sui consilii sit ostendit. Ipse de quarta uigilia eodem itinere quo hostes ierant ad eos contendit equitatumque omnem ante se mittit. P. Considius, qui rei militaris peritissimus habebatur et in exercitu L. Sullae et postea in M. Crassi fuerat, cum exploratoribus praemittitur.
+
+[1,22] Prima luce, cum summus mons a {Lucio} Labieno teneretur, ipse ab hostium castris non longius mille et quingentis passibus abesset neque, ut postea ex captiuis comperit, aut ipsius aduentus aut Labieni cognitus esset, Considius equo admisso ad eum accurrit, dicit montem, quem a Labieno occupari uoluerit, ab hostibus teneri: id se a Gallicis armis atque insignibus cognouisse. Caesar suas copias in proximum collem subducit, aciem instruit. Labienus, ut erat ei praeceptum a Caesare ne proelium committeret, nisi ipsius copiae prope hostium castra uisae essent, ut undique uno tempore in hostes impetus fieret, monte occupato nostros expectabat proelioque abstinebat. Multo denique die per exploratores Caesar cognouit et montem a suis teneri et Heluetios castra, mouisse et Considium timore perterritum quod non uidisset pro uiso sibi renuntiauisse. Eo die quo consuerat interuallo hostes sequitur et milia passuum tria ab eorum castris castra ponit.
+
+[1,23] Postridie eius diei, quod omnino biduum supererat, cum exercitui frumentum metiri oporteret, et quod a Bibracte, oppido Haeduorum longe maximo et copiosissimo, non amplius milibus passuum XVIII aberat, rei frumentariae prospiciendum existimauit; itaque iter ab Heluetiis auertit ac Bibracte ire contendit. Ea res per fugitiuos L- Aemilii, decurionis equitum Gallorum, hostibus nuntiatur. Heluetii, seu quod timore perterritos Romanos discedere a se existimarent, eo magis quod pridie superioribus locis occupatis proelium non commisissent, siue eo quod re frumentaria intercludi posse confiderent, commutato consilio atque itinere conuerso nostros a nouissimo agmine insequi ac lacessere coeperunt.
+
+[1,24] Postquam id animum aduertit, copias suas Caesar in proximum collem subduxit equitatumque, qui sustineret hostium impetum, misit. Ipse interim in colle medio triplicem aciem instruxit legionum quattuor ueteranarum; in summo iugo duas legiones quas in Gallia citeriore proxime conscripserat et omnia auxilia conlocauit, ita ut supra se totum montem hominibus compleret; impedimenta sarcinasque in unum locum conferri et eum ab iis qui in superiore acie constiterant muniri iussit. Heluetii cum omnibus suis carris secuti impedimenta in unum locum contulerunt; ipsi confertissima acie, reiecto nostro equitatu, phalange facta sub primam nostram aciem successerunt.
+
+[1,25] Caesar primum suo, deinde omnium ex conspectu remotis equis, ut aequato omnium periculo spem fugae tolleret, cohortatus suos proelium commisit. Milites loco superiore pilis missis facile hostium phalangem perfregerunt. Ea disiecta gladiis destrictis in eos impetum fecerunt. Gallis magno ad pugnam erat impedimento quod pluribus eorum scutis uno ictu pilorum transfixis et conligatis, cum ferrum se inflexisset, neque euellere neque sinistra impedita satis commode pugnare poterant, multi ut diu iactato bracchio praeoptarent scutum manu emittere et nudo corpore pugnare. Tandem uulneribus defessi et pedem referre et, quod mons suberit circiter mille passuum spatio, eo se recipere coeperunt. Capto monte et succedentibus nostris, Boi et Tulingi, qui hominum milibus circiter XV agmen hostium claudebant et nouissimis praesidio erant, ex itinere nostros ab latere aperto adgressi circumuenire, et id conspicati Heluetii, qui in montem sese receperant, rursus instare et proelium redintegrare coeperunt. Romani conuersa signa bipertito intulerunt: prima et secunda acies, ut uictis ac submotis resisteret, tertia, ut uenientes sustineret.
+
+[1,26] Ita ancipiti proelio diu atque acriter pugnatum est. Diutius cum sustinere nostrorum impetus non possent, alteri se, ut coeperant, in montem receperunt, alteri ad impedimenta et carros suos se contulerunt. Nam hoc toto proelio, cum ab hora septima ad uesperum pugnatum sit, auersum hostem uidere nemo potuit. Ad multam noctem etiam ad impedimenta pugnatum est, propterea quod pro uallo carros obiecerunt et e loco superiore in nostros uenientes tela coiciebant et non nulli inter carros rotasque mataras ac tragulas subiciebant nostrosque uulnerabant. Diu cum esset pugnatum, impedimentis castrisque nostri potiti sunt. Ibi Orgetorigis filia atque unus e filiis captus est. Ex eo proelio circiter hominum milia CXXX superfuerunt eaque tota nocte continenter ierunt {nullam partem noctis itinere intermisso}; in fines Lingonum die quarto peruenerunt, cum et propter uulnera militum et propter sepulturam occisorum nostri {triduum morati} eos sequi non potuissent. Caesar ad Lingonas litteras nuntiosque misit, ne eos frumento neue alia re iuuarent: qui si iuuissent, se eodem loco quo Heluetios habiturum. Ipse triduo intermisso cum omnibus copiis eos sequi coepit.
+
+[1,27] Heluetii omnium rerum inopia adducti legatos de deditione ad eum miserunt. Qui cum eum in itinere conuenissent seque ad pedes proiecissent suppliciterque locuti flentes pacem petissent, atque eos in eo loco quo tum essent suum aduentum expectare iussisset, paruerunt. Eo postquam Caesar peruenit, obsides, arma, seruos qui ad eos perfugissent, poposcit. Dum ea conquiruntur et conferuntur, {nocte intermissa} circiter hominum milia VI eius pagi qui Verbigenus appellatur, siue timore perterriti, ne armis traditis supplicio adficerentur, siue spe salutis inducti, quod in tanta multitudine dediticiorum suam fugam aut occultari aut omnino ignorari posse existimarent, prima nocte e castris Heluetiorum egressi ad Rhenum finesque Germanorum contenderunt.
+
+[1,28] Quod ubi Caesar resciit, quorum per fines ierant his uti conquirerent et reducerent, si sibi purgati esse uellent, imperauit; reductos in hostium numero habuit; reliquos omnes obsidibus, armis, perfugis traditis in deditionem accepit. Heluetios, Tulingos, Latobrigos in fines suos, unde erant profecti, reuerti iussit, et, quod omnibus frugibus amissis domi nihil erat quo famem tolerarent, Allobrogibus imperauit ut iis frumenti copiam facerent; ipsos oppida uicosque, quos incenderant, restituere iussit. Id ea maxime ratione fecit, quod noluit eum locum unde Heluetii discesserant uacare, ne propter bonitatem agrorum Germani, qui trans Rhenum incolunt, ex suis finibus in Heluetiorum fines transirent et finitimi Galliae prouinciae Allobrogibusque essent. Boios petentibus Haeduis, quod egregia uirtute erant cogniti, ut in finibus suis conlocarent, concessit; quibus illi agros dederunt quosque postea in parem iuris libertatisque condicionem atque ipsi erant receperunt.
+
+[1,29] In castris Heluetiorum tabulae repertae sunt litteris Graecis confectae et ad Caesarem relatae, quibus in tabulis nominatim ratio confecta erat, qui numerus domo exisset eorum qui arma ferre possent, et item separatim, quot pueri, senes mulieresque. {Quarum omnium rerum} summa erat capitum Heluetiorum milium CCLXIII, Tulingorum milium XXXVI, Latobrigorum XIIII, Rauracorum XXIII, Boiorum XXXII; ex his qui arma ferre possent ad milia nonaginta duo. Summa omnium fuerunt ad milia CCCLXVIII. Eorum qui domum redierunt censu habito, ut Caesar imperauerat, repertus est numerus milium C et X.
+
+[1,30] Bello Heluetiorum confecto totius fere Galliae legati, principes ciuitatum, ad Caesarem gratulatum conuenerunt: intellegere sese, tametsi pro ueteribus Heluetiorum iniuriis populi Romani ab his poenas bello repetisset, tamen eam rem non minus ex usu {terrae} Galliae quam populi Romani accidisse, propterea quod eo consilio florentissimis rebus domos suas Heluetii reliquissent uti toti Galliae bellum inferrent imperioque potirentur, locumque domicilio ex magna copia deligerent quem ex omni Gallia oportunissimum ac fructuosissimum iudicassent, reliquasque ciuitates stipendiarias haberent. Petierunt uti sibi concilium totius Galliae in diem certam indicere idque Caesaris facere uoluntate liceret: sese habere quasdam res quas ex communi consensu ab eo petere uellent. Ea re permissa diem concilio constituerunt et iure iurando ne quis enuntiaret, nisi quibus communi consilio mandatum esset, inter se sanxerunt.
+
+[1,31] Eo concilio dimisso, idem princeps ciuitatum qui ante fuerant ad Caesarem reuerterunt petieruntque uti sibi secreto in occulto de sua omniumque salute cum eo agere liceret. Ea re impetrata sese omnes flentes Caesari ad pedes proiecerunt: non minus se id contendere et laborare ne ea quae dixissent enuntiarentur quam uti ea quae uellent impetrarent, propterea quod, si enuntiatum esset, summum in cruciatum se uenturos uiderent. Locutus est pro his Diuiciacus Haeduus: Galliae totius factiones esse duas; harum alterius principatum tenere Haeduos, alterius Aruernos. Hi cum tantopere de potentatu inter se multos annos contenderent, factum esse uti ab Aruernis Sequanisque Germani mercede arcesserentur. Horum primo circiter milia XV Rhenum transisse; postea quam agros et cultum et copias Gallorum homines feri ac barbari adamassent, traductos plures; nunc esse in Gallia ad C et XX milium numerum. Cum his Haeduos eorumque clientes semel atque iterum armis contendisse; magnam calamitatem pulsos accepisse, omnem nobilitatem, omnem senatum, omnem equitatum amisisse. Quibus proeliis calamitatibusque fractos, qui et sua uirtute et populi Romani hospitio atque amicitia plurimum ante in Gallia potuissent, coactos esse Sequanis obsides dare nobilissimos ciuitatis et iure iurando ciuitatem obstringere sese neque obsides repetituros neque auxilium a populo Romano imploraturos neque recusaturos quo minus perpetuo sub illorum dicione atque imperio essent. Unum se esse ex omni ciuitate Haeduorum qui adduci non potuerit ut iuraret aut liberos suos obsides daret. Ob eam rem se ex ciuitate profugisse et Romam ad senatum uenisse auxilium postulatum, quod solus neque iure iurando neque obsidibus teneretur. Sed peius uictoribus Sequanis quam Haeduis uictis accidisse, propterea quod Ariouistus, rex Germanorum, in eorum finibus consedisset tertiamque partem agri Sequani, qui esset optimus totius Galliae, occupauisset et nunc de altera parte tertia Sequanos decedere iuberet, propterea quod paucis mensibus ante Harudum milia hominum XXIIII ad eum uenissent, quibus locus ac sedes pararentur. Futurum esse paucis annis uti omnes ex Galliae finibus pellerentur atque omnes Germani Rhenum transirent; neque enim conferendum esse Gallicum cum Germanorum agro neque hanc consuetudinem uictus cum illa comparandam. Ariouistum autem, ut semel Gallorum copias proelio uicerit, quod proelium factum sit ad Magetobrigam, superbe et crudeliter imperare, obsides nobilissimi cuiusque liberos poscere et in eos omnia exempla cruciatusque edere, si qua res non ad nutum aut ad uoluntatem eius facta sit. Hominem esse barbarum, iracundum, temerarium: non posse eius imperia, diutius sustineri. Nisi quid in Caesare populoque Romano sit auxilii, omnibus Gallis idem esse faciendum quod Heluetii fecerint, ut domo emigrent, aliud domicilium, alias sedes, remotas a Germanis, petant fortunamque, quaecumque accidat, experiantur. Haec si enuntiata Ariouisto sint, non dubitare quin de omnibus obsidibus qui apud eum sint grauissimum supplicium sumat. Caesarem uel auctoritate sua atque exercitus uel recenti uictoria uel nomine populi Romani deterrere posse ne maior multitudo Germanorum Rhenum traducatur, Galliamque omnem ab Ariouisti iniuria posse defendere.
+
+[1,32] Hac oratione ab Diuiciaco habita omnes qui aderant magno fletu auxilium a Caesare petere coeperunt. Animaduertit Caesar unos ex omnibus Sequanos nihil earum rerum facere quas ceteri facerent sed tristes capite demisso terram intueri. Eius rei quae causa esset miratus ex ipsis quaesiit. Nihil Sequani respondere, sed in eadem tristitia taciti permanere. Cum ab his saepius quaereret neque ullam omnino uocem exprimere posset, idem Diuiacus Haeduus respondit: hoc esse miseriorem et grauiorem fortunam Sequanorum quam reliquorum, quod soli ne in occulto quidem queri neque auxilium implorare auderent absentisque Ariouisti crudelitatem, uelut si cora adesset, horrerent, propterea quod reliquis tamen fugae facultas daretur, Sequanis uero, qui intra fines suos Ariouistum recepissent, quorum oppida omnia in potestate eius essent, omnes cruciatus essent perferendi.
+
+[1,33] His rebus cognitis Caesar Gallorum animos uerbis confirmauit pollicitusque est sibi eam rem curae futuram; magnam se habere spem et beneficio suo et auctoritate adductum Ariouistum finem iniuriis facturum. Hac oratione habita, concilium dimisit. Et secundum ea multae res eum hortabantur quare sibi eam rem cogitandam et suscipiendam putaret, in primis quod Haeduos, fratres consanguineosque saepe numero a senatu appellatos, in seruitute atque {in} dicione uidebat Germanorum teneri eorumque obsides esse apud Ariouistum ac Sequanos intellegebat; quod in tanto imperio populi Romani turpissimum sibi et rei publicae esse arbitrabatur. Paulatim autem Germanos consuescere Rhenum transire et in Galliam magnam eorum multitudinem uenire populo Romano periculosum uidebat, neque sibi homines feros ac barbaros temperaturos existimabat quin, cum omnem Galliam occupauissent, ut ante Cimbri Teutonique fecissent, in prouinciam exirent atque inde in Italiam contenderent, {praesertim cum Sequanos a prouincia nostra Rhodanus diuideret}; quibus rebus quam maturrime occurrendum putabat. Ipse autem Ariouistus tantos sibi spiritus, tantam arrogantiam sumpserat, ut ferendus non uideretur.
+
+[1,34] Quam ob rem placuit ei ut ad Ariouistum legatos mitteret, qui ab eo postularent uti aliquem locum medium utrisque conloquio deligeret: uelle sese de re publica et summis utriusque rebus cum eo agere. Ei legationi Ariouistus respondit: si quid ipsi a Caesare opus esset, sese ad eum uenturum fuisse; si quid ille se uelit, illum ad se uenire oportere. Praeterea se neque sine exercitu in eas partes Galliae uenire audere quas Caesar possideret, neque exercitum sine magno commeatu atque molimento in unum locum contrahere posse. Sibi autem mirum uideri quid in sua Gallia, quam bello uicisset, aut Caesari aut omnino populo Romano negotii esset.
+
+[1,35] His responsis ad Caesarem relatis, iterum ad eum Caesar legatos cum his mandatis mittit: quoniam tanto suo populique Romani beneficio adtectus, cum in consulatu suo rex atque amicus a senatu appellatus esset, hanc sibi populoque Romano gratiam referret ut in conloquium uenire inuitatus grauaretur neque de communi re dicendum sibi et cognoscendum putaret, haec esse quae ab eo postularet: primum ne quam multitudinem hominum amplius trans Rhenum in Galliam traduceret; deinde obsides quos haberet ab Haeduis redderet Sequanisque permitteret ut quos illi haberent uoluntate eius reddere illis liceret; neue Haeduos iniuria lacesseret neue his sociisque eorum bellum inferret. Si {id} ita fecisset, sibi populoque Romano perpetuam gratiam atque amicitiam cum eo futuram; si non impetraret, sese, quoniam M. Messala, M. Pisone consulibus senatus censuisset uti quicumque Galliam prouinciam obtineret, quod commodo rei publicae lacere posset, Haeduos ceterosque amicos populi Romani defenderet, se Haeduorum iniurias non neglecturum.
+
+[1,36] Ad haec Ariouistus respondit: ius esse belli ut qui uicissent iis quos uicissent quem ad modum uellent imperarent. Item populum Romanum uictis non ad alterius praescriptum, sed ad suum arbitrium imperare consuesse. Si ipse populo Romano non praescriberet quem ad modum suo iure uteretur, non oportere se a populo Romano in suo iure impediri. Haeduos sibi, quoniam belli fortunam temptassent et armis congressi ac superati essent, stipendiarios esse factos. Magnam Caesarem iniuriam facere, qui suo aduentu uectigalia sibi deteriora faceret. Haeduis se obsides redditurum non esse neque his neque eorum sociis iniuria bellum inlaturum, si in eo manerent quod conuenisset stipendiumque quotannis penderent; si id non fecissent, longe iis fraternum nomen populi Romani afuturum. Quod sibi Caesar denuntiaret se Haeduorum iniurias non neglecturum, neminem secum sine sua pernicie contendisse. Cum uellet, congrederetur: intellecturum quid inuicti Germani, exercitatissimi in armis, qui inter annos XIIII tectum non subissent, uirtute possent.
+
+[1,37] Haec eodem tempore Caesari mandata referebantur et legati ab Haeduis et a Treueris ueniebant: Haedui questum quod Harudes, qui nuper in Galliam transportati essent, fines eorum popularentur: sese ne obsidibus quidem datis pacem Ariouisti redimere potuisse; Treueri autem, pagos centum Sueborum ad ripas Rheni consedisse, qui Rhemum transire conarentur; his praeesse Nasuam et Cimberium fratres. Quibus rebus Caesar uehementer commotus maturandum sibi existimauit, ne, si noua manus Sueborum cum ueteribus copiis Ariouisti sese coniunxisset, minus facile resisti posset. Itaque re frumentaria quam celerrime potuit comparata magnis itineribus ad Ariouistum contendit.
+
+[1,38] Cum tridui uiam processisset, nuntiatum est ei Ariouistum cum suis omnibus copiis ad occupandum Vesontionem, quod est oppidum maximum Sequanorum, contendere {triduique uiam a suis finibus processisse}. Id ne accideret, magnopere sibi praecauendum Caesar existimabat. Namque omnium rerum quae ad bellum usui erant summa erat in eo oppido facultas, idque natura loci sic muniebatur ut magnam ad ducendum bellum daret facultatem, propterea quod flumen {alduas} Dubis ut circino circumductum paene totum oppidum cingit, reliquum spatium, quod est non amplius pedum MDC, qua flumen intermittit, mons continet magna altitudine, ita ut radices eius montis ex utraque parte ripae fluminis contingant, hunc murus circumdatus arcem efficit et cum oppido coniungit. Huc Caesar magnis nocturnis diurnisque itineribus contendit occupatoque oppido ibi praesidium conlocat.
+
+[1,39] Dum paucos dies ad Vesontionem rei frumentariae commeatusque causa moratur, ex percontatione nostrorum uocibusque Gallorum ac mercatorum, qui ingenti magnitudine corporum Germanos, incredibili uirtute atque exercitatione in armis esse praedicabant (saepe numero sese cum his congressos ne uultum quidem atque aciem oculorum dicebant ferre potuisse), tantus subito timor omnem exercitum occupauit ut non mediocriter omnium mentes animosque perturbaret. Hic primum ortus est a tribunis militum, praefectis, reliquisque qui ex urbe amicitiae causa Caesarem secuti non magnum in re militari usum habebant: quorum alius alia causa inlata, quam sibi ad proficiscendum necessariam esse diceret, petebat ut eius uoluntate discedere liceret; non nulli pudore adducti, ut timoris suspicionem uitarent, remanebant. Hi neque uultum fingere neque interdum lacrimas tenere poterant: abditi in tabernaculis aut suum fatum querebantur aut cum familiaribus suis commune periculum miserabantur. Vulgo totis castris testamenta obsignabantur. Horum uocibus ac timore paulatim etiam ii qui magnum in castris usum habebant, milites centurionesque quique equitatui praeerant, perturbabantur. Qui se ex his minus timidos existimari uolebant, non se hostem uereri, sed angustias itineris et magnitudinem siluarum quae intercederent inter ipsos atque Ariouistum, aut rem frumentariam, ut satis commode supportari posset, timere dicebant. Non nulli etiam Caesari nuntiabant, cum castra moueri ac signa ferri iussisset, non fore dicto audientes milites neque propter timorem signa laturos.
+
+[1,40] Haec cum animaduertisset, conuocato consilio omniumque ordinum ad id consilium adhibitis centurionibus, uehementer eos incusauit: primum, quod aut quam in partem aut quo consilio ducerentur sibi quaerendum aut cogitandum putarent. Ariouistum se consule cupidissime populi Romani amicitiam adpetisse; cur hunc tam temere quisquam ab officio discessurum iudicaret? Sibi quidem persuaderi cognitis suis poslulatis atque aequitate condicionum perspecta eum neque suam neque populi Romani gratiam repudiaturum. Quod si furore atque amentia impulsum bellum intulisset, quid tandem uererentur? Aut cur de sua uirtute aut de ipsius diligentia desperarent? Factum eius hostis periculum patrum nostrorum memoria Cimbris et Teutonis a C- Mario pulsis {cum non minorem laudem exercitus quam ipse imperator meritus uidebatur}; factum etiam nuper in Italia seruili tumultu, quos tamen aliquid usus ac disciplina, quam a nobis accepissent, subleuarint. Ex quo iudicari posse quantum haberet in se boni constantia, propterea quod quos aliquam diu inermes sine causa timuissent hos postea armatos ac uictores superassent. Denique hos esse eosdem Germanos quibuscum saepe numero Heluetii congressi non solum in suis sed etiam in illorum finibus plerumque superarint, qui tamen pares esse nostro exercitui non potuerint. Si quos aduersum proelium et fuga Gallorum commoueret, hos, si quaererent, reperire posse diuturnitate belli defatigatis Gallis Ariouistum, cum multos menses castris se ac paludibus tenuisset neque sui potestatem fecisset, desperantes iam de pugna et dispersos subito adortum magis ratione et consilio quam uirtute uicisse. Cui rationi contra homines barbaros atque imperitos locus fuisset, hac ne ipsum quidem sperare nostros exercitus capi posse. Qui suum timorem in rei frumentariae simulationem angustiasque itineris conferrent, facere arroganter, cum aut de officio imperatoris desperare aut praescribere uiderentur. Haec sibi esse curae; frumentum Sequanos, Leucos, Lingones subministrare, iamque esse in agris frumenta matura; de itinere ipsos breui tempore iudicaturos. Quod non fore dicto audientes neque signa laturi dicantur, nihil se ea re commoueri: scire enim, quibuscumque exercitus dicto audiens non fuerit, aut male re gesta fortunam defuisse aut aliquo facinore comperto auaritiam esse conuictam. Suam innocentiam perpetua uita, felicitatem Heluetiorum bello esse perspectam. Itaque se quod in longiorem diem conlaturus fuisset repraesentaturum et proxima nocte de quarta, uigilia castra moturum, ut quam primum intellegere posset utrum apud eos pudor atque officium an timor plus ualeret. Quod si praeterea nemo sequatur, tamen se cum sola decima legione iturum, de qua non dubitet, sibique eam praetoriam cohortem futuram. Huic legioni Caesar et indulserat praecipue et propter uirtutem confidebat maxime.
+
+[1,41] Hac oratione habita mirum in modum conuersae sunt omnium mentes summaque alacritas et cupiditas belli gerendi innata est, princepsque X- legio per tribunos militum ei gratias egit quod de se optimum iudicium fecisset, seque esse ad bellum gerendum paratissimam confirmauit. Deinde reliquae legiones cum tribunis militum et primorum ordinum centurionibus egerunt uti Caesari satis facerent: se neque umquam dubitasse neque timuisse neque de summa belli suum iudicium sed imperatoris esse existimauisse. Eorum satisfactione accepta et itinere exquisito per Diuiciacum, quod ex Gallis ei maximam fidem habebat, ut milium amplius quinquaginta circuitu locis apertis exercitum duceret, de quarta uigilia, ut dixerat, profectus est. Septimo die, cum iter non intermitteret, ab exploratoribus certior factus est Ariouisti copias a nostris milia passuum IIII et XX abesse.
+
+[1,42] Cognito Caesaris aduentu Ariouistus legatos ad eum mittit: quod antea de conloquio postulasset, id per se fieri licere, quoniam propius accessisset seque id sine periculo facere posse existimaret. Non respuit condicionem Caesar iamque eum ad sanitatem reuerti arbitrabatur, cum id quod antea petenti denegasset ultro polliceretur, magnamque in spem ueniebat pro suis tantis populique Romani in eum beneficiis cognitis suis postulatis fore uti pertinacia desisteret. Dies conloquio dictus est ex eo die quintus. Interim saepe cum legati ultro citroque inter eos mitterentur, Ariouistus postulauit ne quem peditem ad conloquium Caesar adduceret: uereri se ne per insidias ab eo circumueniretur; uterque cum equitatu ueniret: alia ratione sese non esse uenturum. Caesar, quod neque conloquium interposita causa tolli uolebat neque salutem suam Gallorum equitatui committere audebat, commodissimum esse statuit omnibus equis Gallis equitibus detractis eo legionarios milites legionis X-, cui quam maxime confidebat, imponere, ut praesidium quam amicissimum, si quid opus facto esset, haberet. Quod cum fieret, non inridicule quidam ex militibus X- legionis dixit: plus quam pollicitus esset Caesarem facere; pollicitum se in cohortis praetoriae loco X. legionem habiturum ad equum rescribere.
+
+[1,43] Planities erat magna et in ea tumulus terrenus satis grandis. Hic locus aequum fere spatium a castris Ariouisti et Caesaris aberat. Eo, ut erat dictum, ad conloquium uenerunt. Legionem Caesar, quam equis deuexerat, passibus CC ab eo tumulo constituit. Item equites Ariouisti pari interuallo constiterunt. Ariouistus ex equis ut conloquerentur et praeter se denos ad conloquium adducerent postulauit. Ubi eo uentum est, Caesar initio orationis sua senatusque in eum beneficia commemorauit, quod rex appellatus esset a senatu, quod amicus, quod munera amplissime missa; quam rem et paucis contigisse et pro magnis hominum officiis consuesse tribui docebat; illum, cum neque aditum neque causam postulandi iustam haberet, beneficio ac liberalitate sua ac senatus ea praemia consecutum. Docebat etiam quam ueteres quamque iustae causae necessitudinis ipsis cum Haeduis intercederent, quae senatus consulta quotiens quamque honorifica in eos facta essent, ut omni tempore totius Galliae principatum Haedui tenuissent, prius etiam quam nostram amicitiam adpetissent. Populi Romani hanc esse consuetudinem, ut socios atque amicos non modo sui nihil deperdere, sed gratia, dignitate, honore auctiores uelit esse; quod uero ad amicitiam populi Romani attulissent, id iis eripi quis pati posset? Postulauit deinde eadem quae legatis in mandatis dederat: ne aut Haeduis aut eorum sociis bellum inferret, obsides redderet, si nullam partem Germanorum domum remittere posset, at ne quos amplius Rhenum transire pateretur.
+
+[1,44] Ariouistus ad postulata Caesaris pauca respondit, de suis uirtutibus multa praedicauit: transisse Rhenum sese non sua sponte, sed rogatum et arcessitum a Gallis; non sine magna spe magnisque praemiis domum propinquosque reliquisse; sedes habere in Gallia ab ipsis concessas, obsides ipsorum uoluntate datos; stipendium capere iure belli, quod uictores uictis imponere consuerint. Non sese Gallis sed Gallos sibi bellum intulisse: omnes Galliae ciuitates ad se oppugnandum uenisse ac contra se castra habuisse; eas omnes copias a se uno proelio pulsas ac superatas esse. Si iterum experiri uelint, se iterum paratum esse decertare; si pace uti uelint, iniquum esse de stipendio recusare, quod sua uoluntate ad id tempus pependerint. Amicitiam populi Romani sibi ornamento et praesidio, non detrimento esse oportere, atque se hac spe petisse. Si per populum Romanum stipendium remittatur et dediticii subtrahantur, non minus libenter sese recusaturum populi Romani amicitiam quam adpetierit. Quod multitudinem Germanorum in Galliam traducat, id se sui muniendi, non Galliae oppugnandae causa facere; eius rei testimonium esse quod nisi rogatus non uenerit et quod bellum non intulerit sed defenderit. Se prius in Galliam uenisse quam populum Romanum. Numquam ante hoc tempus exercitum populi Romani Galliae prouinciae finibus egressum. Quid sibi uellet? Cur in suas possessiones ueniret? Prouinciam suam hanc esse Galliam, sicut illam nostram. Ut ipsi concedi non oporteret, si in nostros fines impetum faceret, sic item nos esse iniquos, quod in suo iure se interpellaremus. Quod fratres a senatu Haeduos appellatos diceret, non se tam barbarum neque tam imperitum esse rerum ut non sciret neque bello Allobrogum proximo Haeduos Romanis auxilium tulisse neque ipsos in iis contentionibus quas Haedui secum et cum Sequanis habuissent auxilio populi Romani usos esse. Debere se suspicari simulata Caesarem amicitia, quod exercitum in Gallia habeat, sui opprimendi causa habere. Qui nisi decedat atque exercitum deducat ex his regionibus, sese illum non pro amico sed pro hoste habiturum. Quod si eum interfecerit, multis sese nobilibus principibusque populi Romani gratum esse facturum (id se ab ipsis per eorum nuntios compertum habere), quorum omnium gratiam atque amicitiam eius morte redimere posset. Quod si decessisset et liberam possessionem Galliae sibi tradidisset, magno se illum praemio remuneraturum et quaecumque bella geri uellet sine ullo eius labore et periculo confecturum.
+
+[1,45] Multa a Caesare in eam sententiam dicta sunt quare negotio desistere non posset: neque suam neque populi Romani consuetudinem pati ut optime meritos socios desereret, neque se iudicare Galliam potius esse Ariouisti quam populi Romani. Bello superatos esse Aruernos et Rutenos a Q. Fabio Maximo, quibus populus Romanus ignouisset neque in prouinciam redegisset neque stipendium posuisset. Quod si antiquissimum quodque tempus spectari oporteret, populi Romani iustissimum esse in Gallia imperium; si iudicium senatus obseruari oporteret, liberam debere esse Galliam, quam bello uictam suis legibus uti uoluisset.
+
+[1,46] Dum haec in conloquio geruntur, Caesari nuntiatum est equites Ariouisti propius tumulum accedere et ad nostros adequitare, lapides telaque in nostros coicere. Caesar loquendi finem fecit seque ad suos recepit suisque imperauit ne quod omnino telum in hostes reicerent. Nam etsi sine ullo periculo legionis delectae cum equitatu proelium fore uidebat, tamen committendum non putabat ut, pulsis hostibus, dici posset eos ab se per fidem in conloquio circumuentos. Postea quam in uulgus militum elatum est qua arrogantia in conloquio Ariouistus usus omni Gallia Romanis interdixisset, impetumque in nostros eius equites fecissent, eaque res conloquium ut diremisset, multo maior alacritas studiumque pugnandi maius exercitui iniectum est.
+
+[1,47] Biduo post Ariouistus ad Caesarem legatos misit: uelle se de iis rebus quae inter eos egi coeptae neque perfectae essent agere cum eo: uti aut iterum conloquio diem constitueret aut, si id minus uellet, ex suis legatis aliquem ad se mitteret. Conloquendi Caesari causa uisa non est, et eo magis quod pridie eius diei Germani retineri non potuerant quin tela in nostros coicerent. Legatum ex suis sese magno cum periculo ad eum missurum et hominibus feris obiecturum existimabat. Commodissimum uisum est C- Valerium Procillum, C- Valerii Caburi filium, summa uirtute et humanitate adulescentem, cuius pater a C- Valerio Flacco ciuitate donatus erat, et propter fidem et propter linguae Gallicae scientiam, qua multa iam Ariouistus longinqua consuetudine utebatur, et quod in eo peccandi Germanis causa non esset, ad eum mittere, et una M- Metium, qui hospitio Ariouisti utebatur. His mandauit quae diceret Ariouistus cognoscerent et ad se referrent. Quos cum apud se in castris Ariouistus conspexisset, exercitu suo praesente conclamauit: quid ad se uenirent? an speculandi causa? Conantes dicere prohibuit et in catenas coniecit.
+
+[1,48] Eodem die castra promouit et milibus passuum VI a Caesaris castris sub monte consedit. Postridie eius diei praeter castra Caesaris suas copias traduxit et milibus passuum duobus ultra eum castra fecit eo consilio uti frumento commeatuque qui ex Sequanis et Haeduis supportaretur Caesarem intercluderet. Ex eo die dies continuos V Caesar pro castris suas copias produxit et aciem instructam habuit, ut, si uellet Ariouistus proelio contendere, ei potestas non deesset. Ariouistus his omnibus diebus exercitum castris continuit, equestri proelio cotidie contendit. Genus hoc erat pugnae, quo se Germani exercuerant: equitum milia erant VI, totidem numero pedites uelocissimi ac fortissimi, quos ex omni copia singuli singulos suae salutis causa delegerant: cum his in proeliis uersabantur, ad eos se equites recipiebant; hi, si quid erat durius, concurrebant, si qui grauiore uulnere accepto equo deciderat, circumsistebant; si quo erat longius prodeundum aut celerius recipiendum, tanta erat horum exercitatione celeritas ut iubis subleuati equorum cursum adaequarent.
+
+[1,49] Ubi eum castris se tenere Caesar intellexit, ne diutius commeatu prohiberetur, ultra eum locum, quo in loco Germani consederant, circiter passus DC ab his, castris idoneum locum delegit acieque triplici instructa ad eum locum uenit. Primam et secundam aciem in armis esse, tertiam castra munire iussit. {Hic locus ab hoste circiter passus DC, uti dictum est, aberat.} Eo circiter hominum XVI milia expedita cum omni equitatu Ariouistus misit, quae copiae nostros terrerent et munitione prohiberent. Nihilo setius Caesar, ut ante constituerat, duas acies hostem propulsare, tertiam opus perficere iussit. Munitis castris duas ibi legiones reliquit et partem auxiliorum, quattuor reliquas legiones in castra maiora reduxit.
+
+[1,50] Proximo die instituto suo Caesar ex castris utrisque copias suas eduxit paulumque a maioribus castris progressus aciem instruxit hostibusque pugnandi potestatem fecit. Ubi ne tum quidem eos prodire intellexit, circiter meridiem exercitum in castra reduxit. Tum demum Ariouistus partem suarum copiarum, quae castra minora oppugnaret, misit. Acriter utrimque usque ad uesperum pugnatum est. Solis occasu suas copias Ariouistus multis et inlatis et acceptis uulneribus in castra reduxit. Cum ex captiuis quaereret Caesar quam ob rem Ariouistus proelio non decertaret, hanc reperiebat causam, quod apud Germanos ea consuetudo esset ut matres familiae eorum sortibus et uaticinationibus declararent utrum proelium committi ex usu esset necne; eas ita dicere: non esse fas Germanos superare, si ante nouam lunam proelio contendissent.
+
+[1,51] Postridie eius diei Caesar praesidio utrisque castris quod satis esse uisum est reliquit, alarios omnes in conspectu hostium pro castris minoribus constituit, quod minus multitudine militum legionariorum pro hostium numero ualebat, ut ad speciem alariis uteretur; ipse triplici instructa acie usque ad castra hostium accessit. Tum demum necessario Germani suas copias castris eduxerunt generatimque constituerunt paribus interuallis, Harudes, Marcomanos, Tribocos, Vangiones, Nemetes, Sedusios, Suebos, omnemque aciem suam raedis et carris circumdederunt, ne qua spes in fuga relinqueretur. Eo mulieres imposuerunt, quae ad proelium proficiscentes milites passis manibus flentes implorabant ne se in seruitutem Romanis traderent.
+
+[1,52] Caesar singulis legionibus singulos legatos et quaestorem praefecit, uti eos testes suae quisque uirtutis haberet; ipse a dextro cornu, quod eam partem minime firmam hostium esse animaduerterat, proelium commisit. Ita nostri acriter in hostes signo dato impetum fecerunt itaque hostes repente celeriterque procurrerunt, ut spatium pila in hostes coiciendi non daretur. Relictis pilis comminus gladiis pugnatum est. At Germani celeriter ex consuetudine sua phalange facta impetus gladiorum exceperunt. Reperti sunt complures nostri qui in phalanga insilirent et scuta manibus reuellerent et desuper uulnerarent. Cum hostium acies a sinistro cornu pulsa atque in fugam coniecta esset, a dextro cornu uehementer multitudine suorum nostram aciem premebant. Id cum animaduertisset P- Crassus adulescens, qui equitatui praeerat, quod expeditior erat quam ii qui inter aciem uersabantur, tertiam aciem laborantibus nostris subsidio misit.
+
+[1,53] Ita proelium restitutum est, atque omnes hostes terga uerterunt nec prius fugere destiterunt quam ad flumen Rhenum milia passuum ex eo loco circiter L peruenerunt. Ibi perpauci aut uiribus confisi tranare contenderunt aut lintribus inuentis sibi salutem reppererunt. In his fuit Ariouistus, qui nauiculam deligatam ad ripam nactus ea profugit; reliquos omnes consecuti equites nostri interfecerunt. Duae fuerunt Ariouisti uxores, una Sueba natione, quam domo secum eduxerat, altera Norica, regis Voccionis soror, quam in Gallia duxerat a fratre missam: utraque in ea fuga periit; duae filiae: harum altera occisa, altera capta est. C- Valerius Procillus, cum a custodibus in fuga trinis catenis uinctus traheretur, in ipsum Caesarem hostes equitatu insequentem incidit. Quae quidem res Caesari non minorem quam ipsa uictoria uoluptatem attulit, quod hominem honestissimum prouinciae Galliae, suum familiarem et hospitem, ereptum ex manibus hostium sibi restitutum uidebat neque eius calamitate de tanta uoluptate et gratulatione quicquam fortuna deminuerat. Is se praesente de se ter sortibus consultum dicebat, utrum igni statim necaretur an in aliud tempus reseruaretur: sortium beneficio se esse incolumem. Item M. Metius repertus et ad eum reductus est.
+
+[1,54] Hoc proelio trans Rhenum nuntiato, Suebi, qui ad ripas Rheni uenerant, domum reuerti coeperunt; quos ubi qui proximi Rhenum incolunt perterritos senserunt, insecuti magnum ex iis numerum occiderunt. Caesar una aestate duobus maximis bellis confectis maturius paulo quam tempus anni postulabat in hiberna in Sequanos exercitum deduxit; hibernis Labienum praeposuit; ipse in citeriorem Galliam ad conuentus agendos profectus est. '),
+(9, 10, 'Livre I', 1, '[0,0] DE RERVM NATVRA
+
+[1,0] LIBER PRIMVS
+
+[1,1] Aeneadum genetrix, hominum diuomque uoluptas,
+alma Uenus, caeli subter labentia signa
+quae mare nauigerum, quae terras frugiferentis
+concelebras, per te quoniam genus omne animantum
+
+5 concipitur uisitque exortum lumina solis:
+te, dea, te fugiunt uenti, te nubila caeli
+aduentumque tuum, tibi suauis daedala tellus
+summittit flores, tibi rident aequora ponti
+placatumque nitet diffuso lumine caelum.
+
+[1,10] Nam simul ac species patefacta est uerna diei
+et reserata uiget genitabilis aura fauoni,
+aeriae primum uolucris te, diua, tuumque
+significant initum perculsae corda tua ui.
+Inde ferae pecudes persultant pabula laeta
+
+15 et rapidos tranant amnis: ita capta lepore
+te sequitur cupide quo quamque inducere pergis.
+Denique per maria ac montis fluuiosque rapacis
+frondiferasque domos auium camposque uirentis
+omnibus incutiens blandum per pectora amorem
+
+[1,20] efficis ut cupide generatim saecla propagent.
+Quae quoniam rerum naturam sola gubernas
+nec sine te quicquam dias in luminis oras
+exoritur neque fit laetum neque amabile quicquam,
+te sociam studeo scribendis uersibus esse,
+
+25 quos ego de rerum natura pangere conor
+Memmiadae nostro, quem tu, dea, tempore in omni
+omnibus ornatum uoluisti excellere rebus.
+Quo magis aeternum da dictis, diua, leporem.
+effice ut interea fera moenera militiai
+
+[1,30] per maria ac terras omnis sopita quiescant;
+nam tu sola potes tranquilla pace iuuare
+mortalis, quoniam belli fera moenera Mauors
+armipotens regit, in gremium qui saepe tuum se
+reiicit aeterno deuictus uulnere amoris,
+
+35 atque ita suspiciens tereti ceruice reposta
+pascit amore auidos inhians in te, dea, uisus
+eque tuo pendet resupini spiritus ore.
+Hunc tu, diua, tuo recubantem corpore sancto
+circum fusa super, suauis ex ore loquellas
+
+[1,40] funde petens placidam Romanis, incluta, pacem;
+nam neque nos agere hoc patriai tempore iniquo
+possumus aequo animo nec Memmi clara propago
+talibus in rebus communi desse saluti.
+***
+
+45 ***
+
+[1,50] Quod super est, uacuas auris animumque sagacem
+semotum a curis adhibe ueram ad rationem,
+ne mea dona tibi studio disposta fideli,
+intellecta prius quam sint, contempta relinquas.
+Nam tibi de summa caeli ratione deumque
+
+55 disserere incipiam et rerum primordia pandam,
+unde omnis natura creet res, auctet alatque,
+quoue eadem rursum natura perempta resoluat,
+quae nos materiem et genitalia corpora rebus
+reddunda in ratione uocare et semina rerum
+
+[1,60] appellare suemus et haec eadem usurpare
+corpora prima, quod ex illis sunt omnia primis.
+Humana ante oculos foede cum uita iaceret
+in terris oppressa graui sub religione,
+quae caput a caeli regionibus ostendebat,
+
+65 horribili super aspectu mortalibus instans,
+primum Graius homo mortalis tollere contra
+est oculos ausus primusque obsistere contra;
+quem neque fama deum nec fulmina nec minitanti
+murmure compressit caelum, sed eo magis acrem
+
+[1,70] inritat animi uirtutem, effringere ut arta
+naturae primus portarum claustra cupiret.
+Ergo uiuida uis animi peruicit et extra
+processit longe flammantia moenia mundi
+atque omne immensum peragrauit mente animoque,
+
+75 unde refert nobis uictor quid possit oriri,
+quid nequeat, finita potestas denique cuique
+qua nam sit ratione atque alte terminus haerens.
+Quare religio pedibus subiecta uicissim
+opteritur, nos exaequat uictoria caelo.
+
+[1,80] Illud in his rebus uereor, ne forte rearis
+impia te rationis inire elementa uiamque
+indugredi sceleris. quod contra saepius illa
+religio peperit scelerosa atque impia facta.
+Aulide quo pacto Triuiai uirginis aram
+
+85 Iphianassai turparunt sanguine foede
+ductores Danaum delecti, prima uirorum.
+Cui simul infula uirgineos circum data comptus
+ex utraque pari malarum parte profusa est,
+et maestum simul ante aras adstare parentem
+
+[1,90] sensit et hunc propter ferrum celare ministros
+aspectuque suo lacrimas effundere ciuis,
+muta metu terram genibus summissa petebat.
+Nec miserae prodesse in tali tempore quibat,
+quod patrio princeps donarat nomine regem;
+
+95 nam sublata uirum manibus tremibundaque ad aras
+deducta est, non ut sollemni more sacrorum
+perfecto posset claro comitari Hymenaeo,
+sed casta inceste nubendi tempore in ipso
+hostia concideret mactatu maesta parentis,
+
+[1,100] exitus ut classi felix faustusque daretur.
+Tantum religio potuit suadere malorum.
+Tutemet a nobis iam quouis tempore uatum
+terriloquis uictus dictis desciscere quaeres.
+Quippe etenim quam multa tibi iam fingere possunt
+
+105 somnia, quae uitae rationes uertere possint
+fortunasque tuas omnis turbare timore!
+et merito; nam si certam finem esse uiderent
+aerumnarum homines, aliqua ratione ualerent
+religionibus atque minis obsistere uatum.
+
+[1,110] Nunc ratio nulla est restandi, nulla facultas,
+aeternas quoniam poenas in morte timendum.
+Ignoratur enim quae sit natura animai,
+nata sit an contra nascentibus insinuetur
+et simul intereat nobiscum morte dirempta
+
+115 an tenebras Orci uisat uastasque lacunas
+an pecudes alias diuinitus insinuet se,
+Ennius ut noster cecinit, qui primus amoeno
+detulit ex Helicone perenni fronde coronam,
+per gentis Italas hominum quae clara clueret;
+
+[1,120] etsi praeterea tamen esse Acherusia templa
+Ennius aeternis exponit uersibus edens,
+quo neque permaneant animae neque corpora nostra,
+sed quaedam simulacra modis pallentia miris;
+unde sibi exortam semper florentis Homeri
+
+125 commemorat speciem lacrimas effundere salsas
+coepisse et rerum naturam expandere dictis.
+Quapropter bene cum superis de rebus habenda
+nobis est ratio, solis lunaeque meatus
+qua fiant ratione, et qua ui quaeque gerantur
+
+[1,130] in terris, tunc cum primis ratione sagaci
+unde anima atque animi constet natura uidendum,
+et quae res nobis uigilantibus obuia mentes
+terrificet morbo adfectis somnoque sepultis,
+cernere uti uideamur eos audireque coram,
+
+135 morte obita quorum tellus amplectitur ossa.
+Nec me animi fallit Graiorum obscura reperta
+difficile inlustrare Latinis uersibus esse,
+multa nouis uerbis praesertim cum sit agendum
+propter egestatem linguae et rerum nouitatem;
+
+[1,140] sed tua me uirtus tamen et sperata uoluptas
+suauis amicitiae quemuis efferre laborem
+suadet et inducit noctes uigilare serenas
+quaerentem dictis quibus et quo carmine demum
+clara tuae possim praepandere lumina menti,
+
+145 res quibus occultas penitus conuisere possis.
+Hunc igitur terrorem animi tenebrasque necesse est
+non radii solis neque lucida tela diei
+discutiant, sed naturae species ratioque.
+Principium cuius hinc nobis exordia sumet,
+
+[1,150] nullam rem e nihilo gigni diuinitus umquam.
+Quippe ita formido mortalis continet omnis,
+quod multa in terris fieri caeloque tuentur,
+quorum operum causas nulla ratione uidere
+possunt ac fieri diuino numine rentur.
+
+155 Quas ob res ubi uiderimus nil posse creari
+de nihilo, tum quod sequimur iam rectius inde
+perspiciemus, et unde queat res quaeque creari
+et quo quaeque modo fiant opera sine diuom.
+Nam si de nihilo fierent, ex omnibus rebus
+
+[1,160] omne genus nasci posset, nil semine egeret.
+E mare primum homines, e terra posset oriri
+squamigerum genus et uolucres erumpere caelo;
+armenta atque aliae pecudes, genus omne ferarum,
+incerto partu culta ac deserta tenerent.
+
+165 Nec fructus idem arboribus constare solerent,
+sed mutarentur, ferre omnes omnia possent.
+Quippe ubi non essent genitalia corpora cuique,
+qui posset mater rebus consistere certa?
+At nunc seminibus quia certis quaeque creantur,
+
+[1,170] inde enascitur atque oras in luminis exit,
+materies ubi inest cuiusque et corpora prima;
+atque hac re nequeunt ex omnibus omnia gigni,
+quod certis in rebus inest secreta facultas.
+Praeterea cur uere rosam, frumenta calore,
+
+175 uites autumno fundi suadente uidemus,
+si non, certa suo quia tempore semina rerum
+cum confluxerunt, patefit quod cumque creatur,
+dum tempestates adsunt et uiuida tellus
+tuto res teneras effert in luminis oras?
+
+[1,180] Quod si de nihilo fierent, subito exorerentur
+incerto spatio atque alienis partibus anni,
+quippe ubi nulla forent primordia, quae genitali
+concilio possent arceri tempore iniquo.
+Nec porro augendis rebus spatio foret usus
+
+185 seminis ad coitum, si e nilo crescere possent;
+nam fierent iuuenes subito ex infantibus paruis
+e terraque exorta repente arbusta salirent.
+Quorum nil fieri manifestum est, omnia quando
+paulatim crescunt, ut par est semine certo,
+
+[1,190] crescentesque genus seruant; ut noscere possis
+quicque sua de materia grandescere alique.
+Huc accedit uti sine certis imbribus anni
+laetificos nequeat fetus submittere tellus,
+nec porro secreta cibo natura animantum
+
+195 propagare genus possit uitamque tueri;
+ut potius multis communia corpora rebus
+multa putes esse, ut uerbis elementa uidemus,
+quam sine principiis ullam rem existere posse.
+Denique cur homines tantos natura parare
+
+[1,200] non potuit, pedibus qui pontum per uada possent
+transire et magnos manibus diuellere montis
+multaque uiuendo uitalia uincere saecla,
+si non, materies quia rebus reddita certa est
+gignundis, e qua constat quid possit oriri?
+
+205 Nil igitur fieri de nilo posse fatendum est,
+semine quando opus est rebus, quo quaeque creatae
+aeris in teneras possint proferrier auras.
+Postremo quoniam incultis praestare uidemus
+culta loca et manibus melioris reddere fetus,
+
+[1,210] esse uidelicet in terris primordia rerum
+quae nos fecundas uertentes uomere glebas
+terraique solum subigentes cimus ad ortus;
+quod si nulla forent, nostro sine quaeque labore
+sponte sua multo fieri meliora uideres.
+
+215 Huc accedit uti quicque in sua corpora rursum
+dissoluat natura neque ad nihilum interemat res.
+Nam si quid mortale e cunctis partibus esset,
+ex oculis res quaeque repente erepta periret;
+nulla ui foret usus enim, quae partibus eius
+
+[1,220] discidium parere et nexus exsoluere posset.
+Quod nunc, aeterno quia constant semine quaeque,
+donec uis obiit, quae res diuerberet ictu
+aut intus penetret per inania dissoluatque,
+nullius exitium patitur natura uideri.
+
+225 Praeterea quaecumque uetustate amouet aetas,
+si penitus peremit consumens materiem omnem,
+unde animale genus generatim in lumina uitae
+redducit Uenus, aut redductum daedala tellus
+unde alit atque auget generatim pabula praebens?
+
+[1,230] Unde mare ingenuei fontes externaque longe
+flumina suppeditant? Unde aether sidera pascit?
+Omnia enim debet, mortali corpore quae sunt,
+infinita aetas consumpse ante acta diesque.
+Quod si in eo spatio atque ante acta aetate fuere
+
+235 e quibus haec rerum consistit summa refecta,
+inmortali sunt natura praedita certe;
+haud igitur possunt ad nilum quaeque reuerti.
+Denique res omnis eadem uis causaque uolgo
+conficeret, nisi materies aeterna teneret,
+
+[1,240] inter se nexus minus aut magis indupedita;
+tactus enim leti satis esset causa profecto,
+quippe ubi nulla forent aeterno corpore, quorum
+contextum uis deberet dissoluere quaeque.
+At nunc, inter se quia nexus principiorum
+
+245 dissimiles constant aeternaque materies est,
+incolumi remanent res corpore, dum satis acris
+uis obeat pro textura cuiusque reperta.
+Haud igitur redit ad nihilum res ulla, sed omnes
+discidio redeunt in corpora materiai.
+
+[1,250] Postremo pereunt imbres, ubi eos pater aether
+in gremium matris terrai praecipitauit;
+at nitidae surgunt fruges ramique uirescunt
+arboribus, crescunt ipsae fetuque grauantur.
+Hinc alitur porro nostrum genus atque ferarum,
+
+255 hinc laetas urbes pueris florere uidemus
+frondiferasque nouis auibus canere undique siluas,
+hinc fessae pecudes pinguis per pabula laeta
+corpora deponunt et candens lacteus umor
+uberibus manat distentis, hinc noua proles
+
+[1,260] artubus infirmis teneras lasciua per herbas
+ludit lacte mero mentes perculsa nouellas.
+Haud igitur penitus pereunt quaecumque uidentur,
+quando alit ex alio reficit natura nec ullam
+rem gigni patitur nisi morte adiuta aliena.
+
+265 Nunc age, res quoniam docui non posse creari
+de nihilo neque item genitas ad nil reuocari,
+ne qua forte tamen coeptes diffidere dictis,
+quod nequeunt oculis rerum primordia cerni,
+accipe praeterea quae corpora tute necesse est
+
+[1,270] confiteare esse in rebus nec posse uideri.
+Principio uenti uis uerberat incita corpus
+ingentisque ruit nauis et nubila differt,
+inter dum rapido percurrens turbine campos
+arboribus magnis sternit montisque supremos
+
+275 siluifragis uexat flabris: ita perfurit acri
+cum fremitu saeuitque minaci murmure pontus.
+Sunt igitur uenti ni mirum corpora caeca,
+quae mare, quae terras, quae denique nubila caeli
+uerrunt ac subito uexantia turbine raptant,
+
+[1,280] nec ratione fluunt alia stragemque propagant
+et cum mollis aquae fertur natura repente
+flumine abundanti, quam largis imbribus auget
+montibus ex altis magnus decursus aquai
+fragmina coniciens siluarum arbustaque tota,
+
+285 nec ualidi possunt pontes uenientis aquai
+uim subitam tolerare: ita magno turbidus imbri
+molibus incurrit ualidis cum uiribus amnis,
+dat sonitu magno stragem uoluitque sub undis
+grandia saxa, ruit qua quidquid fluctibus obstat.
+
+[1,290] Sic igitur debent uenti quoque flamina ferri,
+quae uel uti ualidum cum flumen procubuere
+quam libet in partem, trudunt res ante ruuntque
+impetibus crebris, inter dum uertice torto
+corripiunt rapidique rotanti turbine portant.
+
+295 Quare etiam atque etiam sunt uenti corpora caeca,
+quandoquidem factis et moribus aemula magnis
+amnibus inueniuntur, aperto corpore qui sunt.
+Tum porro uarios rerum sentimus odores
+nec tamen ad naris uenientis cernimus umquam
+
+[1,300] nec calidos aestus tuimur nec frigora quimus
+usurpare oculis nec uoces cernere suemus;
+quae tamen omnia corporea constare necesse est
+natura, quoniam sensus inpellere possunt;
+tangere enim et tangi, nisi corpus, nulla potest res.
+
+305 Denique fluctifrago suspensae in litore uestis
+uuescunt, eaedem dispansae in sole serescunt.
+At neque quo pacto persederit umor aquai
+uisum est nec rursum quo pacto fugerit aestu.
+In paruas igitur partis dispergitur umor,
+
+[1,310] quas oculi nulla possunt ratione uidere.
+Quin etiam multis solis redeuntibus annis
+anulus in digito subter tenuatur habendo,
+stilicidi casus lapidem cauat, uncus aratri
+ferreus occulte decrescit uomer in aruis,
+
+315 strataque iam uolgi pedibus detrita uiarum
+saxea conspicimus; tum portas propter aena
+signa manus dextras ostendunt adtenuari
+saepe salutantum tactu praeterque meantum.
+Haec igitur minui, cum sint detrita, uidemus.
+
+[1,320] Sed quae corpora decedant in tempore quoque,
+inuida praeclusit speciem natura uidendi.
+Postremo quae cumque dies naturaque rebus
+paulatim tribuit moderatim crescere cogens,
+nulla potest oculorum acies contenta tueri,
+
+325 nec porro quae cumque aeuo macieque senescunt,
+nec, mare quae impendent, uesco sale saxa peresa
+quid quoque amittant in tempore cernere possis.
+Corporibus caecis igitur natura gerit res.
+Nec tamen undique corporea stipata tenentur
+
+[1,330] omnia natura; namque est in rebus inane.
+Quod tibi cognosse in multis erit utile rebus
+nec sinet errantem dubitare et quaerere semper
+de summa rerum et nostris diffidere dictis.
+Quapropter locus est intactus inane uacansque.
+
+335 Quod si non esset, nulla ratione moueri
+res possent; namque officium quod corporis exstat,
+officere atque obstare, id in omni tempore adesset
+omnibus; haud igitur quicquam procedere posset,
+principium quoniam cedendi nulla daret res.
+
+[1,340] At nunc per maria ac terras sublimaque caeli
+multa modis multis uaria ratione moueri
+cernimus ante oculos, quae, si non esset inane,
+non tam sollicito motu priuata carerent
+quam genita omnino nulla ratione fuissent,
+
+345 undique materies quoniam stipata quiesset.
+Praeterea quamuis solidae res esse putentur,
+hinc tamen esse licet raro cum corpore cernas.
+In saxis ac speluncis permanat aquarum
+liquidus umor et uberibus flent omnia guttis.
+
+[1,350] Dissipat in corpus sese cibus omne animantum;
+crescunt arbusta et fetus in tempore fundunt,
+quod cibus in totas usque ab radicibus imis
+per truncos ac per ramos diffunditur omnis.
+Inter saepta meant uoces et clausa domorum
+
+355 transuolitant, rigidum permanat frigus ad ossa,
+quod nisi inania sint, qua possent corpora quaeque
+transire, haud ulla fieri ratione uideres.
+Denique cur alias aliis praestare uidemus
+pondere res rebus nihilo maiore figura?
+
+[1,360] Nam si tantundem est in lanae glomere quantum
+corporis in plumbo est, tantundem pendere par est,
+corporis officium est quoniam premere omnia deorsum,
+contra autem natura manet sine pondere inanis.
+Ergo quod magnum est aeque leuiusque uidetur,
+
+365 ni mirum plus esse sibi declarat inanis;
+at contra grauius plus in se corporis esse
+dedicat et multo uacui minus intus habere.
+Est igitur ni mirum id quod ratione sagaci
+quaerimus, admixtum rebus, quod inane uocamus.
+
+[1,370] Illud in his rebus ne te deducere uero
+possit, quod quidam fingunt, praecurrere cogor.
+Cedere squamigeris latices nitentibus aiunt
+et liquidas aperire uias, quia post loca pisces
+linquant, quo possint cedentes confluere undae.
+
+375 Sic alias quoque res inter se posse moueri
+et mutare locum, quamuis sint omnia plena.
+Scilicet id falsa totum ratione receptum est.
+Nam quo squamigeri poterunt procedere tandem,
+ni spatium dederint latices? concedere porro
+
+[1,380] quo poterunt undae, cum pisces ire nequibunt?
+aut igitur motu priuandum est corpora quaeque
+aut esse admixtum dicundum est rebus inane,
+unde initum primum capiat res quaeque mouendi.
+Postremo duo de concursu corpora lata
+
+385 si cita dissiliant, nempe aer omne necesse est,
+inter corpora quod fiat, possidat inane.
+Is porro quamuis circum celerantibus auris
+confluat, haud poterit tamen uno tempore totum
+compleri spatium; nam primum quemque necesse est
+
+[1,390] occupet ille locum, deinde omnia possideantur.
+Quod si forte aliquis, cum corpora dissiluere,
+tum putat id fieri quia se condenseat aer,
+errat; nam uacuum tum fit quod non fuit ante
+et repletur item uacuum quod constitit ante,
+
+395 nec tali ratione potest denserier aer
+nec, si iam posset, sine inani posset, opinor,
+ipse in se trahere et partis conducere in unum.
+Qua propter, quamuis causando multa moreris,
+esse in rebus inane tamen fateare necesse est.
+
+[1,400] Multaque praeterea tibi possum commemorando
+argumenta fidem dictis conradere nostris.
+Uerum animo satis haec uestigia parua sagaci
+sunt, per quae possis cognoscere cetera tute.
+Namque canes ut montiuagae persaepe ferai
+
+405 naribus inueniunt intectas fronde quietes,
+cum semel institerunt uestigia certa uiai,
+sic alid ex alio per te tute ipse uidere
+talibus in rebus poteris caecasque latebras
+insinuare omnis et uerum protrahere inde.
+
+[1,410] Quod si pigraris paulumue recesseris ab re,
+hoc tibi de plano possum promittere, Memmi:
+usque adeo largos haustus e fontibus magnis
+lingua meo suauis diti de pectore fundet,
+ut uerear ne tarda prius per membra senectus
+
+415 serpat et in nobis uitai claustra resoluat,
+quam tibi de quauis una re uersibus omnis
+argumentorum sit copia missa per auris.
+Sed nunc ut repetam coeptum pertexere dictis,
+omnis ut est igitur per se natura duabus
+
+[1,420] constitit in rebus; nam corpora sunt et inane,
+haec in quo sita sunt et qua diuersa mouentur.
+Corpus enim per se communis dedicat esse
+sensus; cui nisi prima fides fundata ualebit,
+haut erit occultis de rebus quo referentes
+
+425 confirmare animi quicquam ratione queamus.
+Tum porro locus ac spatium, quod inane uocamus,
+si nullum foret, haut usquam sita corpora possent
+esse neque omnino quoquam diuersa meare;
+id quod iam supera tibi paulo ostendimus ante.
+
+[1,430] Praeterea nihil est quod possis dicere ab omni
+corpore seiunctum secretumque esse ab inani,
+quod quasi tertia sit numero natura reperta.
+Nam quod cumque erit, esse aliquid debebit id ipsum
+augmine uel grandi uel paruo denique, dum sit;
+
+435 cui si tactus erit quamuis leuis exiguusque,
+corporis augebit numerum summamque sequetur;
+sin intactile erit, nulla de parte quod ullam
+rem prohibere queat per se transire meantem,
+scilicet hoc id erit, uacuum quod inane uocamus.
+
+[1,440] Praeterea per se quod cumque erit, aut faciet quid
+aut aliis fungi debebit agentibus ipsum
+aut erit ut possint in eo res esse gerique.
+At facere et fungi sine corpore nulla potest res
+nec praebere locum porro nisi inane uacansque.
+
+445 Ergo praeter inane et corpora tertia per se
+nulla potest rerum in numero natura relinqui,
+nec quae sub sensus cadat ullo tempore nostros
+nec ratione animi quam quisquam possit apisci.
+Nam quae cumque cluent, aut his coniuncta duabus
+
+[1,450] rebus ea inuenies aut horum euenta uidebis.
+Coniunctum est id quod nusquam sine permitiali
+discidio potis est seiungi seque gregari,
+pondus uti saxis, calor ignis, liquor aquai,
+tactus corporibus cunctis, intactus inani.
+
+455 Seruitium contra paupertas diuitiaeque,
+libertas bellum concordia cetera quorum
+aduentu manet incolumis natura abituque,
+haec soliti sumus, ut par est, euenta uocare.
+Tempus item per se non est, sed rebus ab ipsis
+
+[1,460] consequitur sensus, transactum quid sit in aeuo,
+tum quae res instet, quid porro deinde sequatur;
+nec per se quemquam tempus sentire fatendum est
+semotum ab rerum motu placidaque quiete.
+Denique Tyndaridem raptam belloque subactas
+
+465Troiiugenas gentis cum dicunt esse, uidendum est
+ne forte haec per se cogant nos esse fateri,
+quando ea saecla hominum, quorum haec euenta fuerunt,
+inreuocabilis abstulerit iam praeterita aetas;
+namque aliud terris, aliud regionibus ipsis
+
+[1,470] euentum dici poterit quod cumque erit actum.
+Denique materies si rerum nulla fuisset
+nec locus ac spatium, res in quo quaeque geruntur,
+numquam Tyndaridis forma conflatus amore
+ignis Alexandri Phrygio sub pectore gliscens
+
+475 clara accendisset saeui certamina belli
+nec clam durateus Troiianis Pergama partu
+inflammasset equos nocturno Graiiugenarum;
+perspicere ut possis res gestas funditus omnis
+non ita uti corpus per se constare neque esse
+
+[1,480] nec ratione cluere eadem qua constet inane,
+sed magis ut merito possis euenta uocare
+corporis atque loci, res in quo quaeque gerantur.
+Corpora sunt porro partim primordia rerum,
+partim concilio quae constant principiorum.
+
+485 Sed quae sunt rerum primordia, nulla potest uis
+stinguere; nam solido uincunt ea corpore demum.
+Etsi difficile esse uidetur credere quicquam
+in rebus solido reperiri corpore posse.
+Transit enim fulmen caeli per saepta domorum
+
+[1,490] clamor ut ac uoces, ferrum candescit in igni
+dissiliuntque fero feruenti saxa uapore;
+cum labefactatus rigor auri soluitur aestu,
+tum glacies aeris flamma deuicta liquescit;
+permanat calor argentum penetraleque frigus,
+
+495 quando utrumque manu retinentes pocula rite
+sensimus infuso lympharum rore superne.
+Usque adeo in rebus solidi nihil esse uidetur.
+Sed quia uera tamen ratio naturaque rerum
+cogit, ades, paucis dum uersibus expediamus
+
+[1,500] esse ea quae solido atque aeterno corpore constent,
+semina quae rerum primordiaque esse docemus,
+unde omnis rerum nunc constet summa creata.
+Principio quoniam duplex natura duarum
+dissimilis rerum longe constare reperta est,
+
+505 corporis atque loci, res in quo quaeque geruntur,
+esse utramque sibi per se puramque necesse est.
+Nam qua cumque uacat spatium, quod inane uocamus,
+corpus ea non est; qua porro cumque tenet se
+corpus, ea uacuum nequaquam constat inane.
+
+[1,510] Sunt igitur solida ac sine inani corpora prima.
+Praeterea quoniam genitis in rebus inane est,
+materiem circum solidam constare necesse est;
+nec res ulla potest uera ratione probari
+corpore inane suo celare atque intus habere,
+
+515 si non, quod cohibet, solidum constare relinquas.
+Id porro nihil esse potest nisi materiai
+concilium, quod inane queat rerum cohibere.
+Materies igitur, solido quae corpore constat,
+esse aeterna potest, cum cetera dissoluantur.
+
+[1,520] Tum porro si nil esset quod inane uocaret,
+omne foret solidum; nisi contra corpora certa
+essent quae loca complerent quae cumque tenerent
+omne quod est spatium, uacuum constaret inane.
+Alternis igitur ni mirum corpus inani
+
+525 distinctum, quoniam nec plenum nauiter extat
+nec porro uacuum; sunt ergo corpora certa,
+quae spatium pleno possint distinguere inane.
+Haec neque dissolui plagis extrinsecus icta
+possunt nec porro penitus penetrata retexi
+
+[1,530] nec ratione queunt alia temptata labare;
+id quod iam supra tibi paulo ostendimus ante.
+Nam neque conlidi sine inani posse uidetur
+quicquam nec frangi nec findi in bina secando
+nec capere umorem neque item manabile frigus
+
+535 nec penetralem ignem, quibus omnia conficiuntur.
+Et quo quaeque magis cohibet res intus inane,
+tam magis his rebus penitus temptata labascit.
+Ergo si solida ac sine inani corpora prima
+sunt ita uti docui, sint haec aeterna necesse est.
+
+[1,540] Praeterea nisi materies aeterna fuisset,
+antehac ad nihilum penitus res quaeque redissent
+de nihiloque renata forent quae cumque uidemus.
+At quoniam supra docui nil posse creari
+de nihilo neque quod genitum est ad nil reuocari,
+
+545 esse inmortali primordia corpore debent,
+dissolui quo quaeque supremo tempore possint,
+materies ut subpeditet rebus reparandis.
+Sunt igitur solida primordia simplicitate
+nec ratione queunt alia seruata per aeuom
+
+[1,550] ex infinito iam tempore res reparare.
+Denique si nullam finem natura parasset
+frangendis rebus, iam corpora materiai
+usque redacta forent aeuo frangente priore,
+ut nihil ex illis a certo tempore posset
+
+555 conceptum summum aetatis peruadere finem.
+Nam quiduis citius dissolui posse uidemus
+quam rursus refici; qua propter longa diei
+infinita aetas ante acti temporis omnis
+quod fregisset adhuc disturbans dissoluensque,
+
+[1,560] numquam relicuo reparari tempore posset.
+At nunc ni mirum frangendi reddita finis
+certa manet, quoniam refici rem quamque uidemus
+et finita simul generatim tempora rebus
+stare, quibus possint aeui contingere florem.
+
+565 Huc accedit uti, solidissima materiai
+corpora cum constant, possint tamen omnia reddi,
+mollia quae fiunt, aer aqua terra uapores,
+quo pacto fiant et qua ui quaeque gerantur,
+admixtum quoniam semel est in rebus inane.
+
+[1,570] At contra si mollia sint primordia rerum,
+unde queant ualidi silices ferrumque creari,
+non poterit ratio reddi; nam funditus omnis
+principio fundamenti natura carebit.
+Sunt igitur solida pollentia simplicitate,
+
+575 quorum condenso magis omnia conciliatu
+artari possunt ualidasque ostendere uiris.
+Porro si nulla est frangendis reddita finis
+corporibus, tamen ex aeterno tempore quaeque
+nunc etiam superare necesse est corpora rebus,
+
+[1,580] quae non dum clueant ullo temptata periclo.
+At quoniam fragili natura praedita constant,
+discrepat aeternum tempus potuisse manere
+innumerabilibus plagis uexata per aeuom.
+Denique iam quoniam generatim reddita finis
+
+585 crescendi rebus constat uitamque tenendi,
+et quid quaeque queant per foedera naturai,
+quid porro nequeant, sancitum quando quidem extat,
+nec commutatur quicquam, quin omnia constant
+usque adeo, uariae uolucres ut in ordine cunctae
+
+[1,590] ostendant maculas generalis corpore inesse,
+inmutabilis materiae quoque corpus habere
+debent ni mirum; nam si primordia rerum
+commutari aliqua possent ratione reuicta,
+incertum quoque iam constet quid possit oriri,
+
+595 quid nequeat, finita potestas denique cuique
+qua nam sit ratione atque alte terminus haerens,
+nec totiens possent generatim saecla referre
+naturam mores uictum motusque parentum.
+Tum porro quoniam est extremum quodque cacumen
+
+[1,600] corporis illius, quod nostri cernere sensus
+iam nequeunt, id ni mirum sine partibus extat
+et minima constat natura nec fuit umquam
+per se secretum neque post hac esse ualebit,
+alterius quoniam est ipsum pars primaque et una,
+
+605 inde aliae atque aliae similes ex ordine partes
+agmine condenso naturam corporis explent;
+quae quoniam per se nequeunt constare, necesse est
+haerere unde queant nulla ratione reuelli.
+Sunt igitur solida primordia simplicitate,
+
+[1,610] quae minimis stipata cohaerent partibus arte,
+non ex illorum conuentu conciliata,
+sed magis aeterna pollentia simplicitate,
+unde neque auelli quicquam neque deminui iam
+concedit natura reseruans semina rebus.
+
+615 Praeterea nisi erit minimum, paruissima quaeque
+corpora constabunt ex partibus infinitis,
+quippe ubi dimidiae partis pars semper habebit
+dimidiam partem nec res praefiniet ulla.
+Ergo rerum inter summam minimamque quod escit,
+
+[1,620] nil erit ut distet; nam quamuis funditus omnis
+summa sit infinita, tamen, paruissima quae sunt,
+ex infinitis constabunt partibus aeque.
+Quod quoniam ratio reclamat uera negatque
+credere posse animum, uictus fateare necesse est
+
+625 esse ea quae nullis iam praedita partibus extent
+et minima constent natura. quae quoniam sunt,
+illa quoque esse tibi solida atque aeterna fatendum.
+Denique si minimas in partis cuncta resolui
+cogere consuesset rerum natura creatrix,
+
+[1,630] iam nihil ex illis eadem reparare ualeret
+propterea quia, quae nullis sunt partibus aucta,
+non possunt ea quae debet genitalis habere
+materies, uarios conexus pondera plagas
+concursus motus, per quas res quaeque geruntur.
+
+635 Quapropter qui materiem rerum esse putarunt
+ignem atque ex igni summam consistere solo,
+magno opere a uera lapsi ratione uidentur.
+Heraclitus init quorum dux proelia primus,
+clarus ob obscuram linguam magis inter inanis
+
+[1,640] quamde grauis inter Graios, qui uera requirunt;
+omnia enim stolidi magis admirantur amantque,
+inuersis quae sub uerbis latitantia cernunt,
+ueraque constituunt quae belle tangere possunt
+aureis et lepido quae sunt fucata sonore.
+
+645 Nam cur tam uariae res possent esse, requiro,
+ex uno si sunt igni puroque creatae?
+Nil prodesset enim calidum denserier ignem
+nec rare fieri, si partes ignis eandem
+naturam quam totus habet super ignis haberent.
+
+[1,650] Acrior ardor enim conductis partibus esset,
+languidior porro disiectis disque supatis.
+Amplius hoc fieri nihil est quod posse rearis
+talibus in causis, ne dum uariantia rerum
+tanta queat densis rarisque ex ignibus esse.
+
+655 Id quoque: si faciant admixtum rebus inane,
+denseri poterunt ignes rarique relinqui;
+sed quia multa sibi cernunt contraria quae sint
+et fugitant in rebus inane relinquere purum,
+ardua dum metuunt, amittunt uera uiai
+
+[1,660] nec rursum cernunt exempto rebus inane
+omnia denseri fierique ex omnibus unum
+corpus, nil ab se quod possit mittere raptim,
+aestifer ignis uti lumen iacit atque uaporem,
+ut uideas non e stipatis partibus esse.
+
+665 Quod si forte alia credunt ratione potesse
+ignis in coetu stingui mutareque corpus,
+scilicet ex nulla facere id si parte reparcent,
+occidet ad nihilum ni mirum funditus ardor
+omnis et ex nihilo fient quae cumque creantur;
+
+[1,670] nam quod cumque suis mutatum finibus exit,
+continuo hoc mors est illius quod fuit ante.
+Proinde aliquid superare necesse est incolume ollis,
+ne tibi res redeant ad nilum funditus omnes
+de nihiloque renata uigescat copia rerum.
+
+675 Nunc igitur quoniam certissima corpora quaedam
+sunt, quae conseruant naturam semper eandem,
+quorum abitu aut aditu mutatoque ordine mutant
+naturam res et conuertunt corpora sese,
+scire licet non esse haec ignea corpora rerum.
+
+[1,680] Nil referret enim quaedam decedere, abire
+atque alia adtribui mutarique ordine quaedam,
+si tamen ardoris naturam cuncta tenerent;
+ignis enim foret omnimodis quod cumque crearet.
+Uerum, ut opinor, ita est: sunt quaedam corpora, quorum
+
+685 concursus motus ordo positura figurae
+efficiunt ignis mutatoque ordine mutant
+naturam neque sunt igni simulata neque ulli
+praeterea rei quae corpora mittere possit
+sensibus et nostros adiectu tangere tactus.
+
+[1,690] Dicere porro ignem res omnis esse neque ullam
+rem ueram in numero rerum constare nisi ignem,
+quod facit hic idem, perdelirum esse uidetur.
+Nam contra sensus ab sensibus ipse repugnat
+et labefactat eos, unde omnia credita pendent,
+
+695 unde hic cognitus est ipsi quem nominat ignem;
+credit enim sensus ignem cognoscere uere,
+cetera non credit, quae nilo clara minus sunt.
+Quod mihi cum uanum tum delirum esse uidetur;
+quo referemus enim? quid nobis certius ipsis
+
+[1,700] sensibus esse potest, qui uera ac falsa notemus?
+Praeterea quare quisquam magis omnia tollat
+et uelit ardoris naturam linquere solam,
+quam neget esse ignis, summam tamen esse relinquat?
+Aequa uidetur enim dementia dicere utrumque.
+
+705 Quapropter qui materiem rerum esse putarunt
+ignem atque ex igni summam consistere posse,
+et qui principium gignundis aëra rebus
+constituere aut umorem qui cumque putarunt
+fingere res ipsum per se terramue creare
+
+[1,710] omnia et in rerum naturas uertier omnis,
+magno opere a uero longe derrasse uidentur.
+Adde etiam qui conduplicant primordia rerum
+aera iungentes igni terramque liquori,
+et qui quattuor ex rebus posse omnia rentur
+
+715 ex igni terra atque anima procrescere et imbri.
+Quorum Acragantinus cum primis Empedocles est,
+insula quem triquetris terrarum gessit in oris,
+quam fluitans circum magnis anfractibus aequor
+Ionium glaucis aspargit uirus ab undis
+
+[1,720] angustoque fretu rapidum mare diuidit undis
+Aeoliae terrarum oras a finibus eius.
+Hic est uasta Charybdis et hic Aetnaea minantur
+murmura flammarum rursum se colligere iras,
+faucibus eruptos iterum uis ut uomat ignis
+
+725 ad caelumque ferat flammai fulgura rursum.
+Quae cum magna modis multis miranda uidetur
+gentibus humanis regio uisendaque fertur
+rebus opima bonis, multa munita uirum ui,
+nil tamen hoc habuisse uiro praeclarius in se
+
+[1,730] nec sanctum magis et mirum carumque uidetur.
+Carmina quin etiam diuini pectoris eius
+uociferantur et exponunt praeclara reperta,
+ut uix humana uideatur stirpe creatus.
+Hic tamen et supra quos diximus inferiores
+
+735 partibus egregie multis multoque minores,
+quamquam multa bene ac diuinitus inuenientes
+ex adyto tam quam cordis responsa dedere
+sanctius et multo certa ratione magis quam
+Pythia quae tripodi a Phoebi lauroque profatur,
+
+[1,740] principiis tamen in rerum fecere ruinas
+et grauiter magni magno cecidere ibi casu.
+Primum quod motus exempto rebus inani
+constituunt et res mollis rarasque relinquunt
+aera solem ignem terras animalia frugis
+
+745 nec tamen admiscent in eorum corpus inane;
+deinde quod omnino finem non esse secandis
+corporibus facient neque pausam stare fragori
+nec prorsum in rebus minimum consistere quidquam,
+quod uideamus id extremum cuiusque cacumen
+
+[1,750] esse quod ad sensus nostros minimum esse uidetur,
+conicere ut possis ex hoc, quae cernere non quis
+extremum quod habent, minimum consistere rebus.
+Huc accedit item, quoniam primordia rerum
+mollia constituunt, quae nos natiua uidemus
+
+755 esse et mortali cum corpore, funditus ut qui
+debeat ad nihilum iam rerum summa reuerti
+de nihiloque renata uigescere copia rerum;
+quorum utrumque quid a uero iam distet habebis.
+Deinde inimica modis multis sunt atque ueneno
+
+[1,760] ipsa sibi inter se; quare aut congressa peribunt
+aut ita diffugient, ut tempestate coacta
+fulmina diffugere atque imbris uentosque uidemus.
+Denique quattuor ex rebus si cuncta creantur
+atque in eas rursum res omnia dissoluuntur,
+
+765 qui magis illa queunt rerum primordia dici
+quam contra res illorum retroque putari?
+Alternis gignuntur enim mutantque colorem
+et totam inter se naturam tempore ab omni.
+<...>
+
+[1,770] Sin ita forte putas ignis terraeque coire
+corpus et aërias auras roremque liquoris,
+nil in concilio naturam ut mutet eorum,
+nulla tibi ex illis poterit res esse creata,
+non animans, non exanimo cum corpore, ut arbos;
+
+775 quippe suam quicque in coetu uariantis acerui
+naturam ostendet mixtusque uidebitur aer
+cum terra simul et quodam cum rore manere.
+At primordia gignundis in rebus oportet
+naturam clandestinam caecamque adhibere,
+
+[1,780] emineat ne quid, quod contra pugnet et obstet
+quo minus esse queat proprie quodcumque creatur.
+Quin etiam repetunt a caelo atque ignibus eius
+et primum faciunt ignem se uertere in auras
+aëris, hinc imbrem gigni terramque creari
+
+785 ex imbri retroque a terra cuncta reuerti,
+umorem primum, post aëra, deinde calorem,
+nec cessare haec inter se mutare, meare
+a caelo ad terram, de terra ad sidera mundi.
+Quod facere haud ullo debent primordia pacto.
+
+[1,790] immutabile enim quiddam superare necesse est,
+ne res ad nihilum redigantur funditus omnes;
+nam quod cumque suis mutatum finibus exit,
+continuo hoc mors est illius quod fuit ante.
+Quapropter quoniam quae paulo diximus ante
+
+795 in commutatum ueniunt, constare necesse est
+ex aliis ea, quae nequeant conuertier usquam,
+ne tibi res redeant ad nilum funditus omnis;
+quin potius tali natura praedita quaedam
+corpora constituas, ignem si forte crearint,
+
+[1,800] posse eadem demptis paucis paucisque tributis,
+ordine mutato et motu, facere aëris auras,
+sic alias aliis rebus mutarier omnis?
+''At manifesta palam res indicat'' inquis ''in auras
+aëris e terra res omnis crescere alique;
+
+805 et nisi tempestas indulget tempore fausto
+imbribus, ut tabe nimborum arbusta uacillent,
+solque sua pro parte fouet tribuitque calorem,
+crescere non possint fruges arbusta animantis.''
+Scilicet et nisi nos cibus aridus et tener umor
+
+[1,810] adiuuat, amisso iam corpore uita quoque omnis
+omnibus e neruis atque ossibus exsoluatur;
+adiutamur enim dubio procul atque alimur nos
+certis ab rebus, certis aliae atque aliae res:
+nimirum quia multa modis communia multis
+
+815 multarum rerum in rebus primordia mixta
+sunt, ideo uariis uariae res rebus aluntur.
+Atque eadem magni refert primordia saepe
+cum quibus et quali positura contineantur
+et quos inter se dent motus accipiantque;
+
+[1,820] namque eadem caelum mare terras flumina solem
+constituunt, eadem fruges arbusta animantis,
+uerum aliis alioque modo commixta mouentur.
+Quin etiam passim nostris in uersibus ipsis
+multa elementa uides multis communia uerbis,
+
+825 cum tamen inter se uersus ac uerba necesse est
+confiteare et re et sonitu distare sonanti.
+Tantum elementa queunt permutato ordine solo;
+at rerum quae sunt primordia, plura adhibere
+possunt unde queant uariae res quaeque creari.
+
+[1,830] Nunc et Anaxagorae scrutemur homoeomerian
+quam Grai memorant nec nostra dicere lingua
+concedit nobis patrii sermonis egestas,
+sed tamen ipsam rem facile est exponere uerbis.
+Principio, rerum quam dicit homoeomerian,
+
+835 ossa uidelicet e pauxillis atque minutis
+ossibus hic et de pauxillis atque minutis
+uisceribus uiscus gigni sanguenque creari
+sanguinis inter se multis coeuntibus guttis
+ex aurique putat micis consistere posse
+
+[1,840] aurum et de terris terram concrescere paruis,
+ignibus ex ignis, umorem umoribus esse,
+cetera consimili fingit ratione putatque.
+Nec tamen esse ulla de parte in rebus inane
+concedit neque corporibus finem esse secandis.
+
+845 Quare in utraque mihi pariter ratione uidetur
+errare atque illi, supra quos diximus ante.
+Adde quod inbecilla nimis primordia fingit;
+si primordia sunt, simili quae praedita constant
+natura atque ipsae res sunt aequeque laborant
+
+[1,850] et pereunt, neque ab exitio res ulla refrenat.
+Nam quid in oppressu ualido durabit eorum,
+ut mortem effugiat, leti sub dentibus ipsis?
+Ignis an umor an aura? Quid horum? Sanguen an ossa?
+Nil ut opinor, ubi ex aequo res funditus omnis
+
+855 tam mortalis erit quam quae manifesta uidemus
+ex oculis nostris aliqua ui uicta perire.
+At neque reccidere ad nihilum res posse neque autem
+crescere de nihilo testor res ante probatas.
+Praeterea quoniam cibus auget corpus alitque,
+
+[1,860] scire licet nobis uenas et sanguen et ossa <...>
+siue cibos omnis commixto corpore dicent
+esse et habere in se neruorum corpora parua
+ossaque et omnino uenas partisque cruoris,
+fiet uti cibus omnis et aridus et liquor ipse
+
+865 ex alienigenis rebus constare putetur,
+ossibus et neruis sanieque et sanguine mixto.
+Praeterea quae cumque e terra corpora crescunt,
+si sunt in terris, terram constare necesse est
+ex alienigenis, quae terris exoriuntur.
+
+[1,870] Transfer item, totidem uerbis utare licebit:
+in lignis si flamma latet fumusque cinisque,
+ex alienigenis consistant ligna necesse est.
+Praeterea tellus quae corpora cumque alit auget
+ex alienigenis, quae lignis exoriuntur.
+
+875 Linquitur hic quaedam latitandi copia tenuis,
+id quod Anaxagoras sibi sumit, ut omnibus omnis
+res putet inmixtas rebus latitare, sed illud
+apparere unum, cuius sint plurima mixta
+et magis in promptu primaque in fronte locata.
+
+[1,880] Quod tamen a uera longe ratione repulsum est;
+conueniebat enim fruges quoque saepe, minaci
+robore cum in saxi franguntur, mittere signum
+sanguinis aut aliquid, nostro quae corpore aluntur.
+Consimili ratione herbis quoque saepe decebat,
+
+885 cum lapide in lapidem terimus, manare cruorem
+et latices dulcis guttas similique sapore
+mittere, lanigerae quali sunt ubere lactis,
+scilicet et glebis terrarum saepe friatis
+herbarum genera et fruges frondesque uideri
+
+[1,890] dispertita inter terram latitare minute,
+postremo in lignis cinerem fumumque uideri,
+cum praefracta forent, ignisque latere minutos.
+Quorum nil fieri quoniam manifesta docet res,
+scire licet non esse in rebus res ita mixtas,
+
+895 uerum semina multimodis inmixta latere
+multarum rerum in rebus communia debent.
+''At saepe in magnis fit montibus'' inquis ''ut altis
+arboribus uicina cacumina summa terantur
+inter se ualidis facere id cogentibus austris,
+
+[1,900] donec flammai fulserunt flore coorto.''
+Scilicet et non est lignis tamen insitus ignis,
+uerum semina sunt ardoris multa, terendo
+quae cum confluxere, creant incendia siluis.
+Quod si facta foret siluis abscondita flamma,
+
+905 non possent ullum tempus celarier ignes,
+conficerent uolgo siluas, arbusta cremarent.
+Iamne uides igitur, paulo quod diximus ante,
+permagni referre eadem primordia saepe
+cum quibus et quali positura contineantur
+
+[1,910] et quos inter se dent motus accipiantque,
+atque eadem paulo inter se mutata creare
+ignes et lignum? Quo pacto uerba quoque ipsa
+inter se paulo mutatis sunt elementis,
+cum ligna atque ignes distincta uoce notemus.
+
+915 Denique iam quae cumque in rebus cernis apertis
+si fieri non posse putas, quin materiai
+corpora consimili natura praedita fingas,
+hac ratione tibi pereunt primordia rerum:
+fiet uti risu tremulo concussa cachinnent
+
+[1,920] et lacrimis salsis umectent ora genasque.
+Nunc age, quod superest, cognosce et clarius audi.
+nec me animi fallit quam sint obscura; sed acri
+percussit thyrso laudis spes magna meum cor
+et simul incussit suauem mi in pectus amorem
+
+925 Musarum, quo nunc instinctus mente uigenti
+auia Pieridum peragro loca nullius ante
+trita solo. iuuat integros accedere fontis
+atque haurire iuuatque nouos decerpere flores
+insignemque meo capiti petere inde coronam,
+
+[1,930] unde prius nulli uelarint tempora Musae;
+primum quod magnis doceo de rebus et artis
+religionum animum nodis exsoluere pergo,
+deinde quod obscura de re tam lucida pango
+carmina musaeo contingens cuncta lepore.
+
+935 Id quoque enim non ab nulla ratione uidetur;
+sed ueluti pueris absinthia taetra medentes
+cum dare conantur, prius oras pocula circum
+contingunt mellis dulci flauoque liquore,
+ut puerorum aetas inprouida ludificetur
+
+[1,940] labrorum tenus, interea perpotet amarum
+absinthi laticem deceptaque non capiatur,
+sed potius tali facto recreata ualescat,
+sic ego nunc, quoniam haec ratio plerumque uidetur
+tristior esse quibus non est tractata, retroque
+
+945 uolgus abhorret ab hac, uolui tibi suauiloquenti
+carmine Pierio rationem exponere nostram
+et quasi musaeo dulci contingere melle,
+si tibi forte animum tali ratione tenere
+uersibus in nostris possem, dum perspicis omnem
+
+[1,950] naturam rerum, qua constet compta figura.
+Sed quoniam docui solidissima materiai
+corpora perpetuo uolitare inuicta per aeuom,
+nunc age, summai quaedam sit finis eorum
+necne sit, euoluamus; item quod inane repertum est
+
+955 seu locus ac spatium, res in quo quaeque gerantur,
+peruideamus utrum finitum funditus omne
+constet an immensum pateat uasteque profundum.
+Omne quod est igitur nulla regione uiarum
+finitum est; namque extremum debebat habere.
+
+[1,960] Extremum porro nullius posse uidetur
+esse, nisi ultra sit quod finiat, ut uideatur
+quo non longius haec sensus natura sequatur.
+Nunc extra summam quoniam nihil esse fatendum,
+non habet extremum, caret ergo fine modoque.
+
+965 Nec refert quibus adsistas regionibus eius;
+usque adeo, quem quisque locum possedit, in omnis
+tantundem partis infinitum omne relinquit.
+Praeterea si iam finitum constituatur
+omne quod est spatium, si quis procurrat ad oras
+
+[1,970] ultimus extremas iaciatque uolatile telum,
+id ualidis utrum contortum uiribus ire
+quo fuerit missum mauis longeque uolare,
+an prohibere aliquid censes obstareque posse?
+alterutrum fatearis enim sumasque necesse est.
+
+975 Quorum utrumque tibi effugium praecludit et omne
+cogit ut exempta concedas fine patere.
+Nam siue est aliquid quod probeat efficiatque
+quo minus quo missum est ueniat finique locet se,
+siue foras fertur, non est a fine profectum.
+
+[1,980] Hoc pacto sequar atque, oras ubi cumque locaris
+extremas, quaeram: quid telo denique fiet?
+Fiet uti nusquam possit consistere finis
+effugiumque fugae prolatet copia semper.
+Praeterea spatium summai totius omne
+
+985 undique si inclusum certis consisteret oris
+finitumque foret, iam copia materiai
+undique ponderibus solidis confluxet ad imum
+nec res ulla geri sub caeli tegmine posset
+nec foret omnino caelum neque lumina solis,
+
+[1,990] quippe ubi materies omnis cumulata iaceret
+ex infinito iam tempore subsidendo.
+At nunc ni mirum requies data principiorum
+corporibus nulla est, quia nil est funditus imum,
+quo quasi confluere et sedes ubi ponere possint.
+
+995 Semper in adsiduo motu res quaeque geruntur
+partibus in cunctis, infernaque suppeditantur
+ex infinito cita corpora materiai.
+Postremo ante oculos res rem finire uidetur;
+aer dissaepit collis atque aëra montes,
+
+[1,1000] terra mare et contra mare terras terminat omnis;
+omne quidem uero nihil est quod finiat extra.
+Est igitur natura loci spatiumque profundi,
+quod neque clara suo percurrere fulmina cursu
+perpetuo possint aeui labentia tractu
+
+1005 nec prorsum facere ut restet minus ire meando;
+usque adeo passim patet ingens copia rebus
+finibus exemptis in cunctas undique partis.
+Ipsa modum porro sibi rerum summa parare
+ne possit, natura tenet, quae corpus inane
+
+[1,1010] et quod inane autem est finiri corpore cogit,
+ut sic alternis infinita omnia reddat,
+aut etiam alterutrum, nisi terminet alterum eorum,
+simplice natura pateat tamen inmoderatum.
+Nec mare nec tellus neque caeli lucida templa
+
+1015 nec mortale genus nec diuum corpora sancta
+exiguum possent horai sistere tempus;
+nam dispulsa suo de coetu materiai
+copia ferretur magnum per inane soluta,
+siue adeo potius numquam concreta creasset
+
+[1,1020] ullam rem, quoniam cogi disiecta nequisset.
+Nam certe neque consilio primordia rerum
+ordine se suo quaeque sagaci mente locarunt
+nec quos quaeque darent motus pepigere profecto
+sed quia multa modis multis mutata per omne
+
+1025 ex infinito uexantur percita plagis,
+omne genus motus et coetus experiundo
+tandem deueniunt in talis disposituras,
+qualibus haec rerum consistit summa creata,
+et multos etiam magnos seruata per annos
+
+[1,1030] ut semel in motus coniecta est conuenientis,
+efficit ut largis auidum mare fluminis undis
+integrent amnes et solis terra uapore
+fota nouet fetus summissaque gens animantum
+floreat et uiuant labentis aetheris ignes.
+
+1035 Quod nullo facerent pacto, nisi materiai
+ex infinito suboriri copia posset,
+unde amissa solent reparare in tempore quaeque.
+Nam ueluti priuata cibo natura animantum
+diffluit amittens corpus, sic omnia debent
+
+[1,1040] dissolui simul ac defecit suppeditare
+materies aliqua ratione auersa uiai.
+Nec plagae possunt extrinsecus undique summam
+conseruare omnem, quae cumque est conciliata.
+cudere enim crebro possunt partemque morari,
+
+1045 dum ueniant aliae ac suppleri summa queatur;
+interdum resilire tamen coguntur et una
+principiis rerum spatium tempusque fugai
+largiri, ut possint a coetu libera ferri.
+Quare etiam atque etiam suboriri multa necesse est,
+
+[1,1050] et tamen ut plagae quoque possint suppetere ipsae,
+infinita opus est uis undique materiai.
+Illud in his rebus longe fuge credere, Memmi,
+in medium summae quod dicunt omnia niti
+atque ideo mundi naturam stare sine ullis
+
+1055 ictibus externis neque quoquam posse resolui
+summa atque ima, quod in medium sint omnia nixa,
+ipsum si quicquam posse in se sistere credis,
+et quae pondera sunt sub terris omnia sursum
+nitier in terraque retro requiescere posta,
+
+[1,1060] ut per aquas quae nunc rerum simulacra uidemus;
+et simili ratione animalia suppa uagari
+contendunt neque posse e terris in loca caeli
+reccidere inferiora magis quam corpora nostra
+sponte sua possint in caeli templa uolare;
+
+1065 illi cum uideant solem, nos sidera noctis
+cernere et alternis nobiscum tempora caeli
+diuidere et noctes parilis agitare diebus.
+Sed uanus stolidis haec ***
+amplexi quod habent peru ***
+
+[1,1070] nam medium nihil esse potest ***
+infinita. Neque omnino, si iam ***
+possit ibi quicquam hac potius consistere ***
+quam quauis alia longe ratione ***
+omnis enim locus ac spatium, quod in ***
+
+1075 per medium, per non medium, concedere ***
+aeque ponderibus, motus quacumque feruntur.
+Nec quisquam locus est, quo corpora cum uenerunt,
+ponderis amissa ui possint stare in inani;
+nec quod inane autem est ulli subsistere debet,
+
+[1,1080] quin, sua quod natura petit, concedere pergat.
+Haud igitur possunt tali ratione teneri
+res in concilium medii cuppedine uictae.
+Praeterea quoniam non omnia corpora fingunt
+in medium niti, sed terrarum atque liquoris
+
+1085 et quasi terreno quae corpore contineantur,
+umorem ponti magnasque e montibus undas,
+at contra tenuis exponunt aëris auras
+et calidos simul a medio differrier ignis,
+atque ideo totum circum tremere aethera signis
+
+[1,1090] et solis flammam per caeli caerula pasci,
+quod calor a medio fugiens se ibi conligat omnis,
+quippe etiam uesci e terra mortalia secla;
+nec prorsum arboribus summos frondescere ramos
+posse, nisi a terris paulatim cuique cibatum
+
+1095 ***
+
+[1,1100] ***
+ne uolucri ritu flammarum moenia mundi
+diffugiant subito magnum per inane soluta
+et ne cetera consimili ratione sequantur
+
+1105 neue ruant caeli tonitralia templa superne
+terraque se pedibus raptim subducat et omnis
+inter permixtas rerum caelique ruinas
+corpora soluentes abeat per inane profundum,
+temporis ut puncto nihil extet reliquiarum
+
+[1,1110] desertum praeter spatium et primordia caeca.
+Nam qua cumque prius de parti corpora desse
+constitues, haec rebus erit pars ianua leti,
+hac se turba foras dabit omnis materiai.
+Haec sic pernosces parua perductus opella;
+
+1115 namque alid ex alio clarescet nec tibi caeca
+nox iter eripiet, quin ultima naturai
+peruideas: ita res accendent lumina rebus. ')

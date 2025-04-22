@@ -32,5 +32,5 @@ INSERT INTO books (author_id, title, url_title, publication_year, description) V
 
 
 INSERT INTO book_suggestions (suggestion_id, author_id, title, url_title, publication_year, description) VALUES
-    (4, 28, 'De Rerum Natura', 'de-rerum-natura', -55, 'Poème philosophique de Lucrèce sur la nature et l’épicurisme'),
+    (2, 28, 'De Rerum Natura', 'de-rerum-natura', -55, 'Poème philosophique de Lucrèce sur la nature et l’épicurisme'),
     (7, 34, 'Les Métamorphoses', 'les-metamorphoses', 8, 'Poème épique en quinze livres relatant l''histoire du monde depuis sa création à travers des récits de métamorphoses mythologiques')
