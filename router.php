@@ -169,13 +169,13 @@ $router->addRoute('GET', '', 'index.php')
     ->addRoute('GET', 'suggestions/{suggestionId}/edit', ['content/suggestions/edit.php', ['suggestionId' => '$1']]);
 
 // ----- Auth & Account -----
-$router->addRoute('GET', 'auth/login', 'account/login.php')
-    ->addRoute('POST', 'auth/login', 'account/login.php')
-    ->addRoute('GET', 'auth/register', 'account/register.php')
-    ->addRoute('POST', 'auth/register', 'account/register.php')
-    ->addRoute('GET', 'auth/logout', 'account/logout.php')
-    ->addRoute('GET', 'account', 'account/account.php')
-    ->addRoute('POST', 'account', 'account/account.php');
+$router->addRoute('GET', 'auth/login', 'account_related/login.php')
+    ->addRoute('POST', 'auth/login', 'account_related/login.php')
+    ->addRoute('GET', 'auth/register', 'account_related/register.php')
+    ->addRoute('POST', 'auth/register', 'account_related/register.php')
+    ->addRoute('GET', 'auth/logout', 'account_related/logout.php')
+    ->addRoute('GET', 'account', 'account_related/account.php')
+    ->addRoute('POST', 'account', 'account_related/account.php');
 
 // ----- API Routes -----
 $router->addRoute('GET', 'api/authors', function() {
