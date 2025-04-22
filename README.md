@@ -70,6 +70,12 @@ Le schéma de données s'articule autour des relations suivantes :
 - Les suggestions de livres (`book_suggestions`) sont liées à des **auteurs** existants
 - Les suggestions de chapitres (`chapter_suggestions`) sont liées à des **livres** existants
 
+### Pre-remplissage de la base de données
+
+Un fichier combined.sql se trouve dans le dossier `database/` et permet de préremplir la base de données avec des données d'exemple. Si ce dernier
+n'est pas accepté par le SGBD pour des raisons de taille, est fourni également un fichier combined.sql.zip qui contient plusieurs fichiers SQL
+ainsi que l'ordre dans lequel ils doivent être éxecutés.
+
 ## Fonctionnalités
 
 ### Navigation

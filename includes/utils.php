@@ -29,7 +29,7 @@ function toUrlName(string $name): string {
         // Convert accented characters to their ASCII equivalents
         $name = transliterator_transliterate('Any-Latin; Latin-ASCII', $name);
     } else {
-        // Fallback for when intl extension is not available
+        // Fallback in case the function is not available
         $chars = [
             'à' => 'a', 'á' => 'a', 'â' => 'a', 'ã' => 'a', 'ä' => 'a', 'å' => 'a', 'æ' => 'ae',
             'ç' => 'c', 'è' => 'e', 'é' => 'e', 'ê' => 'e', 'ë' => 'e', 'ì' => 'i', 'í' => 'i',
@@ -105,7 +105,7 @@ function ensureLoggedIn() {
     }
 }
 
-function ensureLoggedInError(string $redirectUrl = null) {
+function ensureLoggedInError($redirectUrl = null) {
     if (!isset($_SESSION['user'])) {
         http_response_code(403);
         echo json_encode(['error' => 'Vous devez être connecté pour effectuer cette action.']);
@@ -124,7 +124,7 @@ function ensureAdmin() {
     }
 }
 
-function ensureAdminError(string $redirectUrl = null) {
+function ensureAdminError($redirectUrl = null) {
     if (!isset($_SESSION['user']) || !$_SESSION['user']['is_admin']) {
         http_response_code(403);
         echo json_encode(['error' => 'Accès non autorisé']);
