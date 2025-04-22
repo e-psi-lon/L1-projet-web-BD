@@ -61,10 +61,9 @@
 
                     foreach ($results as $result) {
                         if ($currentBook != $result['book_title'] || $currentAuthor != $result['author_name']) {
-                            // Start of a new book
                             if ($currentBook != '') {
-                                echo '</div>'; // End the chapter container
-                                echo '</div>'; // End the book card
+                                echo '</div>';
+                                echo '</div>';
                             }
 
                             $currentBook = $result['book_title'];

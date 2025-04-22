@@ -22,7 +22,7 @@ $db = getDbConnection();
 // Get book information by name (using URL-safe name)
 $query = "SELECT 
     books.book_id, books.url_title, books.title, books.publication_year, books.description,
-    authors.name, authors.url_name, authors.birth_year, authors.death_year, authors.biography
+    authors.author_id, authors.name, authors.url_name, authors.birth_year, authors.death_year, authors.biography, (authors.image IS NOT NULL) AS image
 FROM books
     JOIN authors ON books.author_id = authors.author_id
 WHERE books.url_title = :title
@@ -39,7 +39,8 @@ if ($result) {
         'url_name' => $result['url_name'],
         'birth_year' => $result['birth_year'],
         'death_year' => $result['death_year'],
-        'biography' => $result['biography']
+        'biography' => $result['biography'],
+        'image' => $result['image'] ? '<img src="/api/author-image?author_id=' . $result['author_id'] . '" alt="' . h($result['name']) . '" class="author-image-small">' : ''
     ];
     $book_info = [
         'title' => $result['title'],
@@ -81,7 +82,12 @@ $db = null;
             <div class="author-section card">
                 <h2 class="card-title">À propos de l'auteur</h2>
 
-                <h3><a href="<?= getAuthorUrl($author_info['url_name']); ?>"><?php echo h($author_info['name']); ?></a></h3>
+                <h3>
+                    <a class="card-header" href="<?= getAuthorUrl($author_info['url_name']); ?>">
+                        <?php echo $author_info['image']; ?>
+                        <?php echo h($author_info['name']); ?>
+                    </a>
+                </h3>
                 <p class="author-years">
                     <?php echo ($author_info['birth_year'] ?: '?'); ?> -
                     <?php echo ($author_info['death_year'] ?: '?'); ?>
