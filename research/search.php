@@ -4,7 +4,7 @@
         <h1>Recherche parmi les textes</h1>
 
         <div class="search-container">
-            <form method="GET" action="../router.php" class="search-form">
+            <form method="GET" action="search" class="search-form">
                 <div class="search-box">
                     <label for="search-input"></label>
                     <input type="text" id="search-input" name="q" placeholder="Rechercher des textes..." value="<?php echo isset($_GET['q']) ? h($_GET['q']) : ''; ?>">
