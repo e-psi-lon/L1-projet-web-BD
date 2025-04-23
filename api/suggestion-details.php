@@ -60,7 +60,7 @@ if (!$details) {
     echo json_encode(['error' => 'Détails de la suggestion non trouvés.']);
     exit;
 }
-if (isset($details['author_image'])) {
+if (isset($details['author_image']) && $details['author_image']) {
     unset($details['author_image']);
     $details['author_image_url'] = '/api/author-image?suggestion_id=' . $suggestionId;
 }
