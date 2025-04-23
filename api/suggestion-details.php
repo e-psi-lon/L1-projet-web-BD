@@ -13,8 +13,6 @@ if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
 $suggestionId = (int) $_GET['id'];
 $userId = $_SESSION['user']['id'];
 
-error_log('User ID: ' . $userId . ' - Suggestion ID: ' . $suggestionId);
-
 // Check if the user has access to the suggestion OR is an admin
 $pdo = getDbConnection();
 $stmt = $pdo->prepare("
@@ -32,8 +30,6 @@ if (!$suggestion) {
     echo json_encode(['error' => 'Suggestion non trouvée ou accès non autorisé.']);
     exit;
 }
-error_log('Suggestion found: ' . json_encode($suggestion));
-
 // Fetch the details based on the suggestion type
 $stmt = null;
 if ($suggestion['suggestion_type'] === 'author') {
@@ -64,11 +60,10 @@ if (!$details) {
     echo json_encode(['error' => 'Détails de la suggestion non trouvés.']);
     exit;
 }
-if ($details['author_image']) {
+if (isset($details['author_image'])) {
     unset($details['author_image']);
     $details['author_image_url'] = '/api/author-image?suggestion_id=' . $suggestionId;
 }
-error_log('Details found: ' . json_encode($details));
 // Prepare the response
 $response = [
     'type' => $suggestion['suggestion_type'],
