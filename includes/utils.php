@@ -22,7 +22,7 @@ function getDbConnection() {
     }
 }
 
-// URL Building
+// Bob the Builder
 function toUrlName(string $name): string {
     // Transliterate accented characters to their ASCII equivalents
     if (function_exists('transliterator_transliterate')) {

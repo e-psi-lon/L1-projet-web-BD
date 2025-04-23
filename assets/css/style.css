@@ -703,7 +703,6 @@ pre {
         border-radius: 4px;
         font-size: 14px;
         opacity: 50%;
-        animation: fadeInOut 2s infinite;
     }
 
     .table-container .table {

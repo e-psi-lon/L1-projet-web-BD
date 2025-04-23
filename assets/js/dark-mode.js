@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const darkModeToggle = document.getElementById('darkModeToggle');
     if (!darkModeToggle) return;
 
-    // Synchroniser l'état du toggle avec le thème actuel
+    // Sync toggle state with current theme
     darkModeToggle.checked = document.documentElement.classList.contains('dark-mode');
 
     darkModeToggle.addEventListener('change', () => {
