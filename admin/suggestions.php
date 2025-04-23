@@ -171,7 +171,7 @@ $_SESSION['from'] = 'admin';
         button.addEventListener('click', function () {
             const suggestionId = this.id.split('-')[1];
 
-            // Créer la structure du modal si elle n'existe pas
+            // Create the modal structure if it doesn't exist
             if (!document.getElementById('reviewModal')) {
                 const modal = document.createElement('div');
                 modal.id = 'reviewModal';
@@ -196,17 +196,17 @@ $_SESSION['from'] = 'admin';
             `;
                 document.body.appendChild(modal);
 
-                // Gérer la fermeture de la modal
+                // Handle modal closing
                 document.querySelector('.modal-close').addEventListener('click', () => {
                     document.getElementById('reviewModal').style.display = 'none';
                 });
             }
 
-            // Afficher la modal
+            // Show modal
             const modal = document.getElementById('reviewModal');
             modal.style.display = 'block';
 
-            // Charger les détails de la suggestion
+            // Loads suggestion informatin
             fetch(`/api/suggestion-details?id=${suggestionId}`)
                 .then(response => response.json())
                 .then(data => {
@@ -218,7 +218,7 @@ $_SESSION['from'] = 'admin';
                     const detailsContainer = document.getElementById('suggestionDetails');
                     let detailsHtml = '';
 
-                    // Afficher les détails selon le type de suggestion
+                    // Show details based on suggestion type
                     if (data.type === 'author') {
                         detailsHtml = `
                         <p><strong>Type :</strong> Auteur</p>
@@ -246,7 +246,7 @@ $_SESSION['from'] = 'admin';
                     detailsContainer.innerHTML = detailsHtml;
                     document.getElementById('adminNotes').value = data.admin_notes || '';
 
-                    // Configuration des boutons d'action
+                    // Config action buttons
                     const currentSuggestionId = suggestionId;
 
                     document.getElementById('saveNotes').onclick = () => {
