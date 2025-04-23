@@ -27,20 +27,20 @@ php -S localhost:8000 router.php
 
 Le projet est divisé en plusieurs dossiers pour une meilleure organisation :
 
-- **[account](/account/)** : Gestion des comptes utilisateurs
+- **[account](/account_related)** : Gestion des comptes utilisateurs
   - Inscription, connexion, déconnexion
-- **[admin](/admin/)** : Interface d'administration
-- **[api](/api/)** : API REST pour accéder et modifier certaines données (interactivité avec le frontend)
-  -  **[`suggestions`](/api/suggestions/)** : Endpoints API spécifiques aux suggestions
-- **[assets](/assets/)** : Contient les ressources statiques
-  - **[`/css`](/assets/css/)** : Feuilles de style CSS
-  - **[`/js`](/assets/js/)** : Scripts JavaScript
-- **[content](/content/)** : Contient les pages de contenu
-  - **[`suggestions`](/content/suggestions/)** : Pages relatives aux suggestions de contenu
-- **[database](/database/)** : Contient le schéma et les données (sous forme de fichiers SQL)
-- **[errors](/errors/)** : Pages d'erreur personnalisées
-- **[includes](/includes/)** : Composants réutilisables (header, footer, utilitaires)
-- **[research](/research/)** : Pages de recherche parmi les auteurs, œuvres et les textes 
+- **[admin](/admin)** : Interface d'administration
+- **[api](/api)** : API REST pour accéder et modifier certaines données (interactivité avec le frontend)
+  -  **[`suggestions`](/api/suggestions)** : Endpoints API spécifiques aux suggestions
+- **[assets](/assets)** : Contient les ressources statiques
+  - **[`/css`](/assets/css)** : Feuilles de style CSS
+  - **[`/js`](/assets/js)** : Scripts JavaScript
+- **[content](/content)** : Contient les pages de contenu
+  - **[`suggestions`](/content/suggestions)** : Pages relatives aux suggestions de contenu
+- **[database](/database)** : Contient le schéma et les données (sous forme de fichiers SQL)
+- **[errors](/errors)** : Pages d'erreur personnalisées
+- **[includes](/includes)** : Composants réutilisables (header, footer, utilitaires)
+- **[research](/research)** : Pages de recherche parmi les auteurs, œuvres et les textes 
 
 ## Base de données
 
@@ -72,8 +72,8 @@ Le schéma de données s'articule autour des relations suivantes :
 
 ### Pre-remplissage de la base de données
 
-Un fichier combined.sql se trouve dans le dossier `database/` et permet de préremplir la base de données avec des données d'exemple. Si ce dernier
-n'est pas accepté par le SGBD pour des raisons de taille, est fourni également un fichier combined.sql.zip qui contient plusieurs fichiers SQL
+Un fichier combine.sql se trouve dans le dossier `database/` et permet de préremplir la base de données avec des données d'exemple. Si ce dernier
+n'est pas accepté par le SGBD pour des raisons de taille, est fourni également un fichier combine.sql.zip qui contient plusieurs fichiers SQL
 ainsi que l'ordre dans lequel ils doivent être éxecutés.
 
 ## Fonctionnalités

@@ -4,7 +4,7 @@ import zipfile
 
 current_directory = os.path.dirname(os.path.abspath(__file__))
 database_directory = os.path.join(current_directory, "database")
-output_file_path = os.path.join(database_directory, "combined.sql")
+output_file_path = os.path.join(database_directory, "combine.sql")
 
 # Liste des fichiers SQL à combiner (dans l'ordre)
 sql_files = [
@@ -27,7 +27,7 @@ with open(output_file_path, "w") as output_file:
 print(f"Combined SQL file created at: {output_file_path}")
 
 # Creer un fichier zip (au cas ou un la version combinee soit trop lourde)
-zip_file_path = os.path.join(database_directory, "combined.sql.zip")
+zip_file_path = os.path.join(database_directory, "combine.sql.zip")
 with zipfile.ZipFile(zip_file_path, "w") as zip_file:
     for index, sql_file in enumerate(sql_files):
         sql_file_path = os.path.join(database_directory, sql_file)
