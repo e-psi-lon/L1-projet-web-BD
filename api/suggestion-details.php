@@ -1,7 +1,7 @@
 <?php
 session_start();
 require_once 'includes/utils.php';
-ensureLoggedIn();
+ensureLoggedInError();
 
 // Check if suggestion ID is provided and is valid
 if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
@@ -21,8 +21,10 @@ $stmt = $pdo->prepare("
     SELECT s.*
     FROM suggestions s
     RIGHT JOIN users u ON s.user_id = u.user_id
-    WHERE s.suggestion_id = ? AND (s.user_id = ? OR u.is_admin = TRUE);");
-$stmt->execute([$suggestionId, $userId]);
+    WHERE s.suggestion_id = ? AND (s.user_id = ? OR 
+        EXISTS (SELECT 1 FROM users WHERE user_id = ? AND is_admin = TRUE)
+        );");
+$stmt->execute([$suggestionId, $userId, $userId]);
 $suggestion = $stmt->fetch(PDO::FETCH_ASSOC);
 
 if (!$suggestion) {
